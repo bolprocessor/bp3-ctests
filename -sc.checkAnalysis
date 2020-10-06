@@ -1,0 +1,13 @@
+// Bol Processor BP3 compatible with version BP2.9.8
+// Script saved as "-sc.checkAnalysis". Date: 2020-09-30 13:37:35
+Set directory 14183
+Reset random sequence
+Load Project "-gr.dhin--"
+Use tokens OFF
+Produce items
+Analyze selection in window "Data"
+
+Play selection in
+Tempo 10 ticks in 2 secs
+Text Color ON
+Use each substitution ON

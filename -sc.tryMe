@@ -1,0 +1,16 @@
+// Bol Processor BP3 compatible with version BP2.9.8
+// Script saved as "-sc.tryMe". Date: 2020-10-01 14:00:22
+// This is a script for Bol Processor BP3
+Show messages OFF -- avoid useless display
+Note convention = English
+Show graphics ON
+Play - - {2,G4,E4,C4,- C5 - C5 {C5_-,A#4_ _}}
+Show messages ON
+Activate window Scrap
+Type <p>Welcome to <a target="_blank" href="https://bolprocessor.org/">Bol Processor BP3</a>...</p>
+Type <p>Hope you <big><i><font color="green">enjoyed</font></i></big> the music!</p>
+Type BP3 is now waiting for you to play ‘C4’ on the MIDI keyboard
+Type <return>
+Wait for C4 channel 1
+Run script -sc.trySubscript
+Type <p>That's all folks!</p>
