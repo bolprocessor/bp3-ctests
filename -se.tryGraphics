@@ -1,8 +1,8 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Settings file saved as "-se.Visser2". Date: 2020-10-11 13:35:59
+// Settings file saved as "-se.tryGraphics". Date: 2020-10-14 13:04:08
 1
  
-20
+10
 10
 100
 1
@@ -20,8 +20,8 @@
 0
 0
 0
-0
-0
+1
+1
 0
 0
 0
@@ -40,28 +40,28 @@
 1
 1
 0
-0
-1002
+1
+1000
 1
 0
 59944
-0
-0
-0
+1
 0
 0
 1
-2
+0
+1
+1
 <no input device>
 <no output device>
 1
 0
+1
+1
+0
 0
 1
-2
-0
-1
-0.00
+2.00
 60
 440.0000
 1
@@ -76,7 +76,7 @@
 10
 10
 10
-9
+10
 10
 10
 10
@@ -115,15 +115,15 @@
 0
 0
 1
-0
-1
-0
-0
-1
-0
 1
 0
 0
 0
+1
+0
+1
+1
+0
+262143
 1
 1

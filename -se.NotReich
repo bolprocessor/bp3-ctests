@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Settings file saved as "-se.NotReich". Date: 2020-09-16 16:26:35
+// Settings file saved as "-se.NotReich". Date: 2020-10-14 08:58:40
 1
  
 50
@@ -19,7 +19,7 @@
 0
 0
 0
-0
+1
 1
 0
 0
@@ -126,4 +126,4 @@
 0
 262143
 1
-1
+0
