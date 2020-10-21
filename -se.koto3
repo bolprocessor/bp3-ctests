@@ -1,5 +1,5 @@
-// Bol Processor on-line test via PHP
-// Settings file saved as ‘-se.koto3’. Date: 2020-07-18 17:10:05
+// Bol Processor BP3 compatible with version BP2.9.8
+// Settings file saved as "-se.koto3". Date: 2020-10-20 06:54:35
 1
  
 10
@@ -10,18 +10,12 @@
 3
 20
 28
-1
-0
-1
-0
-0
-0
-0
-0
 0
 0
 1
-1
+0
+0
+0
 0
 0
 0
@@ -29,7 +23,13 @@
 1
 0
 0
+0
+0
+0
 1
+0
+0
+0
 1
 1
 1
@@ -40,7 +40,7 @@
 1
 1
 0
-0
+1
 1000
 1
 0
@@ -116,7 +116,7 @@
 0
 1
 0
-1
+0
 0
 0
 1
@@ -126,4 +126,4 @@
 0
 262143
 1
-0
+1

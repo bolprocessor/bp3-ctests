@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Csound instrument file saved as "-cs.tryCsound". Date: 2020-09-21 14:11:13
+// Csound instrument file saved as "-cs.tryCsound". Date: 2020-10-21 14:07:46
 16
 2
 3
@@ -28,7 +28,7 @@ This instrument is assigned to channel 1 by default
 -1
 4
 2
-200.0000
+200
 0
 0
 0
@@ -54,11 +54,11 @@ This instrument is assigned to channel 1 by default
 -1
 -1
 -1
-7
-7
-7
-7
-7
+07
+07
+07
+07
+07
 0
 0
 0
@@ -96,7 +96,7 @@ Test parameter
 7
 8
 0.000
-7
+07
 1
 Harpsichord
 This instrument is assigned to channel 2 by default
@@ -330,5 +330,4 @@ This is the default instrument used by BP2 when no -cs. file is loaded.
 _begin tables
 f1 0 256 10 1
 f2 0 256 10 1 0.5 0.3 0.4
-
 

@@ -1,11 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.koto3". Date: 2020-07-18 19:46:12
--or.koto3
--in.abc1
--tb.koto3
--ho.abc1
--se.koto3
-
+// Grammar file saved as "-gr.koto3". Date: 2020-10-19 08:43:50
 // File “-gr.koto3”
 // A sort of unidimensional cellular automaton producing a
 // sort of "Turkish music"!
@@ -20,6 +14,12 @@
 // appropriate program change message.
 
 // You may use a MIDI keyboard to control BP2 on channel 15.
+
+-or.koto3
+-in.abc1
+-tb.koto3
+-ho.abc1
+-se.koto3
 
 RND
 gram#1[1] <100> S --> _vel(127) _volume(40) X X X X Y X X X X Y X X X X
