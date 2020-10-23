@@ -1,6 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.vina3". Date: 2020-10-21 16:26:28
--or.vina
+// Grammar file saved as "-gr.vina3". Date: 2020-10-22 12:26:58
 -se.Vina3
 -cs.Vina
 
@@ -17,7 +16,7 @@
 RND
 gram#1[1] S --> {Taalam4 Taalam4, Pallavi Pallavi}
 
-gram#1[2] Pallavi --> {Maa Yaa Tii . Ta {2, Sva Ruu Pi} . {2, Ni} {1, Nan Nu} .  Bro {2, Va Ve}}
+gram#1[2] Pallavi --> {Maa Yaa Tii . Ta {2, Sva Ruu Pi} . {2, Ni} {1, Nan Nu} . Bro {2, Va Ve}}
 
 gram#1[3] Maa --> C3
 gram#1[4] Yaa --> LongSpuritam C3 Slide1
