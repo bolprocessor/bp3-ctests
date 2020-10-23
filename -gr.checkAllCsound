@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.checkAllCsound". Date: 2020-10-23 08:28:02
+// Grammar file saved as "-gr.checkAllCsound". Date: 2020-10-23 14:28:24
 -cs.checkAllCsound
 -se.checkAllCsound
 
@@ -40,7 +40,7 @@ gram#1[15] <0> S --> _ins(The_default) _pitchcont _pitchbend(0) D4__ _pitchbend(
 
 gram#1[16] <0> S --> _ins(The_default) _pitchrange(200) _pitchcont _pitchbend(-200) D4__ _pitchbend(+200) E4_ _pitchbend(-200)___
 
-gram#1[17] <0> S --> _ins(1) _pitchrange(200) _pitchbend(0) _pitchcont C4 _ _pitchbend(20)_ _ _pitchbend(165) _ _ D4 _ _ _ _pitchbend(150)
+gram#1[17] <1> S --> _ins(1) _pitchrange(200) _pitchbend(0) _pitchcont C4 _ _pitchbend(20)_ _ _pitchbend(165) _ _ D4 _ _ _ _pitchbend(150)
 
 gram#1[18] <0> S --> _ins(1) _pitchrange(200) _pitchbend(0) _pitchcont - _ _ _ C4 _ _ _ _pitchbend(200) _ _ D4 _ _ _ _pitchbend(150)
 
@@ -74,4 +74,4 @@ gram#1[31] <0> S --> _ins(Splashmachine) _cont(splash) _value(splash,544.5) C4__
 
 gram#1[32] <0> S --> _ins(Splashmachine) _cont(pitchbend) _pitchrange(200) _value(pitchbend,120) C4__ _value(pitchbend,34) __ _value(pitchbend,55)___ _value(pitchbend,-160)
 
-gram#1[33] <1> S -->_ins(Splashmachine) _cont(pitchbend) _pitchrange(200) _pitchbend(120) C4__ _pitchbend(34) __ _pitchbend(55)___ _pitchbend(-160)
+gram#1[33] <0> S -->_ins(Splashmachine) _cont(pitchbend) _pitchrange(200) _pitchbend(120) C4__ _pitchbend(34) __ _pitchbend(55)___ _pitchbend(-160)
