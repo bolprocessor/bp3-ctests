@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.checkAllCsound". Date: 2020-10-23 14:28:24
+// Grammar file saved as "-gr.checkAllCsound". Date: 2020-10-24 14:04:29
 -cs.checkAllCsound
 -se.checkAllCsound
 
@@ -8,7 +8,7 @@
 
 ORD
 
-gram#1[1] <0> S --> A4 G4 C5 A4
+gram#1[1] <1> S --> A4 G4 C5 A4
 
 gram#1[2] <0> S --> _pitchrange(200) A4 _pitchbend(200) G4 _pitchbend(0) C5 A5
 

@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Object prototypes file saved as "-mi.tryCsoundObjects". Date: 2020-09-27 12:54:52
+// Object prototypes file saved as "-mi.tryCsoundObjects". Date: 2020-10-24 18:28:22
 84
 1
 64
@@ -68,20 +68,20 @@ _endCsoundScore_
 1
 0
 1000
-0.0000
+0
 00000010111100110010
 0
 0.0000
 0.0000
--1
-0
--1
+1
 0
 1
-1
--1
 0
--1
+1
+1000
+1
+0
+1
 0
 0
 100
@@ -92,9 +92,9 @@ _endCsoundScore_
 -1
 0
 0
-20.0000
-255
+20
 -1
+0
 1
 1
 1
@@ -112,7 +112,7 @@ _endCsoundScore_
 -1
 -1
 -1
-814
+1000000
 65535
 65535
 65535
@@ -357,7 +357,7 @@ _endCsoundScore_
 1
 1
 0
-444.444
+444
 10
 10000010111100111100
 0
