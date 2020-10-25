@@ -1,14 +1,16 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.tryCsoundObjects". Date: 2020-10-24 18:21:30
+// Grammar file saved as "-gr.tryCsoundObjects". Date: 2020-10-25 15:28:33
 -mi.tryCsoundObjects
 -cs.tryCsoundObjects
 -se.tryCsoundObjects
 -ho.tryCsoundObjects
 
 // Check the production of Csound scores using sound-objects whose prototypes contain Csound scores.
-// This is the grammar version of "-da.tryCsoundObjects" which contains also the expected Csound scores.
+// Productions of these rules are listed and fully explained on article Csound objects (https://bolprocessor.org/csound-objects/).
 
-// Play the following musical items and look at the Csound scores BP2/BP3 has produced, in comparison with the ones contained in sound-object prototypes 'a', 'b', 'c', 'midiobject'
+// Play the following musical items and look at the Csound scores BP2/BP3 has produced, in comparison with the ones contained in sound-object prototypes 'a', 'b', 'c', 'midiobject'.
+
+// To play an item, set to <1> the rule weight and click "PRODUCE ITEM(s)"
 
 ORD
 
@@ -18,13 +20,13 @@ gram#1[1] <0> S --> a
 // The reason is that Bol Processor completes missing arguments with default values of the parameters they represent. Here for instance '90' is the default volume. Zeros represent default pitchbend or function table indexes.
 // You can't play this example with the supplied "BP2test.orc" because the latter contains only the default instrument numbered 1 in this setup.
 
-// Here you must look at the graphic display to understand why events of 'a' are 160ms delayed compared with 'b'
+// Here you must look at the graphic display to understand why events of 'a' are 160 ms delayed compared with 'b'
 
 gram#1[2] <0> S --> {a,b} c
 
 gram#1[3] <0> S --> b midiobject
 
-gram#1[4] <0> S --> {a b a,c midiobject}
+gram#1[4] <1> S --> {a b a, c midiobject}
 
 // Here we combine sound-objects (containing Csound scores) with simple notes that need to be converted to Csound. These note are played on (default) MIDI channel 1 which is assigned to instrument 1
 
@@ -32,7 +34,7 @@ gram#1[5] <0> S --> a C4 D4 b c
 
 // A continuous control of pitchbend
 
-gram#1[6] <1> S --> _pitchrange(200) _pitchcont _pitchbend(0) c _pitchbend(100)
+gram#1[6] <0> S --> _pitchrange(200) _pitchcont _pitchbend(0) c _pitchbend(100)
 
 // Volume control with effect on instruments 1 and 2, no effect on 3
 
@@ -64,7 +66,3 @@ gram#1[12] <0> S --> f
 gram#1[13] <0> S --> _cont(oops) _value(oops,0) f _value(oops,4)
 
 // As expected, 'oops' start value in 'C3' is zero, and its end value in 'E3' is 10 = 4 * 2.5/1, where '1' is the default value.
-
-// -------- GENERAL REMARK -------------
-// The time resolution (10ms) has no effect on the accuracy of timings in Csound scores. It concerns only the dates of MIDI messages.
-// (See the "Time resolution" parameter in the settings)
