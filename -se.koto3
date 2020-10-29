@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Settings file saved as "-se.koto3". Date: 2020-10-24 17:08:09
+// Settings file saved as "-se.koto3". Date: 2020-10-26 11:46:27
 1
  
 10
@@ -43,12 +43,12 @@
 1
 1000
 1
-0
+1
 59944
 0
+1
 0
-0
-0
+1
 0
 25
 13
@@ -58,7 +58,7 @@
 0
 1
 1
-0
+1
 0
 1
 2.00
@@ -73,7 +73,7 @@
 50
 39
 10
-12
+10
 10
 10
 10
@@ -126,4 +126,4 @@
 0
 262143
 1
-1
+0

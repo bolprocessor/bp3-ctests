@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.tryCsound". Date: 2020-10-21 10:24:56
+// Grammar file saved as "-gr.tryCsound". Date: 2020-10-28 12:14:07
 -cs.tryCsound
 -se.tryCsound
 
@@ -7,5 +7,5 @@
 // items this grammar will run forever without producing.
 
 RND
-gram#1[1] <1-1> S --> _ins(3)  _volumecont _volume(127) A4 G4 C5 A5 A4 G4 C5 A5 _volume(0)
-gram#1[2] <1-1> S --> _ins(3)  _volumecont _volume(0) A4 G4 C5 A5 A4 G4 C5 A5 _volume(127)
+gram#1[1] <1-1> S --> _ins(3) _volumecont _volume(127) A4 G4 C5 A5 A4 G4 C5 A5 _volume(0)
+gram#1[2] <1-1> S --> _ins(3) _volumecont _volume(0) A4 G4 C5 A5 A4 G4 C5 A5 _volume(127)

@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.vina3". Date: 2020-10-22 12:26:58
+// Grammar file saved as "-gr.vina3". Date: 2020-10-29 06:22:17
 -se.Vina3
 -cs.Vina
 
@@ -36,7 +36,7 @@ gram#1[15] Bro --> {1, GamakaHold F3 Pull2} /pullVa/
 gram#1[16] /slideVa/ Va --> StartSlide G3 SlideBack2 StopSlide
 gram#1[17] /pullVa/ Va --> StartPull Pull2 F3 Pull0 StopPull
 
-gram#1[18] Ve --> {3,  Ve1 Ve2 Ve3}
+gram#1[18] Ve --> {3, Ve1 Ve2 Ve3}
 gram#1[19] Ve1 --> {5, GamakaOscil E3 Pull1}
 gram#1[20] Ve2 --> StartSlide C#3 SlideBack1 _ StopSlide
 gram#1[21] Ve3 --> StartPull B2 Pull1 StopPull
