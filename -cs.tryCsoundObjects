@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Csound instrument file saved as "-cs.tryCsoundObjects". Date: 2020-10-27 14:56:59
+// Csound instrument file saved as "-cs.tryCsoundObjects". Date: 2020-10-31 15:57:43
 16
 1
 3
@@ -17,7 +17,7 @@
 -1
 -1
 -1
-BP2test.orc
+default.orc
 6
 Instrument_1
 This is the default instrument used by "BP2test.orc"

@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.trial.mohanam". Date: 2020-07-28 07:52:38
+// Grammar file saved as "-gr.trial.mohanam". Date: 2020-10-31 17:10:28
 -or.trial.mohanam
 -ho.trial.mohanam
 -se.trial.mohanam
@@ -16,7 +16,7 @@ gram#1[1] S --> _transpose(-5) I /Ideas=20/ /Notes=32/ /NumR=1/
 
 -------------------------
 RND
-gram#2[1] <0> I --> I /NumR+1/  [This rule is only fired on a _goto()]
+gram#2[1] <0> I --> I /NumR+1/ [This rule is only fired on a _goto()]
 gram#2[2] <20> /Ideas-1/ I --> R1 A R2
 gram#2[3] <50> /Ideas-2/ I --> A B
 gram#2[4] <20> /Ideas-1/ I --> R1 B R2

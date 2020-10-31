@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Settings file saved as "-se.Vina3". Date: 2020-10-28 09:48:11
+// Settings file saved as "-se.Vina3". Date: 2020-10-31 16:07:19
 1
  
 10
@@ -43,10 +43,10 @@
 1
 1000
 1
-1
+0
 59944
 1
-1
+0
 0
 1
 0
@@ -54,7 +54,7 @@
 1
 <no input device>
 <no output device>
-1
+0
 0
 1
 1
@@ -125,5 +125,5 @@
 1
 0
 262143
-0
+1
 1

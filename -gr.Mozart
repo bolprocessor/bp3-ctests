@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.Mozart". Date: 2020-09-29 03:48:04
+// Grammar file saved as "-gr.Mozart". Date: 2020-10-31 16:22:20
 -or.Mozart
 -tb.Mozart
 -se.Mozart
@@ -7,7 +7,7 @@
 // Use a harpsichord or piano sound
 
 // No alphabet here: this grammar uses predefined French notes.
-// ...therefore 'French convention' is checked in the 'Misc' menu.
+// . ..therefore 'French convention' is checked in the 'Misc' menu.
 // (This was loaded with the settings.)
 
 // Disabling 'Show graphics' may be needed for non-stop performance on slow Macs.
@@ -31,7 +31,7 @@ gram#2[9] <K9=3> A1 --> T98
 gram#2[10] <K10=2> A1 --> T3
 gram#2[11] <K11=1> A1 --> T54
 -------------------
-LIN [These rules could be mixed with the preceding ones.  But production is faster in this way.]
+LIN [These rules could be mixed with the preceding ones. But production is faster in this way.]
 gram#3[1] <K1> A2 --> T22
 gram#3[2] <K2> A2 --> T6
 gram#3[3] <K3> A2 --> T95

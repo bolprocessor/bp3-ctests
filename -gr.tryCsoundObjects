@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.tryCsoundObjects". Date: 2020-10-25 15:28:33
+// Grammar file saved as "-gr.tryCsoundObjects". Date: 2020-10-31 15:59:31
 -mi.tryCsoundObjects
 -cs.tryCsoundObjects
 -se.tryCsoundObjects
@@ -26,11 +26,11 @@ gram#1[2] <0> S --> {a,b} c
 
 gram#1[3] <0> S --> b midiobject
 
-gram#1[4] <1> S --> {a b a, c midiobject}
+gram#1[4] <0> S --> {a b a, c midiobject}
 
 // Here we combine sound-objects (containing Csound scores) with simple notes that need to be converted to Csound. These note are played on (default) MIDI channel 1 which is assigned to instrument 1
 
-gram#1[5] <0> S --> a C4 D4 b c
+gram#1[5] <1> S --> a C4 D4 b c
 
 // A continuous control of pitchbend
 

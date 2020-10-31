@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Script saved as "-sc.Ruwet". Date: 2020-09-30 12:12:58
+// Script saved as "-sc.Ruwet". Date: 2020-10-29 16:07:48
 // A good example for trying ‘Pause’, ‘Resume’, ‘Skip’, etc.
 // The first execution is likely to abort. Bring BP2 to foreground, save the script and select “Check script syntax” in the “Script” menu. This will set the directory number to the right value.
 // Then copy that value into this field and try another run.

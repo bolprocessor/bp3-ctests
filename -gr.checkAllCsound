@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.checkAllCsound". Date: 2020-10-24 14:04:29
+// Grammar file saved as "-gr.checkAllCsound". Date: 2020-10-30 10:40:32
 -cs.checkAllCsound
 -se.checkAllCsound
 
@@ -20,7 +20,7 @@ gram#1[5] <0> S --> _ins(3) _modcont _mod(0) C4 D4_ _ E4 _mod(12431)
 
 gram#1[6] <0> S --> _ins(1) _chan(2) _modcont _mod(0) C4 D4_ _ E4 _mod(12431)
 
-gram#1[7] <0> S --> _ins(The_default) {_volume(30) C5 D5 E5 F5,_volume(20) G5 D5 C6}
+gram#1[7] <1> S --> _ins(The_default) {_volume(30) C5 D5 E5 F5,_volume(20) G5 D5 C6}
 
 gram#1[8] <0> S --> _ins(Harpsichord) _volume(0) A4 _volume(32) A4 _volume(64) A4 _volume(80) A4_volume(127) A4
 
@@ -40,7 +40,7 @@ gram#1[15] <0> S --> _ins(The_default) _pitchcont _pitchbend(0) D4__ _pitchbend(
 
 gram#1[16] <0> S --> _ins(The_default) _pitchrange(200) _pitchcont _pitchbend(-200) D4__ _pitchbend(+200) E4_ _pitchbend(-200)___
 
-gram#1[17] <1> S --> _ins(1) _pitchrange(200) _pitchbend(0) _pitchcont C4 _ _pitchbend(20)_ _ _pitchbend(165) _ _ D4 _ _ _ _pitchbend(150)
+gram#1[17] <0> S --> _ins(1) _pitchrange(200) _pitchbend(0) _pitchcont C4 _ _pitchbend(20)_ _ _pitchbend(165) _ _ D4 _ _ _ _pitchbend(150)
 
 gram#1[18] <0> S --> _ins(1) _pitchrange(200) _pitchbend(0) _pitchcont - _ _ _ C4 _ _ _ _pitchbend(200) _ _ D4 _ _ _ _pitchbend(150)
 
