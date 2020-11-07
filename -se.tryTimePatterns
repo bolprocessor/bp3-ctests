@@ -1,14 +1,14 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Settings file saved as "-se.tryTimePatterns". Date: 2020-10-17 02:09:50
+// Settings file saved as "-se.tryTimePatterns". Date: 2020-11-06 21:44:20
 1
  
 10
-30
+100
 100
 1
 0
 1
-2
+1
 28
 0
 0
@@ -50,11 +50,11 @@
 1
 0
 0
-5
-7
+1
+2
 <no input device>
 <no output device>
-1
+0
 0
 1
 1
@@ -72,14 +72,14 @@
 10
 50
 39
-14
 10
 10
 10
 10
 10
 10
-14
+10
+10
 10
 10
 10
@@ -125,5 +125,5 @@
 0
 0
 262143
-0
-0
+1
+1

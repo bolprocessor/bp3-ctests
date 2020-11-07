@@ -1,28 +1,22 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.Nadaka". Date: 2020-10-31 17:05:10
+// Grammar file saved as "-gr.Nadaka". Date: 2020-11-05 18:30:38
 // This grammar was composed by Nadaka (nadaka@auroville.org.in) in July 1997.
 
-// It is a first attempt, and there are musical mistakes. It is meant to give an
+// This was a first attempt and there are musical mistakes. It is meant to give an
 // idea of improvisation in a ‘modern’ Carnatic style.
-// It normally should be played on a guitar, but QuickTime piano will do for
-// a start...
 
 // When Nadaka started designing the grammar he typed notes in abbreviated Indian
 // notation: S, R, G, M... However, there were no octave numbers. So I wrote
 // rules deciding on octaves, using Oc1, Oc2... as variables marking octave
-// changes. I think this method is rather clumsy. It took time to check the
-// rules. It is better to enter notes from a MIDI keyboard and get them typed
+// changes. This method is rather clumsy and obsolete now that octave numbers are handled.
+// It is recommended to enter notes from a MIDI keyboard and get them typed
 // automatically by BP2, using standard names in the chosen convention.
 // (Bernard)
 
 -or.Nadaka
 -se.hamsad
 
-// The layout of the different subgrammars is inspired by ‘qaida’ pieces
-// composed by Indian tabla players. Of course it is a loose similarity because
-// this piece is in a South Indian style whereas tabla is North Indian.
-
-_mm(360.0)
+_mm(360.0) _striated
 
 RND
 // Structure

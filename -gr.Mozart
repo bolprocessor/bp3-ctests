@@ -1,24 +1,17 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.Mozart". Date: 2020-10-31 16:22:20
--or.Mozart
--tb.Mozart
+// Grammar file saved as "-gr.Mozart". Date: 2020-11-03 13:50:21
 -se.Mozart
+-or.Mozart
 
 // Use a harpsichord or piano sound
 
-// No alphabet here: this grammar uses predefined French notes.
-// . ..therefore 'French convention' is checked in the 'Misc' menu.
-// (This was loaded with the settings.)
-
-// Disabling 'Show graphics' may be needed for non-stop performance on slow Macs.
-
 LIN [Select rules randomly and apply from left to right]
-_mm(220.0000) _striated
+
 gram#1[1] S --> _vel(80) A B
 gram#1[2] A --> A1 A2 A3 A4 A5 A6 A7 A8 A1 A2 A3 A4 A5 A6 A7 A'8
 gram#1[3] B --> B1 B2 B3 B4 B5 B6 B7 B8 B1 B2 B3 B4 B5 B6 B7 B8
 -------------------
-LIN [?RND? would be OK but slower]
+LIN
 gram#2[1] <K1=1> A1 --> T96
 gram#2[2] <K2=2> A1 --> T32
 gram#2[3] <K3=3> A1 --> T69
@@ -110,7 +103,7 @@ gram#8[10] <K10> A7 --> T147
 gram#8[11] <K11> A7 --> T106
 -------------------
 LIN
-gram#9[1] A8 --> T5 [T30 = T81 = ? = T5]
+gram#9[1] A8 --> T5
 gram#9[2] A'8 --> T'5
 ------------------
 LIN
@@ -379,4 +372,4 @@ gram#18[158] T176 --> {{2,si2,re3}{si2,re3},la5 sol5 si5 sol5 re5 sol5}
 
 COMMENT:
 This is Mozart's musical dice game...
-[Source: B. Schott's S?hne, Mainz 39542]
+[Source: B. Schott's Söhne, Mainz 39542]
