@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.Mozart". Date: 2020-11-03 13:50:21
+// Grammar file saved as "-gr.Mozart". Date: 2020-11-08 15:54:22
 -se.Mozart
 -or.Mozart
 
@@ -7,7 +7,7 @@
 
 LIN [Select rules randomly and apply from left to right]
 
-gram#1[1] S --> _vel(80) A B
+gram#1[1] S --> _transpose(-12) _vel(80) A B
 gram#1[2] A --> A1 A2 A3 A4 A5 A6 A7 A8 A1 A2 A3 A4 A5 A6 A7 A'8
 gram#1[3] B --> B1 B2 B3 B4 B5 B6 B7 B8 B1 B2 B3 B4 B5 B6 B7 B8
 -------------------

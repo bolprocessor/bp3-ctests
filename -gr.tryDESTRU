@@ -1,10 +1,9 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.tryDESTRU". Date: 2020-11-07 13:07:49
+// Grammar file saved as "-gr.tryDESTRU". Date: 2020-11-08 17:48:37
 -se.tryDESTRU
 -ho.abc
 
 // This grammar produces various patterns on alphabet …
-// _rest {a,b,c}
 
 RND
 gram#1[1] <2-1> S --> (= (= X) S (:X)) (: (= X) S (:X))

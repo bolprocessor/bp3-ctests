@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Orchestra saved as "default.orc". Date: 2020-10-28 12:50:28
+// Orchestra saved as "default.orc". Date: 2020-11-09 07:37:33
 ; This is a simple orchestra file for Bol Processor's default Csound score output
 
 ; It contains one single instrument: an oscillator using wave-table 1
@@ -21,6 +21,12 @@ instr 1
 ik1 = 32767. / 127.
 ik2 = log(2.) / 1200.
 
+if (p4 < 15.0) then
+icps = cpspch(p4)
+else
+icps = p4
+endif
+
 ifvol = p7
 ifcents = p10
 
@@ -36,7 +42,7 @@ ilencents = ftlen(ifcents)
 kndxcents line 0, p3, ilencents
 kcents tablei kndxcents, ifcents
 
-pitchbendlin: kpitch = cpspch(p4) * exp(kcents * ik2)
+pitchbendlin: kpitch = icps * exp(kcents * ik2)
 kamp = kvol * ik1
 
 a1 oscil kamp, kpitch, 1
