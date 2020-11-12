@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Csound instrument file saved as "-cs.Vina". Date: 2020-10-30 17:24:07
+// Csound instrument file saved as "-cs.Vina". Date: 2020-11-12 11:07:17
 16
 1
 -1
@@ -100,4 +100,4 @@ Simulates sliding from one fret to another
 1
 _begin tables
 f1 0 256 1 "vina-wave-table.aiff" 0 4 0
-
+f2 0 64 -51 12 2 440 60 1 1.066 1.125 1.2 1.25 1.333 1.42 1.5 1.6 1.666 1.777 1.875 2

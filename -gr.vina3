@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.vina3". Date: 2020-11-07 14:15:25
+// Grammar file saved as "-gr.vina3". Date: 2020-11-12 10:35:31
 -se.Vina3
 -cs.Vina
 
@@ -14,7 +14,8 @@
 // Pallavi - Theme of composition
 
 RND
-gram#1[1] S --> {Taalam4 Taalam4, Pallavi Pallavi}
+
+gram#1[1] S --> {Taalam4 Taalam4, Pallavi Pallavi} Taalam
 
 gram#1[2] Pallavi --> {Maa Yaa Tii . Ta {2, Sva Ruu Pi} . {2, Ni} {1, Nan Nu} . Bro {2, Va Ve}}
 
@@ -23,7 +24,7 @@ gram#1[4] Yaa --> LongSpuritam C3 Slide1
 gram#1[5] Tii --> {1, StartSlidePull C3 Slide1 _ _ Slide1 Pull0 _ Slide4 . Pull1 _ Pull0 _ . Pull0 _ Pull1 - StopSlidePull }
 gram#1[6] Ta --> F3
 gram#1[7] Sva --> {3, G3}
-gram#1[8] Ruu --> {3, StartSlidePull G3 SlideBack2 _ SlideBack3 . Pull0 _ Pull1 - - - StopSlidePull}
+// gram#1[8] Ruu --> {3, StartSlidePull G3 SlideBack2 _ SlideBack3 . Pull0 _ Pull1 - - - StopSlidePull}
 gram#1[9] Ruu --> {3, StartSlidePull G3 SlideBack2 _ SlideBack3 _ SlideBack2 _ . _ _ SlideBack3 Pull0 _ Pull1 - StopSlidePull}
 gram#1[10] Pi --> {2, F3}
 gram#1[11] Ni --> G3

@@ -1,7 +1,7 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Settings file saved as "-se.Mozart". Date: 2020-11-08 13:37:52
+// Settings file saved as "-se.Mozart". Date: 2020-11-11 20:33:28
 1
- 
+0-default.orc
 10
 10
 200
@@ -44,7 +44,7 @@
 1002
 1
 0
-60000
+10
 999
 0
 1

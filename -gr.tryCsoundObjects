@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.tryCsoundObjects". Date: 2020-11-06 06:26:33
+// Grammar file saved as "-gr.tryCsoundObjects". Date: 2020-11-11 06:28:24
 -mi.tryCsoundObjects
 -cs.tryCsoundObjects
 -se.tryCsoundObjects
@@ -14,7 +14,7 @@
 
 ORD
 
-gram#1[1] <0> S --> a
+gram#1[1] <1> S --> a
 
 // Note that this score is more complete than the one contained in sound-object 'a'
 // The reason is that Bol Processor completes missing arguments with default values of the parameters they represent. Here for instance '90' is the default volume. Zeros represent default pitchbend or function table indexes.
@@ -30,7 +30,7 @@ gram#1[4] <0> S --> {a b a, c midiobject}
 
 // Here we combine sound-objects (containing Csound scores) with simple notes that need to be converted to Csound. These note are played on (default) MIDI channel 1 which is assigned to instrument 1
 
-gram#1[5] <1> S --> a C4 D4 b c
+gram#1[5] <0> S --> a C4 D4 b c
 
 // A continuous control of pitchbend
 
@@ -46,7 +46,7 @@ gram#1[8] <0> S --> _pitchrange(200) _pitchcont _pitchbend(100) d _pitchbend(0)
 
 // Here the continous pitchbend correction results in various adjustments of pitchbender parameters on instruments called by a, b, c. The simple notes C4 and D4 call instrument 1 because it is the one assigned to the (default) channel 1. Volume is also adjusted continuously.
 
-gram#1[9] <0> S --> _pitchrange(200) _pitchcont _volumecont _volume(30) _pitchbend(-10) a C4 D4 b c _pitchbend(100) _volume(127)
+gram#1[9] <1> S --> _pitchrange(200) _pitchcont _volumecont _volume(30) _pitchbend(-10) a C4 D4 b c _pitchbend(100) _volume(127)
 
 // Checking an arbitrary parameter "burb" which affects arguments 9, 10 and 11 of instrument 2
 // In sound-object 'e', the 3d event (D3) already sets 'blurb' to start value 10 and to end value 30. These values are added to the ones interpolated on the 'blurb' variation, yielding 72.8 and 130 respectively.
