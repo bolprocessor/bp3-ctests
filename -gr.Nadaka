@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.Nadaka". Date: 2020-11-05 18:30:38
+// Grammar file saved as "-gr.Nadaka". Date: 2020-11-23 13:43:22
 // This grammar was composed by Nadaka (nadaka@auroville.org.in) in July 1997.
 
 // This was a first attempt and there are musical mistakes. It is meant to give an
@@ -15,6 +15,7 @@
 
 -or.Nadaka
 -se.hamsad
+-cs.Nadaka
 
 _mm(360.0) _striated
 
@@ -24,7 +25,7 @@ RND
 // It is clever to append a number to each variable name indicating the duration
 // of the musical fragment it represents. BP2, of course, ignores these numbers.
 
-gram#1[1] S --> Theme32 Theme32 Bridge32 Theme32 B32 Theme32 V16 V16 V16 V16 Theme32 V16 V16 V16 V16 Theme32 V16 V16 V16 V16 Theme32 V16 V16 V16 V16 Theme16 V16 Theme16 V16 Theme16 V16 Theme16 V16 Theme8 V8 Theme8 V8 Theme8 V8 Theme8 V8 Finale
+gram#1[1] S --> _ins(3) Theme32 Theme32 Bridge32 Theme32 B32 Theme32 V16 V16 V16 V16 Theme32 V16 V16 V16 V16 Theme32 V16 V16 V16 V16 Theme32 V16 V16 V16 V16 Theme16 V16 Theme16 V16 Theme16 V16 Theme16 V16 Theme8 V8 Theme8 V8 Theme8 V8 Theme8 V8 Finale
 gram#1[2] Finale --> Theme30 NiSaNiA95 NiSaNiB24 NiSaNiB24 NiSaNiC34 Morai49 Theme32 G _______
 --------------------
 RND

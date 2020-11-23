@@ -1,7 +1,7 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Settings file saved as "-se.Visser.Waves". Date: 2020-10-16 14:15:02
+// Settings file saved as "-se.Visser.Waves". Date: 2020-11-15 11:56:56
 1
- 
+0-default.orc
 10
 10
 100
@@ -25,26 +25,26 @@
 0
 0
 0
-1
-1
 0
 1
 0
-1
-1
 1
 0
 1
 1
 1
+0
+1
+1
+1
 1
 1
 0
-0
+1
 1002
 1
 0
-59944
+30
 0
 0
 0
@@ -54,11 +54,11 @@
 2
 <no input device>
 32115 QuickTime Music
-1
+0
 0
 1
 1
-0
+1
 0
 1
 2.00
@@ -73,7 +73,6 @@
 50
 39
 10
-12
 10
 10
 10
@@ -111,6 +110,7 @@
 10
 10
 10
+60
 262143
 0
 0

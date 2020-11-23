@@ -1,7 +1,8 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.trial.mohanam". Date: 2020-11-08 18:19:18
+// Grammar file saved as "-gr.trial.mohanam". Date: 2020-11-16 15:27:36
 -or.trial.mohanam
 -ho.trial.mohanam
+-cs.trial.mohanam
 -se.trial.mohanam
 
 // Composition by Kumar S. Subramanian, June 1995
@@ -12,7 +13,7 @@
 // Use a flute sound with a patch which is sensitive to velocity
 
 RND
-gram#1[1] S --> _transpose(-20) I /Ideas=20/ /Notes=32/ /NumR=1/
+gram#1[1] S --> _ins(3) _transpose(-24) I /Ideas=20/ /Notes=32/ /NumR=1/
 
 -------------------------
 RND

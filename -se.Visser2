@@ -1,7 +1,7 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Settings file saved as "-se.Visser2". Date: 2020-10-31 17:06:14
+// Settings file saved as "-se.Visser2". Date: 2020-11-15 05:20:51
 1
- 
+0-default.orc
 20
 10
 100
@@ -44,14 +44,14 @@
 1002
 1
 0
-59944
+10
+0
+0
 0
 0
 0
 1
-0
 1
-2
 <no input device>
 <no output device>
 0
@@ -110,7 +110,7 @@
 10
 10
 10
-10
+60
 0
 0
 0

@@ -1,14 +1,14 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Settings file saved as "-se.trial.mohanam". Date: 2020-11-08 18:16:10
+// Settings file saved as "-se.trial.mohanam". Date: 2020-11-16 15:27:20
 1
- 
+0-default.orc
 50
 10
 100
 1
 1
 1
-5
+6
 28
 1
 0
@@ -110,7 +110,7 @@
 10
 10
 10
-10
+60
 262016
 0
 0
