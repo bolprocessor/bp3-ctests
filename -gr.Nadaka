@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.Nadaka". Date: 2020-11-23 13:43:22
+// Grammar file saved as "-gr.Nadaka". Date: 2020-11-24 04:19:41
 // This grammar was composed by Nadaka (nadaka@auroville.org.in) in July 1997.
 
 // This was a first attempt and there are musical mistakes. It is meant to give an
@@ -8,7 +8,7 @@
 // When Nadaka started designing the grammar he typed notes in abbreviated Indian
 // notation: S, R, G, M... However, there were no octave numbers. So I wrote
 // rules deciding on octaves, using Oc1, Oc2... as variables marking octave
-// changes. This method is rather clumsy and obsolete now that octave numbers are handled.
+// changes. This method is obsolete now that octave numbers are handled.
 // It is recommended to enter notes from a MIDI keyboard and get them typed
 // automatically by BP2, using standard names in the chosen convention.
 // (Bernard)
@@ -17,15 +17,13 @@
 -se.hamsad
 -cs.Nadaka
 
-_mm(360.0) _striated
-
-RND
+ORD
 // Structure
 
 // It is clever to append a number to each variable name indicating the duration
 // of the musical fragment it represents. BP2, of course, ignores these numbers.
 
-gram#1[1] S --> _ins(3) Theme32 Theme32 Bridge32 Theme32 B32 Theme32 V16 V16 V16 V16 Theme32 V16 V16 V16 V16 Theme32 V16 V16 V16 V16 Theme32 V16 V16 V16 V16 Theme16 V16 Theme16 V16 Theme16 V16 Theme16 V16 Theme8 V8 Theme8 V8 Theme8 V8 Theme8 V8 Finale
+gram#1[1] <1> S --> _ins(3) Theme32 Theme32 Bridge32 Theme32 B32 Theme32 V16 V16 V16 V16 Theme32 V16 V16 V16 V16 Theme32 V16 V16 V16 V16 Theme32 V16 V16 V16 V16 Theme16 V16 Theme16 V16 Theme16 V16 Theme16 V16 Theme8 V8 Theme8 V8 Theme8 V8 Theme8 V8 Finale
 gram#1[2] Finale --> Theme30 NiSaNiA95 NiSaNiB24 NiSaNiB24 NiSaNiC34 Morai49 Theme32 G _______
 --------------------
 RND
@@ -43,7 +41,7 @@ gram#2[8] V8 --> Oc4 G __ R S Oc3 N Oc4 S R
 gram#2[9] V8 --> Oc4 G _ _ P G R S R
 gram#2[10] V8 --> Oc4 R S Oc4 N P G R S R
 -------------------
-RND
+ORD
 // Fixed patterns
 
 gram#3[1] NiSaNiA95 --> NiSaNiA18 P _____________ NiSaNiA18 G _____________ NiSaNiA18 R ____________
@@ -93,7 +91,7 @@ gram#4[22] Oc5 Oc4 --> Oc4
 gram#4[23] Oc4 Oc3 --> Oc3
 gram#4[24] Oc5 Oc3 --> Oc3
 --------------------
-RND
+ORD
 // Here we erase the unused variable to get a clean output. BP2 would otherwise
 // ignore a left-over variable except if it finds a glosssary rule that rewrites
 // it.

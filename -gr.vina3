@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.vina3". Date: 2020-11-23 04:35:20
+// Grammar file saved as "-gr.vina3". Date: 2020-12-09 04:45:23
 -se.Vina3
 -cs.Vina
 
@@ -15,7 +15,7 @@
 
 RND
 
-gram#1[1] S --> _ins(1) _scale(just intonation, C4) _volume(127) {Taalam4 Taalam4, Pallavi Pallavi} _volumecont _volume(127) Taalam _volume(0) -
+gram#1[1] S --> _ins(1) _scale(just intonation, C4) _volume(64) {Taalam4 Taalam4, Pallavi Pallavi} _volumecont _volume(64) Taalam _volume(0) -
 
 gram#1[2] Pallavi --> {Maa Yaa Tii . Ta {2, Sva Ruu Pi} . {2, Ni} {1, Nan Nu} . Bro {2, Va Ve}}
 
