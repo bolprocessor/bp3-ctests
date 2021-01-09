@@ -1,0 +1,22 @@
+// Bol Processor BP3 compatible with version BP2.9.8
+// Grammar file saved as "-gr.tryTunings". Date: 2021-01-05 21:28:33
+-se.tryTunings
+-cs.tryTunings
+
+RND
+
+// Asselin page 131
+
+// S --> _scale(Cmaj,0) Cmaj _scale(Cmin,0) Cmin
+// S --> _scale(Dmaj,0) Dmaj _scale(Dmin,0) Dmin
+S --> Temp - Just
+Temp --> Cmaj Fmaj Dmin Gmaj Cmaj
+Just --> _scale(Cmaj,0) Cmaj _scale(Fmaj,0) Fmaj _scale(Dmin,0) Dmin _scale(Gmaj,0) Gmaj _scale(Cmaj,0) Cmaj
+
+Cmaj --> {C3,C4,E4,G4}
+Fmaj --> {F3,C4,F4,A4}
+Dmin --> {D3,D4,F4,A4}
+Gmaj --> {G3,B3,D4,G4}
+
+Dmaj --> {D3,D4,F#4,A4}
+Cmin --> {C3,C4,Eb4,G4}
