@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Settings file saved as "-se.Hungarian_Rhapsody". Date: 2021-02-26 13:31:42
+// Settings file saved as "-se.Hungarian_Rhapsody". Date: 2021-03-27 11:15:55
 1
 0-default.orc
 10
@@ -20,7 +20,7 @@
 0
 0
 0
-0
+1
 1
 0
 0
@@ -51,7 +51,7 @@
 0
 0
 1
-2
+1
 <no input device>
 <no output device>
 0
@@ -118,7 +118,7 @@
 1
 0
 0
-1
+0
 1
 1
 1

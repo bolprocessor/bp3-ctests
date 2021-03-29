@@ -1,7 +1,7 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Settings file saved as "-se.checkPoly". Date: 2021-03-28 07:36:33
+// Settings file saved as "-se.Watch_What_Happens". Date: 2021-03-19 14:10:02
 1
- 
+0-default.orc
 10
 10
 100
@@ -21,7 +21,7 @@
 0
 0
 1
-0
+1
 0
 0
 0
@@ -30,21 +30,21 @@
 0
 0
 0
-0
-0
-0
-0
-1
-1
 1
 1
 1
 0
 1
-1002
+1
+1
+1
 1
 0
-59944
+1
+1000
+1
+0
+60
 1
 0
 0
@@ -53,7 +53,7 @@
 1
 1
 <no input device>
-32115 QuickTime Music
+<no output device>
 0
 0
 1
@@ -61,7 +61,7 @@
 1
 0
 1
-0
+2.00
 60
 440.0000
 1
@@ -113,14 +113,14 @@
 60
 0
 0
-1
+0
 1
 1
 0
 0
 0
 1
-1
+0
 1
 1
 0
