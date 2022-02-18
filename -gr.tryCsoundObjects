@@ -1,5 +1,5 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.tryCsoundObjects". Date: 2020-11-15 15:16:47
+// Grammar file saved as "-gr.tryCsoundObjects". Date: 2022-02-18 14:55:34
 -mi.tryCsoundObjects
 -cs.tryCsoundObjects
 -se.tryCsoundObjects
@@ -14,7 +14,7 @@
 
 ORD
 
-gram#1[1] <1> S --> a
+gram#1[1] <0> S --> a
 
 // Note that this score is more complete than the one contained in sound-object 'a'
 // The reason is that Bol Processor completes missing arguments with default values of the parameters they represent. Here for instance '90' is the default volume. Zeros represent default pitchbend or function table indexes.
@@ -22,7 +22,7 @@ gram#1[1] <1> S --> a
 
 // Here you must look at the graphic display to understand why events of 'a' are 160 ms delayed compared with 'b'
 
-gram#1[2] <0> S --> {a,b} c
+gram#1[2] <1> S --> {a,b} c
 
 gram#1[3] <0> S --> b midiobject
 
@@ -46,7 +46,7 @@ gram#1[8] <0> S --> _pitchrange(200) _pitchcont _pitchbend(100) d _pitchbend(0)
 
 // Here the continous pitchbend correction results in various adjustments of pitchbender parameters on instruments called by a, b, c. The simple notes C4 and D4 call instrument 1 because it is the one assigned to the (default) channel 1. Volume is also adjusted continuously.
 
-gram#1[9] <1> S --> _pitchrange(200) _pitchcont _volumecont _volume(30) _pitchbend(-10) a C4 D4 b c _pitchbend(100) _volume(127)
+gram#1[9] <0> S --> _pitchrange(200) _pitchcont _volumecont _volume(30) _pitchbend(-10) a C4 D4 b c _pitchbend(100) _volume(127)
 
 // Checking an arbitrary parameter "burb" which affects arguments 9, 10 and 11 of instrument 2
 // In sound-object 'e', the 3d event (D3) already sets 'blurb' to start value 10 and to end value 30. These values are added to the ones interpolated on the 'blurb' variation, yielding 72.8 and 130 respectively.

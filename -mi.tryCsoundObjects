@@ -1,9 +1,9 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Object prototypes file saved as "-mi.tryCsoundObjects". Date: 2020-11-09 13:52:13
+// Object prototypes file saved as "-mi.tryCsoundObjects". Date: 2022-02-18 13:27:58
 84
 1
-64
--cs.tryCsoundObjects
+80
+csound_resources/-cs.tryCsoundObjects
 7
 <HTML>a</HTML>
 4
@@ -300,20 +300,20 @@ _endCsoundScore_
 1
 0
 1000
-0.0000
+0
 10000010111000110000
 0
 0.0000
 0.0000
--1
-0
--1
+1
 0
 1
-1
--1
 0
--1
+1
+1000
+1
+0
+1
 0
 0
 100
@@ -325,8 +325,8 @@ _endCsoundScore_
 0
 -1
 0.0000
-255
 -1
+0
 1
 1
 1
@@ -338,13 +338,13 @@ _endCsoundScore_
 0
 0
 -2
-0.0000
 0
 0
+0
 -1
 -1
 -1
-662
+1000000
 65535
 65535
 65535
@@ -352,7 +352,7 @@ _beginCsoundScore_
 <HTML>t 0.000 60.000<BR>i6 0.000 0.500 7.00 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.5 1.5 0.000 0.000 0.000 0.000 ; C3<BR>i6 0.500 0.500 7.02 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.000 4.7 0.000 0.000 0.000 0.000 ; D3<BR>i6 1.000 0.500 7.04 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.25 2.5 0.000 0.000 0.000 0.000 ; E3<BR></HTML>
 _endCsoundScore_
 0
-<HTML>[Comment on this prototype]</HTML>
+<HTML>Comment on this prototype f</HTML>
 <HTML>midiobject</HTML>
 5
 1
@@ -436,5 +436,5 @@ _endCsoundScore_
 512064
 <HTML>This prototype was created capturing  {C3 D3,E3 - G3} and then converting it to Csound. It contains both Csound and MIDI events.</HTML>
 DATA:
-<HTML>These prototypes contain only Csound scores, no MIDI message, except &quot;midiobject&quot;</HTML>
+<HTML>These prototypes contain only Csound scores, no MIDI message, except object &quot;midiobject&quot;</HTML>
 _endSoundObjectFile_

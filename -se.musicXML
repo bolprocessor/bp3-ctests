@@ -1,8 +1,8 @@
 // Bol Processor BP3 compatible with version BP2.9.8
-// Settings file saved as "-se.MusicXML". Date: 2021-02-07 10:55:24
+// Settings file saved as "-se.MusicXML". Date: 2021-02-28 17:10:35
 1
 0-default.orc
-10
+20
 10
 100
 1
@@ -50,7 +50,7 @@
 0
 0
 0
-1
+3
 2
 <no input device>
 <no output device>
