@@ -1,5 +1,4 @@
-// Bol Processor BP3 compatible with version BP2.9.8
-// Script saved as "-sc.trySubscript". Date: 2020-10-29 16:57:10
-Load project -gr.Ames
-Csound score ON
+// Bol Processor BP3
+// Script saved as "-sc.trySubscript". Date: 2024-07-08 19:25:03
+Load grammar -gr.Ames
 Produce items
