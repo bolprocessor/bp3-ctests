@@ -1,6 +1,6 @@
 // Bol Processor BP3 compatible with version BP2.9.8
 // Grammar file saved as "symbols.bpgr". Date: 2020-10-29 16:06:20
--ho.:symbols.bpho
+-ho.:symbols.bpal
 -se.:symbols.bpse
 RND
 _mm(60.0000) _striated
