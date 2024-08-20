@@ -1,0 +1,49 @@
+// Bol Processor BP3
+// Data saved as "-da.tryMPE". Date: 2024-08-20 07:51:36
+-se.tryMPE
+-to.tryMPE
+-al.abc1
+-so.abc1
+
+// These are short technical examples of how MIDI microtonality works
+// The MIDI output device doesn't have to be MPE compatible. It should only be sensitive to pitchbend messages.
+// “Trace microtonality” is checked in the settings so that the details of tunings are made visible
+// For a real test, play "-da.Ombres_errantes" in the "imported_MusicXML" folder
+
+// Try sound objets. The '0' means 'C4' by default
+
+_scale(just intonation,0) a f b b
+
+// Listen to the beats between the "piano" and the equal temperament scales in the first part, then the perfect unison in the second part. "_scale(0,0)" resets the tuning to equal temperament
+
+_tempo(1/2) {_scale(piano,0) C2 C3 C4 C5 C6 C7 _scale(0,0) C2 C3 C4 C5 C6 C7 1/16, 1/16 C2 C3 C4 C5 C6 C7 C2 C3 C4 C5 C6 C7}
+
+// The (so-called) "just intonation" scale. Check cent corrections in the trace
+
+_scale(just intonation,0) C4 C#4 D4 D#4 E4 F4 F#4 G4 G#4 A4 A#4 B4 C5
+
+// The "piano" scale with its stretched octave
+
+_scale(piano,0) C4 C#4 D4 D#4 E4 F4 F#4 G4 G#4 A4 A#4 B4 C5
+
+// This shows the difference between using the "A4" and "C4" block keys
+
+G3 A3 B3 {_scale(just intonation,A4) C4 D4 E4 A4, _scale(just intonation,C4) C5 D5 E5 A5}
+
+// In this one you can hear perfect fifths C4/G4, E4/B4 and F4/C5, and a wolf fifth D4/A4
+
+_scale(just intonation,0) {C4_ D4_ E4_ F4_, G4 A4 B4 C5}
+
+// This ones retune the input notes and send them to the output MIDI device
+
+_script(wait for C3 channel 1) _scale(just intonation,A4) _vel(0) C0
+
+_script(wait for C3 channel 1) _scale(piano,0) _vel(0) C0
+
+// The following are plain pitchbend tests for the output MIDI device
+
+_chan(2) C4 _pitchrange(200) _pitchbend(+100) E4
+
+C4 _pitchbend(16383) C4 _pitchbend(8192) C4 _pitchbend(0) C4
+
+_chan(1) _pitchrange(200) C4 _chan(2) _pitchrange(200) _pitchbend(-100) C4 _chan(1) _pitchbend(0) C4

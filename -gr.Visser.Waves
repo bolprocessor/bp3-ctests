@@ -7,7 +7,7 @@
 ORD
 _mm(60.0000) _striated
 
-gram#1[1] S --> _script(Wait for space) _tempo(0.8) Waves
+gram#1[1] S --> _tempo(0.8) Waves
 
 gram#1[2] Waves --> Frase1 1 Frase1 Frase2 1/2 {_retro _transpose(12) Frase1} {_rotate(2) _transpose(1) Frase2} {_transpose(-13) Frase3} 1/4 {_transpose(-1) Frase1} Frase4 {_retro _transpose(-1) Frase1} {_rotate(3) _transpose(-11) Frase4} 1 Frase1 {_keyxpand(C4,-1) Frase1} 1/2 {2, _keyxpand(B3,-1) _vel(40) M19, M24} 1/2 {2, _keyxpand(A#3,-1) _vel(40) M19, M24} 1/4 Frase5 {_keyxpand(B3,-1) _transpose(-1) Frase5} {_keyxpand(C4,-1) Frase1} 1/2 {2, _keyxpand(B3,-1) _vel(40) M19, M24} 1/2 {2, _keyxpand(A#3,-1) _vel(40) M19, M24} 1 Frase6 1 Frase6 F1 B3 1 {_vel(50) F1 B3} 2 {6, _vel(40) F1}
 
