@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Settings file saved as "-se.tryMPE". Date: 2024-08-26 05:13:25
+// Settings file saved as "-se.tryWait". Date: 2024-08-22 20:58:29
 1
 0-default.orc
 10
@@ -27,7 +27,7 @@
 0
 0
 1
-1
+0
 0
 0
 1
@@ -47,7 +47,7 @@
 60
 1
 0
-0
+3
 0
 0
 1
@@ -63,7 +63,7 @@
 1
 2.00
 60
-440.05
+440.0000
 1
 90
 7

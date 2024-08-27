@@ -1,8 +1,6 @@
 // Bol Processor BP3 compatible with version BP2.9.8
 // Grammar file saved as "-gr.acceleration". Date: 2022-02-18 15:14:04
--se.Visser2
--cs.vina
-// A grammar by Harm Visser (hvisser@pop3.worldaccess.nl)
+// A grammar by Harm Visser
 // October 1997
 
 // This grammar produces a “sawtooth-rhythm”… I have used an
@@ -11,7 +9,9 @@
 // notation; its handy when you want to use a more algorithmic
 // approach. (Harm)
 
-RND
+-se.Visser2
+
+ORD
 
 gram#1[1] S --> _transpose(12) _vel(60) A B _vel(65) C D _vel(70) E F _vel(75) G _vel(77) H _vel(80) I _vel(85) J _vel(87) K _vel(90) L
 gram#1[2] A --> E2 . 
