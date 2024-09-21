@@ -1,10 +1,10 @@
 // Bol Processor BP3
-// Settings file saved as "-se.Ombres_errantes". Date: 2024-09-21 04:33:16
+// Settings file saved as "-se.tryReceive". Date: 2024-09-19 17:03:15
 1
 0-default.orc
-10
-10
 100
+10
+380
 1
 1
 1
@@ -21,13 +21,13 @@
 0
 0
 1
-0
+1
 0
 0
 0
 0
 1
-1
+0
 0
 0
 1
@@ -51,7 +51,7 @@
 0
 0
 1
-1
+2
 <no input device>
 <no output device>
 0
@@ -63,7 +63,7 @@
 1
 2.00
 60
-420
+440
 1
 90
 7

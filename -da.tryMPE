@@ -1,9 +1,16 @@
 // Bol Processor BP3
-// Data saved as "-da.tryMPE". Date: 2024-09-06 13:07:29
+// Data saved as "-da.tryMPE". Date: 2024-09-18 12:40:44
 -se.tryMPE
 -to.tryMPE
 -al.abc1
 -so.abc1
+
+
+b <<chik>> b
+
+b <<chik>>
+
+b <<chik>> b <<chik>>
 
 // These are short technical examples of how microtonality works in both Csound and real-time MIDI
 // Read explanations on https://bolprocessor.org/check-midi-microtonality/
@@ -45,7 +52,7 @@ _scale(meantone_try,69) key#60 key#62 key#65 key#69 key#72
 _scale(meantone_try2,73) key#64 key#66 key#69 key#73 key#76
 
 // 9) These ones retune the input notes and send them to the output MIDI device
-// You can check the corrections in the trace
+// You can check the corrections in the trace (and on PianoTeq)
 // Don't forget to set the input port filter to "treat & pass"
 // Try to change the base keys of these scales. It will transpose your input.
 
@@ -53,7 +60,7 @@ _script(wait for C3 channel 1) _scale(just intonation,A4) _vel(0) C0
 
 // 10) Another one
 
-_vel(0) C0 _scale(piano,0) _script(wait forever)
+_vel(0) C0 _script(wait forever) _scale(piano,0)
 
 // 11) Check the combination of pitchbend and tonal adjustment. "_chan()" is ignored when MIDI microtonality is active, because channels 2-16 are used for tonal adjustments
 
