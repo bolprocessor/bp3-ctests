@@ -1,7 +1,7 @@
 // Bol Processor BP3
-// Settings file saved as "-se.tryMPE". Date: 2024-10-03 13:46:30
+// Settings file saved as "-se.asymmetric". Date: 2024-09-25 17:15:22
 1
-new-vina.orc
+0-default.orc
 10
 10
 380
@@ -10,8 +10,13 @@ new-vina.orc
 1
 1
 28
+1
 0
-20
+0
+0
+1
+0
+0
 0
 0
 0
@@ -20,16 +25,11 @@ new-vina.orc
 0
 0
 0
-1
-1
-0
-0
-0
 0
 1
 0
 0
-1
+0
 1
 1
 1
@@ -45,7 +45,7 @@ new-vina.orc
 1
 0
 60
-1
+0
 0
 0
 0
@@ -63,7 +63,7 @@ new-vina.orc
 1
 2.00
 60
-440
+440.0000
 1
 90
 7
@@ -125,5 +125,5 @@ new-vina.orc
 1
 0
 262143
-1
-1
+0
+0

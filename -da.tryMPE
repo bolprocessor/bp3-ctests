@@ -1,16 +1,9 @@
 // Bol Processor BP3
-// Data saved as "-da.tryMPE". Date: 2024-09-18 12:40:44
+// Data saved as "-da.tryMPE". Date: 2024-10-03 14:31:13
 -se.tryMPE
 -to.tryMPE
 -al.abc1
 -so.abc1
-
-
-b <<chik>> b
-
-b <<chik>>
-
-b <<chik>> b <<chik>>
 
 // These are short technical examples of how microtonality works in both Csound and real-time MIDI
 // Read explanations on https://bolprocessor.org/check-midi-microtonality/
@@ -99,11 +92,17 @@ C4 C4 _chan(3) _pitchrange(200) _pitchbend(+200) C4 _pitchbend(+100) _scale(just
 
 _scale(grama,60) _tempo(4) sa_4 r1_4 r2_4 r3_4 r4_4 g1_4 g2_4 g3_4 g4_4 m1_4 m2_4 m3_4 p3_4 p4_4 d1_4 d2_4 d3_4 d4_4 n1_4 n2_4 n3_4 n4_4 sa_5
 
-// 20) Microtonality also applies to sound objects. The '0' means blockkey = 'C4' by default. Check cent corrections at the end of the trace.
+// 20) The Bohlen-Pierce "just intonation" scale
+// https://en.wikipedia.org/wiki/Bohlen-Pierce_scale
+// We will try transposing notes so that pitchbend corrections are within ± 200 cents. Meanwhile, this works in Csound.
+
+_scale(Bohlen-Pierce,0) C4 Db4 D4 E4 F4 Gb4 G4 H4 Jb4 J4 A4 Bb4 B4 C5
+
+// 21) Microtonality also applies to sound objects. The '0' means blockkey = 'C4' by default. Check cent corrections at the end of the trace.
 
 _scale(just intonation,0) a f b b
 
-// 21-22-23) Examples explained on https://bolprocessor.org/check-midi-microtonality/
+// 22-23-24) Examples explained on https://bolprocessor.org/check-midi-microtonality/
 
 _pitchrange(200) C4 _pitchbend(100) C4 {_pitchbend(-100) C4, _pitchbend(200) C4} C4 _pitchbend(0) C4
 

@@ -1,0 +1,12 @@
+// Bol Processor BP3
+// Data saved as "-da.tryBohlen-Pierce". Date: 2024-10-03 13:57:47
+-se.Bohlen-Pierce
+-to.tryScales
+-cs.Vina
+
+// The Bohlen-Pierce "just intonation" scale
+// https://en.wikipedia.org/wiki/Bohlen-Pierce_scale
+// We will try transposing notes so that pitchbend corrections are within ± 200 cents
+// Meanwhile this works in Csound.
+
+_scale(Bohlen-Pierce,0) C4 Db4 D4 E4 F4 Gb4 G4 H4 Jb4 J4 A4 Bb4 B4 C5
