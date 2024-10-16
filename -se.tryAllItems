@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Settings file saved as "-se.asymmetric1". Date: 2024-10-16 08:07:56
+// Settings file saved as "-se.tryAllItems". Date: 2024-10-14 17:09:28
 1
 0-default.orc
 10
@@ -11,7 +11,7 @@
 1
 28
 0
-20
+500
 0
 1
 0
@@ -27,7 +27,7 @@
 0
 0
 1
-0
+1
 0
 0
 1
@@ -44,8 +44,8 @@
 1000
 1
 0
+60
 1
-0
 0
 0
 0

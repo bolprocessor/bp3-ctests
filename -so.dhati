@@ -1,5 +1,5 @@
-// Bol Processor BP3 compatible with version BP2.9.8
-// Object prototypes file saved as "-mi.dhati". Date: 2022-02-18 17:48:20
+// Bol Processor BP3
+// Object prototypes file saved as "-so.dhati". Date: 2024-06-12 13:06:13
 84
 1
 64
@@ -10,7 +10,7 @@
 1
 0
 1000
-0.0000
+10
 10000010110000111100
 0
 0.0000
@@ -20,23 +20,23 @@
 -1
 0
 1
+1000
 1
--1
 0
--1
+1
 0
-0
-100
 0
 100
 0
 100
+1
 0
-100
+1
+0
 -1
 0.0000
-255
 -1
+0
 1
 1
 1
@@ -48,13 +48,13 @@
 0
 0
 -2
-0.0000
+0
 0
 0
 -1
 -1
 0
-0
+1000000
 65535
 65535
 65535

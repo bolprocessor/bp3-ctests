@@ -1,5 +1,5 @@
-// Bol Processor BP3 compatible with version BP2.9.8
-// Object prototypes file saved as "-mi.abc1". Date: 2024-05-06 16:46:38
+// Bol Processor BP3
+// Object prototypes file saved as "-so.abc1". Date: 2024-08-13 10:24:49
 84
 1
 64
@@ -59,7 +59,7 @@
 65535
 65535
 _beginCsoundScore_
-<HTML>t 0.000 40.000<BR>i1 0.000 0.550 8.00 90.000 90.000 0.000 0.000 0.000 0.000 ; C4<BR>i1 0.536 0.464 8.02 90.000 90.000 0.000 0.000 0.000 0.000 ; D4<BR>e<BR></HTML>
+<HTML>t 0.000 40.000<BR>i1 0.000 0.550 8.00 90.000 90.000 0.000 0.000 0.000 0.000 ; C4<BR>i1 0.536 0.464 8.02 90.000 90.000 0.000 0.000 0.000 0.000 ; D4<BR></HTML>
 _endCsoundScore_
 30
 144
