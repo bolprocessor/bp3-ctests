@@ -1,7 +1,7 @@
-// Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.tryDESTRU". Date: 2020-11-08 17:48:37
+// Bol Processor BP3
+// Grammar saved as "-gr.tryDESTRU". Date: 2024-10-22 13:18:51
 -se.tryDESTRU
--ho.abc
+-al.abc
 
 // This grammar produces various patterns on alphabet …
 

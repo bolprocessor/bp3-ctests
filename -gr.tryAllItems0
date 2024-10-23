@@ -1,10 +1,16 @@
 // Bol Processor BP3
-// Grammar saved as "-gr.tryAllItems0". Date: 2024-10-16 08:18:39
+// Grammar saved as "-gr.tryAllItems0". Date: 2024-10-23 03:32:26
 -se.tryAllItems0
 -al.abc
 
 RND
 
-S --> X X
-X --> a
-X --> b
+gram#1[1] S --> (= X) X (: X)
+gram#1[2] S --> X X
+
+-----
+RND
+// _destru
+
+gram#2[1] X --> a
+gram#2[2] X --> b
