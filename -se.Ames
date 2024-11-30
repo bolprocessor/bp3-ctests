@@ -1,5 +1,5 @@
-// Bol Processor BP3 compatible with version BP2.9.8
-// Settings file saved as "-se.Ames". Date: 2021-04-02 07:43:50
+// Bol Processor BP3
+// Settings file saved as "-se.Ames". Date: 2024-11-26 05:07:38
 1
  
 10
@@ -11,7 +11,7 @@
 1
 28
 0
-0
+20
 0
 0
 0
@@ -27,7 +27,7 @@
 0
 0
 1
-0
+1
 1
 0
 1
@@ -44,14 +44,14 @@
 1000
 1
 0
-59944
+15
 0
 0
 0
 0
 0
-1
 2
+3
 <no input device>
 32115 QuickTime Music
 0
@@ -62,8 +62,8 @@
 0
 1
 0
-48
-220.0000
+60
+440
 1
 90
 7

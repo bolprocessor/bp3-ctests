@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Object prototypes file saved as "-so.abc1". Date: 2024-08-13 10:24:49
+// Object prototypes file saved as "-so.abc1". Date: 2024-11-02 15:20:33
 84
 1
 64
@@ -946,5 +946,5 @@ _endCsoundScore_
 0
 <HTML>This is only for triggering another BP2 with the same grammar</HTML>
 DATA:
-<HTML>These sound-object prototypes are used with -gr.koto</HTML>
+<HTML>These sound-object prototypes are used with -gr.koto3</HTML>
 _endSoundObjectFile_
