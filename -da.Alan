@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-da.Alan". Date: 2024-08-02 10:47:41
+// Data saved as "-da.Alan". Date: 2024-12-22 17:29:04
 -se.da.Alan
 
 _script(wait for E4 channel 1) {2, - F3 C#3 Eb3 A3 G#3 C3 Bb3 F#3 G3 B3 D3 E3}

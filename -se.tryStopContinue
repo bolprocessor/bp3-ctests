@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Visser2'. Date: 2024-12-21 18:13:11",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.tryStopContinue'. Date: 2024-12-22 17:27:28",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -32,13 +32,13 @@
     },
     "Pclock": {
         "name": "Pclock",
-        "value": "3",
+        "value": "1",
         "unit": "Pclock\/Qclock is the period of metronome (seconds)",
         "boolean": "0"
     },
     "Qclock": {
         "name": "Qclock",
-        "value": "4",
+        "value": "1",
         "unit": "",
         "boolean": "0"
     },
@@ -140,7 +140,7 @@
     },
     "GraphicScaleQ": {
         "name": "Graphic scale Q",
-        "value": "2",
+        "value": "1",
         "unit": "",
         "boolean": "0"
     },
@@ -224,7 +224,7 @@
     },
     "ComputeWhilePlay": {
         "name": "Compute while playing",
-        "value": " ",
+        "value": "1",
         "unit": "(not implemented, always true)",
         "boolean": "1"
     },
@@ -362,7 +362,7 @@
     },
     "StopPauseContinue": {
         "name": "Accept Stop\/Pause\/Continue",
-        "value": "1",
+        "value": " ",
         "unit": "(not implemented)",
         "boolean": "1"
     },
