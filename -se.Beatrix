@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Mozart'. Date: 2024-12-24 16:09:09",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Beatrix'. Date: 2024-12-24 16:53:44",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -62,7 +62,7 @@
     },
     "Eb_instead_of_D#": {
         "name": "Eb instead of D#",
-        "value": " ",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
@@ -92,7 +92,7 @@
     },
     "Bb_instead_of_A#": {
         "name": "Bb instead of A#",
-        "value": " ",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
@@ -122,7 +122,7 @@
     },
     "ShowObjectGraph": {
         "name": "Show object graph",
-        "value": " ",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
@@ -140,7 +140,7 @@
     },
     "GraphicScaleQ": {
         "name": "Graphic scale Q",
-        "value": "1",
+        "value": "2",
         "unit": "",
         "boolean": "0"
     },
@@ -176,7 +176,7 @@
     },
     "MaxItemsProduce": {
         "name": "Max items produced",
-        "value": "40",
+        "value": "20",
         "unit": "Except in real-time MIDI (deft 20)",
         "boolean": "0"
     },
@@ -218,7 +218,7 @@
     },
     "MaxConsoleTime": {
         "name": "Max computation time",
-        "value": "30",
+        "value": "60",
         "unit": "seconds. Time for console's work (0 = no limit) Except in Improvize mode",
         "boolean": "0"
     },
@@ -254,25 +254,25 @@
     },
     "ResetWeights": {
         "name": "Reset rule weights",
-        "value": " ",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
     "ResetFlags": {
         "name": "Reset rule flags",
-        "value": " ",
+        "value": "1",
         "unit": "\/this is a flag\/",
         "boolean": "1"
     },
     "ResetControllers": {
         "name": "Reset controllers",
-        "value": " ",
+        "value": "1",
         "unit": "volume, panoramic, pressure, pitchbend, modulation",
         "boolean": "1"
     },
     "EndFadeOut": {
         "name": "Fade-out time",
-        "value": "2",
+        "value": "2.00",
         "unit": "seconds (end of MIDI files and Csound scores)",
         "boolean": "0"
     },
@@ -302,7 +302,7 @@
     },
     "TraceMIDIinteraction": {
         "name": "Trace MIDI interactions",
-        "value": " ",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
@@ -320,7 +320,7 @@
     },
     "A4freq": {
         "name": "A4 frequency (diapason)",
-        "value": "440",
+        "value": "440.0000",
         "unit": "Hz (usually 440)",
         "boolean": "0"
     },
