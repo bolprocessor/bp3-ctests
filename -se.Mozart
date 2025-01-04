@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Mozart'. Date: 2024-12-24 16:09:09",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Mozart'. Date: 2025-01-04 18:55:55",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -50,67 +50,67 @@
     },
     "B#_instead_of_C": {
         "name": "B# instead of C",
-        "value": " ",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
     "Db_instead_of_C#": {
         "name": "Db instead of C#",
-        "value": " ",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
     "Eb_instead_of_D#": {
         "name": "Eb instead of D#",
-        "value": " ",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
     "Fb_instead_of_E": {
         "name": "Fb instead of E",
-        "value": " ",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
     "E#_instead_of_F": {
         "name": "E# instead of F",
-        "value": " ",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
     "Gb_instead_of_F#": {
         "name": "Gb instead of F#",
-        "value": " ",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
     "Ab_instead_of_G#": {
         "name": "Ab instead of G#",
-        "value": " ",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
     "Bb_instead_of_A#": {
         "name": "Bb instead of A#",
-        "value": " ",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
     "Cb_instead_of_B": {
         "name": "Cb instead of B",
-        "value": " ",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
     "TraceMicrotonality": {
         "name": "Trace microtonality",
-        "value": " ",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
     "DisplayItems": {
         "name": "Display final score",
-        "value": " ",
+        "value": "0",
         "unit": "Bol Processor score",
         "boolean": "1"
     },
@@ -122,7 +122,7 @@
     },
     "ShowObjectGraph": {
         "name": "Show object graph",
-        "value": " ",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
@@ -146,7 +146,7 @@
     },
     "DisplayProduce": {
         "name": "Display production",
-        "value": " ",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
@@ -158,13 +158,13 @@
     },
     "SplitVariables": {
         "name": "Split |variables|",
-        "value": " ",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
     "CsoundTrace": {
         "name": "Trace Csound",
-        "value": " ",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
@@ -182,31 +182,31 @@
     },
     "AllItems": {
         "name": "Produce all items",
-        "value": " ",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
     "UseEachSub": {
         "name": "Play each substitution",
-        "value": " ",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
     "StepProduce": {
         "name": "Step-by-step produce",
-        "value": " ",
+        "value": "0",
         "unit": "(not implemented)",
         "boolean": "1"
     },
     "TraceProduce": {
         "name": "Trace production",
-        "value": " ",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
     "PlanProduce": {
         "name": "Choose candidate rule",
-        "value": " ",
+        "value": "0",
         "unit": "(not implemented)",
         "boolean": "1"
     },
@@ -224,7 +224,7 @@
     },
     "ComputeWhilePlay": {
         "name": "Compute while playing",
-        "value": " ",
+        "value": "0",
         "unit": "true by default",
         "boolean": "1"
     },
@@ -254,19 +254,19 @@
     },
     "ResetWeights": {
         "name": "Reset rule weights",
-        "value": " ",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
     "ResetFlags": {
         "name": "Reset rule flags",
-        "value": " ",
+        "value": "0",
         "unit": "\/this is a flag\/",
         "boolean": "1"
     },
     "ResetControllers": {
         "name": "Reset controllers",
-        "value": " ",
+        "value": "0",
         "unit": "volume, panoramic, pressure, pitchbend, modulation",
         "boolean": "1"
     },
@@ -278,31 +278,31 @@
     },
     "NoConstraint": {
         "name": "Ignore constraints in time setting",
-        "value": " ",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
     "DisplayTimeSet": {
         "name": "Time setting display",
-        "value": " ",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
     "TraceTimeSet": {
         "name": "Time setting trace",
-        "value": " ",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
     "StepTimeSet": {
         "name": "Time setting step",
-        "value": " ",
+        "value": "0",
         "unit": "(not implemented)",
         "boolean": "1"
     },
     "TraceMIDIinteraction": {
         "name": "Trace MIDI interactions",
-        "value": " ",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
@@ -371,5 +371,17 @@
         "value": "60",
         "unit": "(0..127) e.g. 60 for 'C4' or 69 for 'A4'",
         "boolean": "0"
+    },
+    "MinPeriod": {
+        "name": "Minimum period",
+        "value": "20",
+        "unit": "ms (deft 200, at least 2 times the Quantization)<br>This is used for positioning sound-objects",
+        "boolean": "0"
+    },
+    "TraceCaptureAnalysis": {
+        "name": "Trace this analysis",
+        "value": "1",
+        "unit": "",
+        "boolean": "1"
     }
 }
