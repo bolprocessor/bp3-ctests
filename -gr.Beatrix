@@ -1,10 +1,8 @@
 // Bol Processor BP3
-// Grammar saved as "-gr.Beatrix". Date: 2024-08-30 15:32:48
+// Grammar saved as "-gr.Beatrix". Date: 2025-01-17 08:08:10
 -se.Beatrix
 
 ORD
-
-// S --> _script(wait for do2 channel 1) do3 re3 mi3
 
 gram#1[1] S --> _script(Wait for do#3 channel 2) _vel(80) A B _vel(0) do#2
 gram#1[2] A --> A1 A2 A3 A4 A5 A6 A7 A8 A1 A2 A3 A4 A5 A6 A7 A'8

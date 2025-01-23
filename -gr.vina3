@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Grammar saved as "-gr.vina3". Date: 2024-07-24 19:18:32
+// Grammar saved as "-gr.vina3". Date: 2025-01-17 07:26:35
 -to.Vina
 -se.Vina3
 -cs.Vina
@@ -35,7 +35,7 @@ gram#1[10] Ni --> G3
 gram#1[11] Nan --> G3
 gram#1[12] Nu --> {1, StartPull Pull1 G3 Pull0 _ Pull1 - StopPull}
 
-gram#1[13] Bro --> {1, StartSlide F3 Slide2 _ _ _ StopSlide} /slideVa/
+// gram#1[13] Bro --> {1, StartSlide F3 Slide2 _ _ _ StopSlide} /slideVa/
 gram#1[14] Bro --> {1, GamakaHold F3 Pull2} /pullVa/
 gram#1[15] /slideVa/ Va --> StartSlide G3 SlideBack2 StopSlide
 gram#1[16] /pullVa/ Va --> StartPull Pull2 F3 Pull0 StopPull

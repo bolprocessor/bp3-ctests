@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.checkNegativeContext'. Date: 2025-01-18 09:04:15",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.checkContControls'. Date: 2025-01-19 19:11:51",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -38,7 +38,7 @@
     },
     "Qclock": {
         "name": "Qclock",
-        "value": "6",
+        "value": "1",
         "unit": "",
         "boolean": "0"
     },
@@ -116,13 +116,13 @@
     },
     "ShowGraphic": {
         "name": "Show graphics",
-        "value": "0",
+        "value": "1",
         "unit": "Object graph or Pianoroll, see below",
         "boolean": "1"
     },
     "ShowObjectGraph": {
         "name": "Show object graph",
-        "value": "0",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
@@ -134,7 +134,7 @@
     },
     "ShowPianoRoll": {
         "name": "Show pianoroll",
-        "value": "0",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
@@ -146,13 +146,13 @@
     },
     "GraphicScaleQ": {
         "name": "Graphic scale Q",
-        "value": "1",
+        "value": "2",
         "unit": "",
         "boolean": "0"
     },
     "DisplayProduce": {
         "name": "Display production",
-        "value": "1",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
@@ -218,7 +218,7 @@
     },
     "DeftBufferSize": {
         "name": "Default buffer size",
-        "value": "2000",
+        "value": "1000",
         "unit": "symbols",
         "boolean": "0"
     },
@@ -242,13 +242,13 @@
     },
     "AllowRandomize": {
         "name": "Allow randomize",
-        "value": "0",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
     "Seed": {
         "name": "Seed for randomization",
-        "value": "2",
+        "value": "0",
         "unit": "Positive integer, or 0 if cards need to be shuffled",
         "boolean": "0"
     },
@@ -260,7 +260,7 @@
     },
     "ResetWeights": {
         "name": "Reset rule weights",
-        "value": "0",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
@@ -272,13 +272,13 @@
     },
     "ResetControllers": {
         "name": "Reset controllers",
-        "value": "0",
+        "value": "1",
         "unit": "volume, panoramic, pressure, pitchbend, modulation",
         "boolean": "1"
     },
     "EndFadeOut": {
         "name": "Fade-out time",
-        "value": "9",
+        "value": "0",
         "unit": "seconds (end of MIDI files and Csound scores)",
         "boolean": "0"
     },
@@ -342,6 +342,12 @@
         "unit": "Keep checked unless you know why!<br>(Read https:\/\/bolprocessor.org\/control-noteon-noteoff\/)",
         "boolean": "1"
     },
+    "DeftVelocity": {
+        "name": "Default velocity",
+        "value": "64",
+        "unit": "(1..127)",
+        "boolean": "0"
+    },
     "DeftVolume": {
         "name": "Default volume",
         "value": "64",
@@ -352,12 +358,6 @@
         "name": "Volume controller",
         "value": "7",
         "unit": "(0..127) usually 7",
-        "boolean": "0"
-    },
-    "DeftVelocity": {
-        "name": "Default velocity",
-        "value": "64",
-        "unit": "(1..127)",
         "boolean": "0"
     },
     "DeftPanoramic": {
@@ -387,7 +387,7 @@
     "MinPeriod": {
         "name": "Minimum period",
         "value": "200",
-        "unit": "ms (deft 200, at least 2 times the Quantization)<br>This is used for positioning sound-objects",
+        "unit": "ms (deft 200, at least 2 times the Quantization)<br>This is used for positioning sound-objects<br>(Read https:\/\/bolprocessor.org\/control-noteon-noteoff\/)",
         "boolean": "0"
     },
     "TraceCaptureAnalysis": {

@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Alan'. Date: 2025-01-04 18:48:52",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Alan'. Date: 2025-01-17 08:07:46",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -14,7 +14,7 @@
     },
     "Time_res": {
         "name": "Time resolution",
-        "value": "10",
+        "value": "1",
         "unit": "ms (deft 10)",
         "boolean": "0"
     },
@@ -126,6 +126,12 @@
         "unit": "",
         "boolean": "1"
     },
+    "ShowAllObjects": {
+        "name": "Show all objects",
+        "value": "0",
+        "unit": "including inaudible ones (for geeks)",
+        "boolean": "1"
+    },
     "ShowPianoRoll": {
         "name": "Show pianoroll",
         "value": "1",
@@ -224,13 +230,13 @@
     },
     "ComputeWhilePlay": {
         "name": "Compute while playing",
-        "value": "0",
+        "value": "1",
         "unit": "true by default",
         "boolean": "1"
     },
     "AdvanceTime": {
         "name": "Max advance time",
-        "value": "40",
+        "value": "30",
         "unit": "seconds (if not compute while playing)",
         "boolean": "0"
     },
@@ -306,6 +312,12 @@
         "unit": "",
         "boolean": "1"
     },
+    "TraceNoteOn": {
+        "name": "Trace NoteOn\/NoteOff",
+        "value": "0",
+        "unit": "(only for short items)",
+        "boolean": "1"
+    },
     "SamplingRate": {
         "name": "Sampling rate",
         "value": "50",
@@ -362,7 +374,7 @@
     },
     "StopPauseContinue": {
         "name": "Respond to  Stop\/Continue",
-        "value": "1",
+        "value": "0",
         "unit": "(if a MIDI input is active)",
         "boolean": "1"
     },

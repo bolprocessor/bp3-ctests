@@ -1,20 +1,20 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Vina3'. Date: 2025-01-04 18:50:13",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Vina3'. Date: 2025-01-17 07:27:46",
     "Quantization": {
         "name": "Quantization",
-        "value": "10",
+        "value": "0",
         "unit": "ms (deft 10)",
         "boolean": "0"
     },
     "Quantize": {
         "name": "Quantize",
-        "value": "1",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
     "Time_res": {
         "name": "Time resolution",
-        "value": "10",
+        "value": "1",
         "unit": "ms (deft 10)",
         "boolean": "0"
     },
@@ -124,6 +124,12 @@
         "name": "Show object graph",
         "value": "1",
         "unit": "",
+        "boolean": "1"
+    },
+    "ShowAllObjects": {
+        "name": "Show all objects",
+        "value": "0",
+        "unit": "including inaudible ones (for geeks)",
         "boolean": "1"
     },
     "ShowPianoRoll": {
@@ -304,6 +310,12 @@
         "name": "Trace MIDI interactions",
         "value": "0",
         "unit": "",
+        "boolean": "1"
+    },
+    "TraceNoteOn": {
+        "name": "Trace NoteOn\/NoteOff",
+        "value": "0",
+        "unit": "(only for short items)",
         "boolean": "1"
     },
     "SamplingRate": {
