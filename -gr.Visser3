@@ -1,15 +1,15 @@
-// Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.Visser3". Date: 2022-02-18 17:08:07
+// Bol Processor BP3
+// Grammar saved as "-gr.Visser3". Date: 2025-02-09 09:46:45
 -se.Visser3
 
 // By Harm Visser (March 1998)
 
 // This grammar is interesting because it produces a very complex time structure even though the musical 'complexity' may not be striking. This is due to lower-common-multiple calculations.
-// With a time accuracy set to 10ms, the piece needed to be quantized at a compression rate of more than 2,600,000... This forced us to rewrite arithmetic routines supporting numbers overflowing 'unsigned long integers'.
-// BP2 wants to switch on quantization. That's ok...
+// The grammar contains a single note: C3. The tonal structure is constructed by transpositions!
+
+_mm(120)
 
 ORD
-_mm(120.0000) _striated
 gram#1[1] S --> M1 M2 M3 M4 M5 M6 M7 M8 M9 M10 M11
 
 // words
@@ -27,6 +27,7 @@ gram#1[12] M11 --> K
 -----------------------
 ORD
 // phonemes
+// This is the only note!
 gram#2[1] A --> C3
 gram#2[2] B --> {Tr11 A}
 gram#2[3] C --> {Tr5 {A,B}}

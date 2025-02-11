@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Beethoven-fugue-b-flat-major'. Date: 2025-01-22 17:44:30",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Beethoven-fugue-b-flat-major'. Date: 2025-02-09 11:27:21",
     "Quantization": {
         "name": "Quantization",
         "value": "20",
@@ -14,7 +14,7 @@
     },
     "Time_res": {
         "name": "Time resolution",
-        "value": "10",
+        "value": "1",
         "unit": "ms (deft 10)",
         "boolean": "0"
     },
