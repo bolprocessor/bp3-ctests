@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.checkNegativeContext'. Date: 2025-01-18 09:04:15",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.checkNegativeContext'. Date: 2025-03-15 10:12:45",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -20,7 +20,7 @@
     },
     "MIDIsyncDelay": {
         "name": "Sync delay",
-        "value": "380",
+        "value": "100",
         "unit": "ms after wait (deft 380)",
         "boolean": "0"
     },
@@ -38,13 +38,13 @@
     },
     "Qclock": {
         "name": "Qclock",
-        "value": "6",
+        "value": "1",
         "unit": "",
         "boolean": "0"
     },
     "NoteConvention": {
         "name": "Note convention",
-        "value": "0",
+        "value": "1",
         "unit": "0 = English: C, D, E...<br \/>1 = Italian\/Spanish\/French: do, re, mi...<br \/>2 = Indian: sa, re, ga...<br \/>3 = Keys<br \/>4 = Only from tonal scales(s)",
         "boolean": "0"
     },
@@ -158,7 +158,7 @@
     },
     "SplitTimeObjects": {
         "name": "Split terminal symbols",
-        "value": "1",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
@@ -194,7 +194,7 @@
     },
     "UseEachSub": {
         "name": "Play each substitution",
-        "value": "0",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
@@ -206,7 +206,7 @@
     },
     "TraceProduce": {
         "name": "Trace production",
-        "value": "0",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
@@ -218,19 +218,19 @@
     },
     "DeftBufferSize": {
         "name": "Default buffer size",
-        "value": "2000",
+        "value": "1000",
         "unit": "symbols",
         "boolean": "0"
     },
     "MaxConsoleTime": {
         "name": "Max computation time",
-        "value": "60",
+        "value": "10",
         "unit": "seconds. Time for console's work (0 = no limit) Except in Improvize mode",
         "boolean": "0"
     },
     "ComputeWhilePlay": {
         "name": "Compute while playing",
-        "value": "1",
+        "value": "0",
         "unit": "true by default",
         "boolean": "1"
     },
@@ -254,7 +254,7 @@
     },
     "ResetNotes": {
         "name": "Reset Notes",
-        "value": "1",
+        "value": "0",
         "unit": "Send AllNotesOff, pedals off and reset pitchbend at the end of item",
         "boolean": "1"
     },
@@ -320,7 +320,7 @@
     },
     "SamplingRate": {
         "name": "Sampling rate",
-        "value": "50",
+        "value": "10",
         "unit": "samples per second, usually 50",
         "boolean": "0"
     },
@@ -332,7 +332,7 @@
     },
     "A4freq": {
         "name": "A4 frequency (diapason)",
-        "value": "440",
+        "value": "435",
         "unit": "Hz (usually 440)",
         "boolean": "0"
     },
@@ -342,9 +342,15 @@
         "unit": "Keep checked unless you know why!<br>(Read https:\/\/bolprocessor.org\/control-noteon-noteoff\/)",
         "boolean": "1"
     },
+    "DeftVelocity": {
+        "name": "Default velocity",
+        "value": "64",
+        "unit": "(1..127)",
+        "boolean": "0"
+    },
     "DeftVolume": {
         "name": "Default volume",
-        "value": "64",
+        "value": "127",
         "unit": "(1..127)",
         "boolean": "0"
     },
@@ -352,12 +358,6 @@
         "name": "Volume controller",
         "value": "7",
         "unit": "(0..127) usually 7",
-        "boolean": "0"
-    },
-    "DeftVelocity": {
-        "name": "Default velocity",
-        "value": "64",
-        "unit": "(1..127)",
         "boolean": "0"
     },
     "DeftPanoramic": {
@@ -387,12 +387,30 @@
     "MinPeriod": {
         "name": "Minimum period",
         "value": "200",
-        "unit": "ms (deft 200, at least 2 times the Quantization)<br>This is used for positioning sound-objects",
+        "unit": "ms (deft 200, at least 2 times the Quantization)<br>This is used for positioning sound-objects<br>(Read https:\/\/bolprocessor.org\/control-noteon-noteoff\/)",
         "boolean": "0"
     },
     "TraceCaptureAnalysis": {
         "name": "Trace this analysis",
         "value": "1",
+        "unit": "",
+        "boolean": "1"
+    },
+    "LiveGrammar": {
+        "name": "Follow grammar(s)",
+        "value": "0",
+        "unit": "(Read https:\/\/bolprocessor.org\/live-coding\/)",
+        "boolean": "1"
+    },
+    "LiveSettings": {
+        "name": "Follow settings",
+        "value": "0",
+        "unit": "",
+        "boolean": "1"
+    },
+    "TraceLive": {
+        "name": "Trace changes",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     }

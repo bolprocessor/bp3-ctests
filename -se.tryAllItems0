@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.tryAllItems0'. Date: 2025-01-04 18:49:54",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.tryAllItems0'. Date: 2025-03-15 14:07:04",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -116,19 +116,25 @@
     },
     "ShowGraphic": {
         "name": "Show graphics",
-        "value": "1",
+        "value": "0",
         "unit": "Object graph or Pianoroll, see below",
         "boolean": "1"
     },
     "ShowObjectGraph": {
         "name": "Show object graph",
-        "value": "1",
+        "value": "0",
         "unit": "",
+        "boolean": "1"
+    },
+    "ShowAllObjects": {
+        "name": "Show all objects",
+        "value": "0",
+        "unit": "including inaudible ones (for geeks)",
         "boolean": "1"
     },
     "ShowPianoRoll": {
         "name": "Show pianoroll",
-        "value": "1",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
@@ -306,6 +312,12 @@
         "unit": "",
         "boolean": "1"
     },
+    "TraceNoteOn": {
+        "name": "Trace NoteOn\/NoteOff",
+        "value": "0",
+        "unit": "(only for short items)",
+        "boolean": "1"
+    },
     "SamplingRate": {
         "name": "Sampling rate",
         "value": "50",
@@ -327,8 +339,14 @@
     "StrikeAgainDefault": {
         "name": "Strike again NoteOn's",
         "value": "1",
-        "unit": "Keep checked unless you know why!<br>(Read https:\/\/bp3.tech\/csound-checkup\/)",
+        "unit": "Keep checked unless you know why!<br>(Read https:\/\/bolprocessor.org\/control-noteon-noteoff\/)",
         "boolean": "1"
+    },
+    "DeftVelocity": {
+        "name": "Default velocity",
+        "value": "64",
+        "unit": "(1..127)",
+        "boolean": "0"
     },
     "DeftVolume": {
         "name": "Default volume",
@@ -340,12 +358,6 @@
         "name": "Volume controller",
         "value": "7",
         "unit": "(0..127) usually 7",
-        "boolean": "0"
-    },
-    "DeftVelocity": {
-        "name": "Default velocity",
-        "value": "64",
-        "unit": "(1..127)",
         "boolean": "0"
     },
     "DeftPanoramic": {
@@ -375,12 +387,30 @@
     "MinPeriod": {
         "name": "Minimum period",
         "value": "200",
-        "unit": "ms (deft 200, at least 2 times the Quantization)<br>This is used for positioning sound-objects",
+        "unit": "ms (deft 200, at least 2 times the Quantization)<br>This is used for positioning sound-objects<br>(Read https:\/\/bolprocessor.org\/control-noteon-noteoff\/)",
         "boolean": "0"
     },
     "TraceCaptureAnalysis": {
         "name": "Trace this analysis",
         "value": "1",
+        "unit": "",
+        "boolean": "1"
+    },
+    "LiveGrammar": {
+        "name": "Follow grammar(s)",
+        "value": "0",
+        "unit": "(Read https:\/\/bolprocessor.org\/live-coding\/)",
+        "boolean": "1"
+    },
+    "LiveSettings": {
+        "name": "Follow settings",
+        "value": "0",
+        "unit": "",
+        "boolean": "1"
+    },
+    "TraceLive": {
+        "name": "Trace changes",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     }

@@ -1,8 +1,8 @@
 // Bol Processor BP3
-// Grammar saved as "-gr.checkNegativeContext". Date: 2025-03-15 10:12:04
+// Grammar saved as "-gr.checkNegativeContext". Date: 2025-03-15 10:09:01
 -se.checkNegativeContext
 
-// Check the BP data file output and read the Trace file
+// Check the BP data file output
 
 RND
 gram#1[1] S --> A A2 A3 A1 A A /times=5/
