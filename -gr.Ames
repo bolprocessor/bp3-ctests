@@ -1,5 +1,5 @@
-// Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.Ames". Date: 2022-02-18 15:12:36
+// Bol Processor BP3
+// Grammar saved as "-gr.Ames". Date: 2025-12-19 11:59:10
 -se.Ames
 
 // A grammar illustrating the construction of a rather
@@ -10,7 +10,7 @@ _mm(60.0000) _striated
 
 gram#1[1] S --> {PA, _rest PB}
 
-gram#1[2] PA --> {2,- PA1,_rest PA2} {4,PA3}
+gram#1[2] PA --> {2,- PA1, 2 PA2} {4,PA3}
 gram#1[3] PA1 --> {2,F#3}
 gram#1[4] PA2 --> {1,F5,A5}
 gram#1[5] PA3 --> PA31 PA32
