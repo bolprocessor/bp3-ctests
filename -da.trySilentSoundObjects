@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-da.trySilentSoundObjects". Date: 2026-03-21 17:52:33
+// Data saved as "-da.trySilentSoundObjects". Date: 2026-03-23 05:44:42
 -se.trySilentSoundObjects
 -al.abc
 -so.abc
@@ -20,4 +20,4 @@ a <<Truc>> z a
 
 D4 z& a &z
 
-Truc& a &Truc // doesn't work
+Truc& a &Truc
