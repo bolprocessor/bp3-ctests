@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-da.checkTies". Date: 2026-03-23 06:47:39
+// Data saved as "-da.checkTies". Date: 2026-03-23 06:54:36
 -se.checkTies
 -to.Vina
 -cs.Vina
@@ -8,9 +8,6 @@
 // A set of examples to understand (and verify) the concatenation of tied notes (or sound-objects)
 // Some examples show an incorrect use
 // More info: https://bolprocessor.org/tied-notes/
-
-
-
 
 C4& • D4 • &C4
 
