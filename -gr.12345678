@@ -1,11 +1,9 @@
 // Bol Processor BP3
-// Grammar saved as "-gr.12345678". Date: 2025-03-15 09:42:42
+// Grammar saved as "-gr.12345678". Date: 2026-04-02 19:03:44
 -se.EkDoTin
 -al.EkDoTin
 
 // This project demonstrates performance controls on sound-objects. The structure is a well-known Kathak tihai.
-
-INIT: MIDI program 110
 
 ORD
 _mm(88.0000) _striated

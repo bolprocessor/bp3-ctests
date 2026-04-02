@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Vina3'. Date: 2025-01-17 07:27:46",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Vina3'. Date: 2026-04-02 19:26:13",
     "Quantization": {
         "name": "Quantization",
         "value": "0",
@@ -114,6 +114,12 @@
         "unit": "Bol Processor score",
         "boolean": "1"
     },
+    "MaxItemsGraphic": {
+        "name": "Max items displayed",
+        "value": "10",
+        "unit": "in graphics",
+        "boolean": "0"
+    },
     "ShowGraphic": {
         "name": "Show graphics",
         "value": "1",
@@ -180,17 +186,17 @@
         "unit": "",
         "boolean": "1"
     },
-    "MaxItemsProduce": {
-        "name": "Max items produced",
-        "value": "20",
-        "unit": "Except in real-time MIDI (deft 20)",
-        "boolean": "0"
-    },
     "AllItems": {
         "name": "Produce all items",
         "value": "0",
         "unit": "",
         "boolean": "1"
+    },
+    "MaxItemsProduce": {
+        "name": "Max items produced",
+        "value": "20",
+        "unit": "Except in real-time MIDI (deft 20)",
+        "boolean": "0"
     },
     "UseEachSub": {
         "name": "Play each substitution",
@@ -255,7 +261,7 @@
     "ResetNotes": {
         "name": "Reset Notes",
         "value": "0",
-        "unit": "Send AllNotesOff, pedals off and reset pitchbend at the end of item",
+        "unit": "Send AllNotesOff at the end of item",
         "boolean": "1"
     },
     "ResetWeights": {
@@ -273,7 +279,7 @@
     "ResetControllers": {
         "name": "Reset controllers",
         "value": "1",
-        "unit": "volume, panoramic, pressure, pitchbend, modulation",
+        "unit": "volume, panoramic, pressure, pitchbend, modulation, pedal",
         "boolean": "1"
     },
     "EndFadeOut": {
@@ -336,11 +342,23 @@
         "unit": "Hz (usually 440)",
         "boolean": "0"
     },
+    "PedalReleaseDefault": {
+        "name": "Pedals 64 to 69",
+        "value": "1",
+        "unit": "Release pedal before pressing it again (set by default)",
+        "boolean": "1"
+    },
     "StrikeAgainDefault": {
         "name": "Strike again NoteOn's",
         "value": "1",
-        "unit": "Keep checked unless you know why!<br>(Read https:\/\/bp3.tech\/csound-checkup\/)",
+        "unit": "Keep checked unless you know why!<br>(Read https:\/\/bolprocessor.org\/control-noteon-noteoff\/)",
         "boolean": "1"
+    },
+    "DeftVelocity": {
+        "name": "Default velocity",
+        "value": "64",
+        "unit": "(1..127)",
+        "boolean": "0"
     },
     "DeftVolume": {
         "name": "Default volume",
@@ -352,12 +370,6 @@
         "name": "Volume controller",
         "value": "7",
         "unit": "(0..127) usually 7",
-        "boolean": "0"
-    },
-    "DeftVelocity": {
-        "name": "Default velocity",
-        "value": "64",
-        "unit": "(1..127)",
         "boolean": "0"
     },
     "DeftPanoramic": {
@@ -387,7 +399,7 @@
     "MinPeriod": {
         "name": "Minimum period",
         "value": "200",
-        "unit": "ms (deft 200, at least 2 times the Quantization)<br>This is used for positioning sound-objects",
+        "unit": "ms (deft 200, at least 2 times the Quantization)<br>This is used for positioning sound-objects<br>(Read https:\/\/bolprocessor.org\/control-noteon-noteoff\/)",
         "boolean": "0"
     },
     "TraceCaptureAnalysis": {
@@ -395,5 +407,35 @@
         "value": "1",
         "unit": "",
         "boolean": "1"
+    },
+    "LiveGrammar": {
+        "name": "Follow grammar(s)",
+        "value": "0",
+        "unit": "(Read https:\/\/bolprocessor.org\/live-coding\/)",
+        "boolean": "1"
+    },
+    "SyncChange": {
+        "name": "Synchronised change",
+        "value": "0",
+        "unit": "",
+        "boolean": "1"
+    },
+    "LiveSettings": {
+        "name": "Follow settings",
+        "value": "0",
+        "unit": "",
+        "boolean": "1"
+    },
+    "TraceLive": {
+        "name": "Trace changes",
+        "value": "0",
+        "unit": "",
+        "boolean": "1"
+    },
+    "TraceMinimise": {
+        "name": "Trace item #",
+        "value": "0",
+        "unit": "(0 for none)",
+        "boolean": "0"
     }
 }

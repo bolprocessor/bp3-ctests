@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.cloches'. Date: 2026-03-26 20:48:02",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.cloches'. Date: 2026-03-31 17:10:51",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -146,7 +146,7 @@
     },
     "GraphicScaleQ": {
         "name": "Graphic scale Q",
-        "value": "1",
+        "value": "3",
         "unit": "",
         "boolean": "0"
     },
@@ -180,17 +180,17 @@
         "unit": "",
         "boolean": "1"
     },
-    "MaxItemsProduce": {
-        "name": "Max items produced",
-        "value": "20",
-        "unit": "Except in real-time MIDI (deft 20)",
-        "boolean": "0"
-    },
     "AllItems": {
         "name": "Produce all items",
         "value": "0",
         "unit": "",
         "boolean": "1"
+    },
+    "MaxItemsProduce": {
+        "name": "Max items produced",
+        "value": "20",
+        "unit": "Except in real-time MIDI (deft 20)",
+        "boolean": "0"
     },
     "UseEachSub": {
         "name": "Play each substitution",

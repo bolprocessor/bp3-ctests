@@ -1,0 +1,26 @@
+// Bol Processor BP3
+// Grammar saved as "-gr.tryDerivationModes". Date: 2026-03-31 15:20:50
+-se.tryDerivationModes
+-al.abc
+
+// Try the following grammar to produce a “BP data file” output for each mode of derivation: ORD, RND, etc.
+// When not specified, the mode is RND
+
+// ORD
+// RND
+// LIN
+// SUB
+// SUB1
+// POSLONG
+
+gram#1[1] S --> A B B A B B A
+gram#1[2] A B --> a B
+gram#1[3] B A --> B b
+gram#1[4] B B A --> e B A
+gram#1[5] B B --> f B
+
+---
+ORD
+gram#2[1] f B --> f f
+gram#2[2] e B --> e e
+gram#2[3] A e --> c e

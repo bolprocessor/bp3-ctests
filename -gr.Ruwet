@@ -1,6 +1,6 @@
-// Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.Ruwet". Date: 2020-10-31 17:03:39
--ho.Ruwet
+// Bol Processor BP3
+// Grammar saved as "-gr.Ruwet". Date: 2026-04-02 19:39:38
+-al.Ruwet
 -se.Ruwet
 
 // This model of theme-and-variation was inspired by an analysis by musicologist Nicolas Ruwet. It was done by a student of mine using a very old version of BP2. I have "recycled" it recently. Suggestions are welcome.
