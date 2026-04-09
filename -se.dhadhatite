@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.dhadhatite'. Date: 2026-03-24 10:16:32",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.dhadhatite'. Date: 2026-04-09 14:31:02",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -110,9 +110,15 @@
     },
     "DisplayItems": {
         "name": "Display final score",
-        "value": "1",
+        "value": "0",
         "unit": "Bol Processor score",
         "boolean": "1"
+    },
+    "MaxItemsGraphic": {
+        "name": "Max items displayed",
+        "value": "10",
+        "unit": "in graphics",
+        "boolean": "0"
     },
     "ShowGraphic": {
         "name": "Show graphics",
@@ -180,17 +186,17 @@
         "unit": "",
         "boolean": "1"
     },
-    "MaxItemsProduce": {
-        "name": "Max items produced",
-        "value": "10",
-        "unit": "Except in real-time MIDI (deft 20)",
-        "boolean": "0"
-    },
     "AllItems": {
         "name": "Produce all items",
         "value": "0",
         "unit": "",
         "boolean": "1"
+    },
+    "MaxItemsProduce": {
+        "name": "Max items produced",
+        "value": "8",
+        "unit": "Except in real-time MIDI (deft 20)",
+        "boolean": "0"
     },
     "UseEachSub": {
         "name": "Play each substitution",

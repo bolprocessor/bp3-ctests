@@ -1,10 +1,11 @@
 // Bol Processor BP3
-// Grammar saved as "-gr.tryDerivationModes". Date: 2026-03-31 15:20:50
+// Grammar saved as "-gr.tryDerivationModes". Date: 2026-04-07 13:48:22
 -se.tryDerivationModes
 -al.abc
 
 // Try the following grammar to produce a “BP data file” output for each mode of derivation: ORD, RND, etc.
 // When not specified, the mode is RND
+// Read page https://bolprocessor.org/derivation-modes/
 
 // ORD
 // RND

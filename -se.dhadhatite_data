@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.dhin--'. Date: 2026-04-07 14:25:59",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.dhadhatite_data'. Date: 2026-04-09 14:33:23",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -38,13 +38,13 @@
     },
     "Qclock": {
         "name": "Qclock",
-        "value": "6",
+        "value": "1",
         "unit": "",
         "boolean": "0"
     },
     "NoteConvention": {
         "name": "Note convention",
-        "value": "2",
+        "value": "0",
         "unit": "0 = English: C, D, E...<br \/>1 = Italian\/Spanish\/French: do, re, mi...<br \/>2 = Indian: sa, re, ga...<br \/>3 = Keys<br \/>4 = Only from tonal scales(s)",
         "boolean": "0"
     },
@@ -62,7 +62,7 @@
     },
     "Eb_instead_of_D#": {
         "name": "Eb instead of D#",
-        "value": "0",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
@@ -92,7 +92,7 @@
     },
     "Bb_instead_of_A#": {
         "name": "Bb instead of A#",
-        "value": "0",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
@@ -110,7 +110,7 @@
     },
     "DisplayItems": {
         "name": "Display final score",
-        "value": "1",
+        "value": "0",
         "unit": "Bol Processor score",
         "boolean": "1"
     },
@@ -122,13 +122,13 @@
     },
     "ShowGraphic": {
         "name": "Show graphics",
-        "value": "0",
+        "value": "1",
         "unit": "Object graph or Pianoroll, see below",
         "boolean": "1"
     },
     "ShowObjectGraph": {
         "name": "Show object graph",
-        "value": "0",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
@@ -140,7 +140,7 @@
     },
     "ShowPianoRoll": {
         "name": "Show pianoroll",
-        "value": "0",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
@@ -158,7 +158,7 @@
     },
     "DisplayProduce": {
         "name": "Display production",
-        "value": "1",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
@@ -182,7 +182,7 @@
     },
     "Improvize": {
         "name": "Non-stop improvize",
-        "value": "1",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
@@ -194,7 +194,7 @@
     },
     "MaxItemsProduce": {
         "name": "Max items produced",
-        "value": "5",
+        "value": "1",
         "unit": "Except in real-time MIDI (deft 20)",
         "boolean": "0"
     },
@@ -212,7 +212,7 @@
     },
     "TraceProduce": {
         "name": "Trace production",
-        "value": "1",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
@@ -266,13 +266,13 @@
     },
     "ResetWeights": {
         "name": "Reset rule weights",
-        "value": "0",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
     "ResetFlags": {
         "name": "Reset rule flags",
-        "value": "0",
+        "value": "1",
         "unit": "\/this is a flag\/",
         "boolean": "1"
     },
@@ -284,7 +284,7 @@
     },
     "EndFadeOut": {
         "name": "Fade-out time",
-        "value": "0.00",
+        "value": "2",
         "unit": "seconds (end of MIDI files and Csound scores)",
         "boolean": "0"
     },
@@ -314,7 +314,7 @@
     },
     "TraceMIDIinteraction": {
         "name": "Trace MIDI interactions",
-        "value": "0",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
@@ -362,7 +362,7 @@
     },
     "DeftVolume": {
         "name": "Default volume",
-        "value": "64",
+        "value": "90",
         "unit": "(1..127)",
         "boolean": "0"
     },

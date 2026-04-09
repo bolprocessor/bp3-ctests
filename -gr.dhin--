@@ -1,11 +1,11 @@
-// Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.dhin--". Date: 2020-11-07 15:06:33
+// Bol Processor BP3
+// Grammar saved as "-gr.dhin--". Date: 2026-04-07 14:26:05
 -se.dhin--
--ho.dhin--
+-al.dhin--
 
 // Example of qa‘ida (grammar for the tabla) transfered from
 // Bol Processor BP1
-// This is a “true” BP grammar.
+// This is a “true” BP grammar
 // Weights of rules have been inferred from real examples
 // You may create your own ‘-mi.dhin--’ using SoundObjectEditor
 
