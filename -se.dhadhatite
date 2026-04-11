@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.dhadhatite'. Date: 2026-04-09 14:31:02",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.dhadhatite'. Date: 2026-04-11 07:05:26",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -174,6 +174,12 @@
         "unit": "",
         "boolean": "1"
     },
+    "SplitLines": {
+        "name": "Add lines between items",
+        "value": "1",
+        "unit": "",
+        "boolean": "1"
+    },
     "CsoundTrace": {
         "name": "Trace Csound",
         "value": "0",
@@ -182,19 +188,19 @@
     },
     "Improvize": {
         "name": "Non-stop improvize",
-        "value": "1",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
     "AllItems": {
         "name": "Produce all items",
-        "value": "0",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
     "MaxItemsProduce": {
         "name": "Max items produced",
-        "value": "8",
+        "value": "3",
         "unit": "Except in real-time MIDI (deft 20)",
         "boolean": "0"
     },
