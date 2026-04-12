@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.dhin--'. Date: 2026-04-07 14:25:59",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.dhin--'. Date: 2026-04-12 14:28:00",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -174,6 +174,12 @@
         "unit": "",
         "boolean": "1"
     },
+    "SplitLines": {
+        "name": "Add lines between items",
+        "value": "1",
+        "unit": "",
+        "boolean": "1"
+    },
     "CsoundTrace": {
         "name": "Trace Csound",
         "value": "0",
@@ -211,7 +217,7 @@
         "boolean": "1"
     },
     "TraceProduce": {
-        "name": "Trace production",
+        "name": "Trace production or parsing",
         "value": "1",
         "unit": "",
         "boolean": "1"
@@ -220,6 +226,12 @@
         "name": "Choose candidate rule",
         "value": "0",
         "unit": "(not implemented)",
+        "boolean": "1"
+    },
+    "AllTemplates": {
+        "name": "When parsing, check all templates",
+        "value": "0",
+        "unit": "",
         "boolean": "1"
     },
     "DeftBufferSize": {
