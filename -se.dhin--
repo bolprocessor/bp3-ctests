@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.dhin--'. Date: 2026-04-12 14:28:00",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.dhin--'. Date: 2026-04-13 09:40:30",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -218,7 +218,7 @@
     },
     "TraceProduce": {
         "name": "Trace production or parsing",
-        "value": "1",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },

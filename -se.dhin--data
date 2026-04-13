@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.dhin--data'. Date: 2026-04-12 13:28:24",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.dhin--data'. Date: 2026-04-13 10:12:50",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -230,7 +230,7 @@
     },
     "AllTemplates": {
         "name": "When parsing, check all templates",
-        "value": "0",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
