@@ -1,7 +1,9 @@
 // Bol Processor BP3
-// Grammar saved as "-gr.dhadhatite". Date: 2026-04-13 10:01:02
+// Grammar saved as "-gr.dhadhatite". Date: 2026-04-20 17:12:02
 -se.dhadhatite
 -al.dhadhatite
+-wg.dhadhatite
+-da.dhadhatite
 
 /* "dhadhatite" qa‘ida. This is a beginner's piece containing only
 a small number of different strokes (bols). It does not have a wide
@@ -82,3 +84,11 @@ gram#5[6] <100> #+ S1F <-> #+ dhadhatitedhadhadheena
 gram#5[7] <100> + S2F <-> + dhadhatitedhadhateena
 gram#5[8] ++ S2F <-- ++ dhadhatitedhadhadheena [This rule must be last]
 ------------
+TEMPLATES:
+[1] ________+________(@0 ________)+________ * (@0 ________++________)(@2 )________
+[2] (@0 ++________)+________________+________ * (@1 ) * (@0 ++________)________________
+[3] ________(@0 ______+__)________+________ * (@0 ________) * (@2 )________________
+[4] (@0 ++____________+____)________+________ * (@1 )________________
+[5] (@0 ++______________+__)________+________ * (@1 )________________
+[6] (@0 ++________________)________+________ * (@1 )________________
+---------

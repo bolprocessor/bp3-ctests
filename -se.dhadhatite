@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.dhadhatite'. Date: 2026-04-11 07:05:26",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.dhadhatite'. Date: 2026-04-18 16:15:19",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -164,7 +164,7 @@
     },
     "SplitTimeObjects": {
         "name": "Split terminal symbols",
-        "value": "1",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
@@ -188,13 +188,13 @@
     },
     "Improvize": {
         "name": "Non-stop improvize",
-        "value": "0",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
     "AllItems": {
         "name": "Produce all items",
-        "value": "1",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
@@ -217,8 +217,8 @@
         "boolean": "1"
     },
     "TraceProduce": {
-        "name": "Trace production",
-        "value": "0",
+        "name": "Trace production or parsing",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
@@ -226,6 +226,12 @@
         "name": "Choose candidate rule",
         "value": "0",
         "unit": "(not implemented)",
+        "boolean": "1"
+    },
+    "AllTemplates": {
+        "name": "When parsing, check all templates",
+        "value": "0",
+        "unit": "",
         "boolean": "1"
     },
     "DeftBufferSize": {
@@ -237,7 +243,7 @@
     "MaxConsoleTime": {
         "name": "Max computation time",
         "value": "60",
-        "unit": "seconds. Time for console's work (0 = no limit) Except in Improvize mode",
+        "unit": "seconds. Time for console's work (0 = no limit).<br >(Except in Improvize mode)",
         "boolean": "0"
     },
     "ComputeWhilePlay": {
@@ -260,7 +266,7 @@
     },
     "Seed": {
         "name": "Seed for randomization",
-        "value": "0",
+        "value": "1",
         "unit": "Positive integer, or 0 if cards need to be shuffled",
         "boolean": "0"
     },
