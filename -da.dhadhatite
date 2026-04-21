@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-da.dhadhatite". Date: 2026-04-20 18:38:09
+// Data saved as "-da.dhadhatite". Date: 2026-04-20 18:55:25
 -se.dhadhatite_data
 -al.dhadhatite
 -gr.dhadhatite
@@ -57,6 +57,7 @@ dha dha ti te . dha dha dhee na . dha dha ti te . dha dha tee na .
 ta ta ti te . ta ta tee na . tee na ti te . tee na tee na .
 dha dha ti te . dha dha dhee na . dha dha ti te . dha dha dhee na
 
+[Using _tempo()]
 _tempo(4) dha dha ti te . dha dha dhee na . dha dha ti te . dha dha tee na .
 tee na dhee na . dha dha ti te . dha dha ti te . dha dha tee na .
 ta ta ti te . ta ta tee na . ta ta ti te . ta ta tee na .
