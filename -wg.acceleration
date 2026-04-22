@@ -1,0 +1,14 @@
+// Rule weights after learning
+{"igram":1,"irul":1,"weight":"3"}
+{"igram":1,"irul":2,"weight":"36"}
+{"igram":1,"irul":3,"weight":"33"}
+{"igram":1,"irul":4,"weight":"30"}
+{"igram":1,"irul":5,"weight":"27"}
+{"igram":1,"irul":6,"weight":"24"}
+{"igram":1,"irul":7,"weight":"21"}
+{"igram":1,"irul":8,"weight":"18"}
+{"igram":1,"irul":9,"weight":"15"}
+{"igram":1,"irul":10,"weight":"12"}
+{"igram":1,"irul":11,"weight":"9"}
+{"igram":1,"irul":12,"weight":"6"}
+{"igram":1,"irul":13,"weight":"3"}
