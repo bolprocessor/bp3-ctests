@@ -1,5 +1,0 @@
-// Bol Processor BP3
-// Data saved as "unknown-terminal.bpgr". Date: 2026-04-23 18:55:54
-gram#1[1] S --> A B
-gram#1[2] A -->
-B --> x a
