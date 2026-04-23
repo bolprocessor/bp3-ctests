@@ -1,7 +1,7 @@
-// Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.tryHarmony". Date: 2020-12-05 08:39:44
+// Bol Processor BP3
+// Data saved as "-gr.tryHarmony". Date: 2026-04-23 18:13:30
 -se.tryHarmony
--cs.tryHarmony
+-to.tryHarmony
 
 ORD
 

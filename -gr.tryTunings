@@ -1,21 +1,22 @@
-// Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.tryTunings". Date: 2021-01-15 20:47:55
+// Bol Processor BP3
+// Data saved as "-gr.tryTunings". Date: 2026-04-23 18:43:17
 -se.tryTunings
+-to.tryTunings
 -cs.tryTunings
 
 ORD
 
 // Asselin page 131
 
-// S --> _tempo(2) _scale(0,0) Up_Down - _scale(meantone_classic,0) Up_Down - {_scale(meantone_classic,0) Up_Down, _scale(0,0) Up_Down}
+// S --> _tempo(2) _scale(0,0) Up_Down - _scale(classic,0) Up_Down - {_scale(classic,0) Up_Down, _scale(0,0) Up_Down}
 // S --> _tempo(4) _scale(Zarlino_temp,0) Diatonic_scale_up Altered_scale_down
-// S --> _scale(meantone_classic,0) Cmaj Cmin _scale(0,0) Cmaj Cmin
+// S --> _scale(classic,0) Cmaj Cmin _scale(0,0) Cmaj Cmin
 // S --> _scale(Cmaj,0) Cmaj _scale(Cmin,0) Cmin
 // S --> _scale(Dmaj,0) Dmaj _scale(Dmin,0) Dmin
 
-S --> _tempo(2) _scale(bach_temperament,0) Up_Down
-S --> _tempo(2) _scale(pure_minor-third_meantone,0) Up_Down
-S --> _tempo(2) _scale(meantone_classic,0) Up_Down
+S --> _tempo(2) _scale(BACH,0) Up_Down
+S --> _tempo(2) _scale(pure_minor-thirds,0) Up_Down
+S --> _tempo(2) _scale(classic,0) Up_Down
 S --> _tempo(2) Up_Down
 
 Up_Down --> Diatonic_scale_up Altered_scale_down

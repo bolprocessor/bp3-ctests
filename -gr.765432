@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Grammar saved as "-gr.765432". Date: 2024-08-17 06:48:21
+// Data saved as "-gr.765432". Date: 2026-04-23 17:55:39
 -se.765432
 
 // This is "765432", a polyrhythmic piece composed by Andrine Bel for the Cronos dance production (1994). It was performed by Suresh, Smriti, Olivier, etc. as you will guess from variable names.
@@ -13,6 +13,7 @@ GRAM#1[2] Part1 --> {Suresh1, _rest Smriti1, _rest Olivier1, _rest Vijayshree1, 
 GRAM#1[3] Part2 --> {Suresh2, Smriti2 _rest, Olivier2 _rest, Vijayshree2 _rest, Arindam2 _rest, Andreine2 _rest}
 // Here we've used undetermined silences: '…'. It would have been a headache to calculate their durations!
 // Try to figure out the same on a commercial MIDI sequencer...
+
 -------------------------
 ORD
 GRAM#2[1] Suresh1 --> SuMov7x7 SuSil7x7 SuMov6x7 SuSil6x7 SuMov5x7 SuSil5x7 SuMov4x7 SuSil4x7 SuMov3x7 SuSil3x7 SuMov2x7 SuSil2x7 SuMov1x7 SuSil1x7

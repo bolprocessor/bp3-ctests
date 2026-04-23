@@ -1,7 +1,7 @@
-// Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.tryrepeat". Date: 2020-11-08 09:56:51
+// Bol Processor BP3
+// Data saved as "-gr.tryrepeat". Date: 2026-04-23 18:45:19
 -se.tryrepeat
--ho.abc
+-al.abc
 
 // This grammar creates a string a...b...c... with equal number of occurrences of a,b,c. The number is set by K1
 // Two important points:

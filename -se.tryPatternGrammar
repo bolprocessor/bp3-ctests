@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.tryPatternGrammar'. Date: 2026-02-28 15:07:27",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.tryPatternGrammar'. Date: 2026-04-23 18:27:17",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -114,6 +114,12 @@
         "unit": "Bol Processor score",
         "boolean": "1"
     },
+    "MaxItemsGraphic": {
+        "name": "Max items displayed",
+        "value": "10",
+        "unit": "in graphics",
+        "boolean": "0"
+    },
     "ShowGraphic": {
         "name": "Show graphics",
         "value": "0",
@@ -168,6 +174,12 @@
         "unit": "",
         "boolean": "1"
     },
+    "SplitLines": {
+        "name": "Add lines between items",
+        "value": "0",
+        "unit": "",
+        "boolean": "1"
+    },
     "CsoundTrace": {
         "name": "Trace Csound",
         "value": "0",
@@ -180,17 +192,17 @@
         "unit": "",
         "boolean": "1"
     },
-    "MaxItemsProduce": {
-        "name": "Max items produced",
-        "value": "20",
-        "unit": "Except in real-time MIDI (deft 20)",
-        "boolean": "0"
-    },
     "AllItems": {
         "name": "Produce all items",
         "value": "1",
         "unit": "",
         "boolean": "1"
+    },
+    "MaxItemsProduce": {
+        "name": "Max items produced",
+        "value": "30",
+        "unit": "Except in real-time MIDI (deft 20)",
+        "boolean": "0"
     },
     "UseEachSub": {
         "name": "Play each substitution",
@@ -205,8 +217,8 @@
         "boolean": "1"
     },
     "TraceProduce": {
-        "name": "Trace production",
-        "value": "0",
+        "name": "Trace production or parsing",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
@@ -214,6 +226,12 @@
         "name": "Choose candidate rule",
         "value": "0",
         "unit": "(not implemented)",
+        "boolean": "1"
+    },
+    "AllTemplates": {
+        "name": "When parsing, check all templates",
+        "value": "0",
+        "unit": "",
         "boolean": "1"
     },
     "DeftBufferSize": {
@@ -225,7 +243,7 @@
     "MaxConsoleTime": {
         "name": "Max computation time",
         "value": "60",
-        "unit": "seconds. Time for console's work (0 = no limit) Except in Improvize mode",
+        "unit": "seconds. Time for console's work (0 = no limit).<br >(Except in Improvize mode)",
         "boolean": "0"
     },
     "ComputeWhilePlay": {

@@ -1,13 +1,14 @@
-// Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.vina2". Date: 2020-10-20 18:55:57
+// Bol Processor BP3
+// Data saved as "-gr.vina2". Date: 2026-04-23 18:49:08
 -se.Vina
+-to.Vina
 -cs.Vina
 
 // This is the first cycle of the famous Gitam "Sri Gananaada" in raga "Malahari"
 
 RND
-gram#1[1] <0> S --> Sri Ga Na Naa Da
-gram#1[2] S --> {sa4 _ _,_pitchcont _pitchrange(500) _pitchbend(0) -  _pitchbend(500)}
+gram#1[1] <1> S --> Sri Ga Na Naa Da
+gram#1[2] <0> S --> {sa4 _ _,_pitchcont _pitchrange(500) _pitchbend(0) - _pitchbend(500)}
 
 gram#1[3] Sri --> {2, StartSlide StartPull sa3 _ Pull0 Slide0 _ Pull2 Slide5 _ Pull0 _ Pull2 _ Pull0 Slide5 _ Slide7 _ _ _ _ _ StopSlide StopPull}
 

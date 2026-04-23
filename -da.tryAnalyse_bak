@@ -1,0 +1,21 @@
+// Bol Processor BP3
+// Data saved as "-da.tryAnalyse". Date: 2026-04-11 08:22:41
+-se.tryAnalyse
+-al.abc
+-gr.tryAllItems0
+
+a a a
+
+a b a
+
+b a b
+
+b b b
+
+a a
+
+a b
+
+b a
+
+b b

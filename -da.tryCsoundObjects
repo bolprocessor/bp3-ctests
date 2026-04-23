@@ -1,9 +1,9 @@
-// Bol Processor BP3 compatible with version BP2.9.8
-// Data saved as "-da.tryCsoundObjects". Date: 2020-10-25 06:58:44
--mi.tryCsoundObjects
+// Bol Processor BP3
+// Data saved as "-da.tryCsoundObjects". Date: 2026-04-23 15:38:21
+-so.tryCsoundObjects
 -cs.tryCsoundObjects
 -se.tryCsoundObjects
--ho.tryCsoundObjects
+-al.tryCsoundObjects
 
 // Check the production of Csound scores using sound-objects whose prototypes contain
 // Csound scores.

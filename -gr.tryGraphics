@@ -1,5 +1,5 @@
-// Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.tryGraphics". Date: 2020-10-17 02:51:08
+// Bol Processor BP3
+// Data saved as "-gr.tryGraphics". Date: 2026-04-23 18:10:27
 -se.tryGraphics
 
 gram#1[1] S --> {_legato(20) C4 D4 E4, _staccato(10) F#5 G3, - G4}
