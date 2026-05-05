@@ -1,11 +1,11 @@
 // Bol Processor BP3
-// Keyboard file saved as "-kb.tabla.qwerty". Date: 2026-05-05 08:22:16
+// Keyboard file saved as "-kb.dhadhatite". Date: 2026-05-05 10:40:54
 {
-    "A": "ge",
+    "A": "",
     "B": "",
-    "C": "tit",
+    "C": "tite",
     "D": "na",
-    "E": "ta",
+    "E": "",
     "F": "",
     "G": "",
     "H": "",
@@ -18,13 +18,13 @@
     "O": "",
     "P": "",
     "Q": "dha",
-    "R": "dhi",
-    "S": "ke",
-    "T": "ti",
-    "U": "tira",
+    "R": "dhee",
+    "S": "",
+    "T": "tee",
+    "U": "",
     "V": "",
     "W": "",
-    "X": "ki",
+    "X": "",
     "Y": "",
-    "Z": "ghi"
+    "Z": ""
 }
