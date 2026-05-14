@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.dhadhatite'. Date: 2026-04-18 16:15:19",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.dhadhatite'. Date: 2026-05-14 07:39:52",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -200,7 +200,7 @@
     },
     "MaxItemsProduce": {
         "name": "Max items produced",
-        "value": "3",
+        "value": "15",
         "unit": "Except in real-time MIDI (deft 20)",
         "boolean": "0"
     },
@@ -214,6 +214,18 @@
         "name": "Step-by-step produce",
         "value": "0",
         "unit": "(not implemented)",
+        "boolean": "1"
+    },
+    "ParseMode": {
+        "name": "Parse mode",
+        "value": "ANAL",
+        "unit": "when grammar is parsing a data file",
+        "boolean": "0"
+    },
+    "TraceDetail": {
+        "name": "Detailed trace",
+        "value": "0",
+        "unit": "(for special use)",
         "boolean": "1"
     },
     "TraceProduce": {
@@ -266,7 +278,7 @@
     },
     "Seed": {
         "name": "Seed for randomization",
-        "value": "1",
+        "value": "0",
         "unit": "Positive integer, or 0 if cards need to be shuffled",
         "boolean": "0"
     },
