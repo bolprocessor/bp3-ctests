@@ -1,9 +1,9 @@
 // Bol Processor BP3
-// Object prototypes file saved as "-so.abc1". Date: 2025-02-08 17:02:45
+// Object prototypes file saved as "-so.abc1". Date: 2026-08-03 11:28:38 GMT
 84
 1
 64
-csound_resources/-cs.Vina
+
 12
 <HTML>a'</HTML>
 5
@@ -726,7 +726,7 @@ _endCsoundScore_
 128144
 128069
 128000
-<HTML>Example of MIDI sample containing a cyclic parts (try &quot;cycle2______&quot; with mm =  90, cello sound)</HTML>
+<HTML>Example of MIDI sample containing a cyclic part (try &quot;cycle2______&quot; with mm =  90, cello sound)</HTML>
 <HTML>d</HTML>
 1
 1
