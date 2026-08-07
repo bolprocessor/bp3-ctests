@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.trial.mohanam'. Date: 2026-04-02 19:14:01",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.trial.mohanam'. Date: 2026-08-07 07:16:51 7AugGMT",
     "Quantization": {
         "name": "Quantization",
         "value": "20",
@@ -117,7 +117,7 @@
     "MaxItemsGraphic": {
         "name": "Max items displayed",
         "value": "10",
-        "unit": "in graphics",
+        "unit": "in real-time MIDI",
         "boolean": "0"
     },
     "ShowGraphic": {
@@ -174,6 +174,12 @@
         "unit": "",
         "boolean": "1"
     },
+    "SplitLines": {
+        "name": "Add lines between items",
+        "value": "0",
+        "unit": "",
+        "boolean": "1"
+    },
     "CsoundTrace": {
         "name": "Trace Csound",
         "value": "0",
@@ -210,8 +216,26 @@
         "unit": "(not implemented)",
         "boolean": "1"
     },
+    "ParseMode": {
+        "name": "Parse mode",
+        "value": "ANAL",
+        "unit": "when grammar is parsing a data file",
+        "boolean": "0"
+    },
+    "LearnFromWeights": {
+        "name": "Start from latest weights file instead of grammar",
+        "value": "1",
+        "unit": "when learning rule weights from a data file",
+        "boolean": "1"
+    },
+    "TraceDetail": {
+        "name": "Detailed trace",
+        "value": "0",
+        "unit": "(for special use)",
+        "boolean": "1"
+    },
     "TraceProduce": {
-        "name": "Trace production",
+        "name": "Trace production or parsing",
         "value": "0",
         "unit": "",
         "boolean": "1"
@@ -220,6 +244,12 @@
         "name": "Choose candidate rule",
         "value": "0",
         "unit": "(not implemented)",
+        "boolean": "1"
+    },
+    "AllTemplates": {
+        "name": "When parsing, check all templates",
+        "value": "0",
+        "unit": "",
         "boolean": "1"
     },
     "DeftBufferSize": {
@@ -231,7 +261,7 @@
     "MaxConsoleTime": {
         "name": "Max computation time",
         "value": "100",
-        "unit": "seconds. Time for console's work (0 = no limit) Except in Improvize mode",
+        "unit": "seconds. Time for console's work (0 = no limit).<br >(Except in Improvize mode)",
         "boolean": "0"
     },
     "ComputeWhilePlay": {
@@ -410,7 +440,7 @@
     },
     "LiveGrammar": {
         "name": "Follow grammar(s)",
-        "value": "1",
+        "value": "0",
         "unit": "(Read https:\/\/bolprocessor.org\/live-coding\/)",
         "boolean": "1"
     },
@@ -422,7 +452,7 @@
     },
     "LiveSettings": {
         "name": "Follow settings",
-        "value": "1",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
@@ -436,6 +466,11 @@
         "name": "Trace item #",
         "value": "0",
         "unit": "(0 for none)",
+        "boolean": "0"
+    },
+    "UrlToPush": {
+        "name": "url_to_push",
+        "value": "http:\/\/localhost\/bolprocessor\/php\/note_push.php",
         "boolean": "0"
     }
 }

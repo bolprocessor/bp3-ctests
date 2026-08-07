@@ -1,17 +1,11 @@
 // Bol Processor BP3
-// Data saved as "-gr.koto3". Date: 2026-08-03 12:03:17
+// Data saved as "-gr.koto3". Date: 2026-08-06 16:39:05
 // File “-gr.koto3”
 // A sort of unidimensional cellular automaton producing a
 // sort of "Turkish music"!
 
 // To get the real sound you would need a D50 or D550 synth.
 // Use sound patch C-36 "Koto" on the PN-D50-O2 memory card
-// or I-21 "Koto" with the D50 dump file enclosed with BP2.
-
-// Here, the vibraphone patch of GeneralMIDI (program #12)
-// is automatically selected because the grammar loaded
-// the MIDI orchestra file “-or.koto3” which sent the
-// appropriate program change message.
 
 // You may use a MIDI keyboard to control BP2 on channel 15.
 
