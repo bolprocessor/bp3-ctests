@@ -1,0 +1,15 @@
+// Bol Processor BP3
+// Data saved as "-da.tryRandomTime". Date: 2026-08-10 07:01:18
+-se.tryRandomTime
+
+// This example shows the effect of randomizing the timings of simple notes
+// The argument of _rndtime() is in milliseconds
+// Due to the 10ms quantization, _rndtime(x) has no effect when x < 10
+
+_tempo(2) _rndtime(50) C4 D4 E4 F4 G4 A4 B4 C5
+
+_tempo(2) _rndtime(300) C4 D4 E4 F4 G4 A4 B4 C5
+
+_tempo(2) _rndtime(50) {C4 D4 E4 F4 G4 A4 B4 C5, C5 D5 E5 F5 G5 A5 B5 C6}
+
+_tempo(2) {C4 D4 E4 F4 G4 A4 B4 C5, _rndtime(50) C5 D5 E5 F5 G5 A5 B5 C6} {_rndtime(100) C4 D4 E4 F4 G4 A4 B4 C5, C5 D5 E5 F5 G5 A5 B5 C6}

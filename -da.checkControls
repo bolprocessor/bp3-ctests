@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-da.checkControls". Date: 2026-08-09 20:42:01
+// Data saved as "-da.checkControls". Date: 2026-08-10 07:08:36
 -gl.GeneralMIDI
 
 -se.checkControls
@@ -28,9 +28,9 @@ LoudPiano -- do4 re4 mi4 _transpose(-128) do4 re4 mi4 {fa4 mi4 re4,si4 la4 sol4 
 
 [Here] Shakuhachi -- _vel(40) do4 re4 mi4 fa4 _vel(120) sol4 {2,fa4 mi4 re4 mi4 re4} _vel(30) do4 re4 mi4 fa4
 
-// #4 Stepwise variation 5 to 127, and from 127 down to 10
+// #4 Stepwise variation 5 to 127, and from 127 down to 10, with random velocity = 3 and random time = 100 ms
 
-Shakuhachi -- _vel(5) _velstep do4 re4 mi4 fa4 _vel(127) do4 re4 mi4 fa4 _vel(10) re4 do4
+Shakuhachi -- _rndvel(3) _rndtime(100) _vel(5) _velstep do4 re4 mi4 fa4 _vel(127) do4 re4 mi4 fa4 _vel(10) re4 do4
 
 // #5 Stepwise variation 5 to 127, then keep value 127, eventually change suddenly to 10
 // Reduce tempo if you can't hear!
