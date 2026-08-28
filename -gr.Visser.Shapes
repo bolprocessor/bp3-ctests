@@ -1,7 +1,9 @@
 // Bol Processor BP3
-// Data saved as "-gr.Visser.Shapes". Date: 2026-04-23 18:03:49
--md.VisserShapes.bpmd
+// Data saved as "-gr.Visser.Shapes". Date: 2026-08-28 15:35:02
 -se.Visser.Shapes
+
+// Warning: This grammar uses the old syntax for processing serial tools (such as _rotate) which was in use prior to August 2026.
+// It will produce the correct musical work if the “Ignore field separators” option is selected in the settings.
 
 ORD
 _mm(60.0000) _striated
@@ -10,6 +12,7 @@ gram#1[1] S --> _staccato(50) Shapes
 gram#1[2] Shapes --> Part1 {_rotate(20) _transpose(2) Part1} Part2 Part3 {_tempo(0.7) Part3} Part4
 
 -----
+
 ORD
 //parts
 
@@ -19,6 +22,7 @@ gram#2[3] Part3 --> {1 {M3, M4} 2, _transpose(12) Trill1} _transpose(-11) {1 {M3
 gram#2[4] Part4 --> {Trill12, Trill11} {Trill10, Trill1} {Trill9 Trill10, Trill2} {_transpose(11) {M3, Trill2}} {M3, _transpose(12) Trill3} {Trill10, Trill1} {Trill9 Trill10, Trill2} {_tempo(2/3) Trill10} {M3, M4} {_tempo(1/2) Trill10} 1/4 _transpose(12) Trill9
 
 -----
+
 ORD
 //parts-material
 

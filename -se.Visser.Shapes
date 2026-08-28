@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Visser.Shapes'. Date: 2026-04-23 18:04:02",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Visser.Shapes'. Date: 2026-08-28 15:15:04 15AugGMT",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -117,7 +117,7 @@
     "MaxItemsGraphic": {
         "name": "Max items displayed",
         "value": "10",
-        "unit": "in graphics",
+        "unit": "in real-time MIDI",
         "boolean": "0"
     },
     "ShowGraphic": {
@@ -140,7 +140,7 @@
     },
     "ShowPianoRoll": {
         "name": "Show pianoroll",
-        "value": "1",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
@@ -216,9 +216,27 @@
         "unit": "(not implemented)",
         "boolean": "1"
     },
+    "ParseMode": {
+        "name": "Parse mode",
+        "value": "ANAL",
+        "unit": "when grammar is parsing a data file",
+        "boolean": "0"
+    },
+    "LearnFromWeights": {
+        "name": "Start from latest weights file instead of grammar",
+        "value": "1",
+        "unit": "when learning rule weights from a data file",
+        "boolean": "1"
+    },
+    "TraceDetail": {
+        "name": "Detailed trace",
+        "value": "0",
+        "unit": "(for special use)",
+        "boolean": "1"
+    },
     "TraceProduce": {
         "name": "Trace production or parsing",
-        "value": "0",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
@@ -266,7 +284,7 @@
     },
     "Seed": {
         "name": "Seed for randomization",
-        "value": "0",
+        "value": "1",
         "unit": "Positive integer, or 0 if cards need to be shuffled",
         "boolean": "0"
     },
@@ -402,6 +420,18 @@
         "unit": "(if a MIDI input is active)",
         "boolean": "1"
     },
+    "IgnoreFields": {
+        "name": "Ignore field separators ','",
+        "value": "1",
+        "unit": "False by default, not advised",
+        "boolean": "1"
+    },
+    "TraceZouleb": {
+        "name": "Trace serial tools Zouleb()",
+        "value": "0",
+        "unit": "For geeks!",
+        "boolean": "1"
+    },
     "DefaultBlockKey": {
         "name": "Default block key",
         "value": "60",
@@ -448,6 +478,11 @@
         "name": "Trace item #",
         "value": "0",
         "unit": "(0 for none)",
+        "boolean": "0"
+    },
+    "UrlToPush": {
+        "name": "url_to_push",
+        "value": "http:\/\/localhost\/bolprocessor\/php\/note_push.php",
         "boolean": "0"
     }
 }

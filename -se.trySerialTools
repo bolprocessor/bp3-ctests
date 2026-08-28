@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Visser.Waves'. Date: 2026-08-28 15:15:38 15AugGMT",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.trySerialTools'. Date: 2026-08-28 15:28:50 15AugGMT",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -62,7 +62,7 @@
     },
     "Eb_instead_of_D#": {
         "name": "Eb instead of D#",
-        "value": "0",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
@@ -92,7 +92,7 @@
     },
     "Bb_instead_of_A#": {
         "name": "Bb instead of A#",
-        "value": "0",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
@@ -140,7 +140,7 @@
     },
     "ShowPianoRoll": {
         "name": "Show pianoroll",
-        "value": "1",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
@@ -152,7 +152,7 @@
     },
     "GraphicScaleQ": {
         "name": "Graphic scale Q",
-        "value": "4",
+        "value": "1",
         "unit": "",
         "boolean": "0"
     },
@@ -200,7 +200,7 @@
     },
     "MaxItemsProduce": {
         "name": "Max items produced",
-        "value": "20",
+        "value": "1",
         "unit": "Except in real-time MIDI (deft 20)",
         "boolean": "0"
     },
@@ -284,7 +284,7 @@
     },
     "Seed": {
         "name": "Seed for randomization",
-        "value": "0",
+        "value": "1",
         "unit": "Positive integer, or 0 if cards need to be shuffled",
         "boolean": "0"
     },
@@ -314,7 +314,7 @@
     },
     "EndFadeOut": {
         "name": "Fade-out time",
-        "value": "2.00",
+        "value": "2",
         "unit": "seconds (end of MIDI files and Csound scores)",
         "boolean": "0"
     },
@@ -342,9 +342,21 @@
         "unit": "(not implemented)",
         "boolean": "1"
     },
+    "IgnoreFields": {
+        "name": "Ignore field separators ','",
+        "value": "0",
+        "unit": "False by default, not advised",
+        "boolean": "1"
+    },
+    "TraceZouleb": {
+        "name": "Trace serial tools Zouleb()",
+        "value": "0",
+        "unit": "For geeks!",
+        "boolean": "1"
+    },
     "TraceMIDIinteraction": {
         "name": "Trace MIDI interactions",
-        "value": "0",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
@@ -392,7 +404,7 @@
     },
     "DeftVolume": {
         "name": "Default volume",
-        "value": "64",
+        "value": "90",
         "unit": "(1..127)",
         "boolean": "0"
     },
@@ -418,18 +430,6 @@
         "name": "Respond to  Stop\/Continue",
         "value": "1",
         "unit": "(if a MIDI input is active)",
-        "boolean": "1"
-    },
-    "IgnoreFields": {
-        "name": "Ignore field separators ','",
-        "value": "1",
-        "unit": "False by default, not advised",
-        "boolean": "1"
-    },
-    "TraceZouleb": {
-        "name": "Trace serial tools Zouleb()",
-        "value": "0",
-        "unit": "For geeks!",
         "boolean": "1"
     },
     "DefaultBlockKey": {

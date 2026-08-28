@@ -1,8 +1,9 @@
 // Bol Processor BP3
-// Data saved as "-gr.Visser.Waves". Date: 2026-04-23 18:02:52
-// -gr.Visser.Waves
-
+// Data saved as "-gr.Visser.Waves". Date: 2026-08-28 15:38:44
 -se.Visser.Waves
+
+// Warning: This grammar uses the old syntax for processing serial tools (such as _rotate) which was in use prior to August 2026.
+// It will produce the correct musical work if the “Ignore field separators” option is selected in the settings.
 
 ORD
 _mm(60.0000) _striated
