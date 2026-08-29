@@ -1,5 +1,5 @@
-// Bol Processor BP3 compatible with version BP2.9.8
-// Object prototypes file saved as "-mi.tryKeyMap". Date: 2022-03-10 09:01:39
+// Bol Processor BP3
+// Object prototypes file saved as "-so.tryKeyMap". Date: 2026-08-29 15:57:05 GMT
 84
 1
 64
@@ -290,4 +290,3 @@ _endCsoundScore_
 DATA:
 <HTML>[Comments on file]</HTML>
 _endSoundObjectFile_
-
