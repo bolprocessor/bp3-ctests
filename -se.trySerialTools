@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.trySerialTools'. Date: 2026-08-28 15:28:50 15AugGMT",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.trySerialTools'. Date: 2026-08-29 10:12:28 10AugGMT",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -350,7 +350,7 @@
     },
     "TraceZouleb": {
         "name": "Trace serial tools Zouleb()",
-        "value": "0",
+        "value": "1",
         "unit": "For geeks!",
         "boolean": "1"
     },
