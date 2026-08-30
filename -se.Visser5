@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Visser5'. Date: 2026-04-23 18:07:55",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Visser5'. Date: 2026-08-30 16:21:42 16AugGMT",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -117,7 +117,7 @@
     "MaxItemsGraphic": {
         "name": "Max items displayed",
         "value": "10",
-        "unit": "in graphics",
+        "unit": "in real-time MIDI",
         "boolean": "0"
     },
     "ShowGraphic": {
@@ -214,6 +214,24 @@
         "name": "Step-by-step produce",
         "value": "0",
         "unit": "(not implemented)",
+        "boolean": "1"
+    },
+    "ParseMode": {
+        "name": "Parse mode",
+        "value": "ANAL",
+        "unit": "when grammar is parsing a data file",
+        "boolean": "0"
+    },
+    "LearnFromWeights": {
+        "name": "Start from latest weights file instead of grammar",
+        "value": "1",
+        "unit": "when learning rule weights from a data file",
+        "boolean": "1"
+    },
+    "TraceDetail": {
+        "name": "Detailed trace",
+        "value": "0",
+        "unit": "(for special use)",
         "boolean": "1"
     },
     "TraceProduce": {
@@ -322,6 +340,18 @@
         "name": "Time setting step",
         "value": "0",
         "unit": "(not implemented)",
+        "boolean": "1"
+    },
+    "IgnoreFields": {
+        "name": "Ignore field separators",
+        "value": "1",
+        "unit": "False by default, not advised",
+        "boolean": "1"
+    },
+    "TraceZouleb": {
+        "name": "Trace serial tools Zouleb()",
+        "value": "0",
+        "unit": "For geeks!",
         "boolean": "1"
     },
     "TraceMIDIinteraction": {
@@ -448,6 +478,11 @@
         "name": "Trace item #",
         "value": "0",
         "unit": "(0 for none)",
+        "boolean": "0"
+    },
+    "UrlToPush": {
+        "name": "url_to_push",
+        "value": "http:\/\/localhost\/bolprocessor\/php\/note_push.php",
         "boolean": "0"
     }
 }

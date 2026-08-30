@@ -1,13 +1,12 @@
 // Bol Processor BP3
-// Data saved as "-gr.tryKeyXpand". Date: 2026-08-29 15:59:11
+// Data saved as "-gr.tryKeyXpand". Date: 2026-08-30 16:18:33
 -al.tryKeyXpand
--cs.tryCsoundObjects
 -se.tryKeyXpand
 
 ORD
 _mm(60.0000) _striated
 
-gram#1[1] S --> /6 M Part1 -- Part2 -- Part3 -- Part4
+gram#1[1] S --> _tempo(6) M Part1 -- Part2 -- Part3 -- Part4
 
 // In Part1, we invert intervals, then we multiply them by 1.5, first on M and then
 // on the retrogradation of M.
@@ -29,5 +28,5 @@ gram#2[1] M --> C4 C#4 D4 G4 F#4 F4 E4 2/3
 
 COMMENT:
 This is a test of the key-expansion tool.
-?Display production? has been set to allow you to watch computation steps in the ?Trace?
+“Trace production” has been set to allow you to watch computation steps in the Trace
 window and figure out the process.

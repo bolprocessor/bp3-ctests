@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.trySerialTools'. Date: 2026-08-29 10:12:28 10AugGMT",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.trySerialTools'. Date: 2026-08-30 16:11:11 16AugGMT",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -140,7 +140,7 @@
     },
     "ShowPianoRoll": {
         "name": "Show pianoroll",
-        "value": "0",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
@@ -343,14 +343,14 @@
         "boolean": "1"
     },
     "IgnoreFields": {
-        "name": "Ignore field separators ','",
+        "name": "Ignore field separators",
         "value": "0",
         "unit": "False by default, not advised",
         "boolean": "1"
     },
     "TraceZouleb": {
         "name": "Trace serial tools Zouleb()",
-        "value": "1",
+        "value": "0",
         "unit": "For geeks!",
         "boolean": "1"
     },

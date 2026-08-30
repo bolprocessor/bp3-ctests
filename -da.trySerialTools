@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-da.trySerialTools". Date: 2026-08-29 13:10:52
+// Data saved as "-da.trySerialTools". Date: 2026-08-30 16:09:42
 -se.trySerialTools
 
 // This is temporary set of examples using serial tools:
@@ -14,6 +14,7 @@
 -al.abc1
 -to.tryTunings
 -cs.tryTunings
+
 
 // First, we check tools that modify the order in a sequence
 
@@ -151,3 +152,26 @@ _rotate(-2) {_rndseq {a b c d}}
 {_rndseq _rotate(1) {C4 D4 E4 F4}} C3 D3 E3 F3
 
 {_rndseq _retro {C4 D4 E4 F4}} C3 D3 E3 F3
+
+// Serial tools modifying pitches
+
+_transpose(4) C4 D4 E4
+
+c a b - _transpose(6) c a b
+
+[Using _keyxpand] 
+_keyxpand(C4,-1) D4 E4
+
+[With floating-point parameter] 
+_keyxpand(C4,-1) D4 E4 _keyxpand(C4,-1.8) D4 E4
+
+_keyxpand(C4,-2) B3 C4 {_keyxpand(C4,-1) D4 E4}
+
+_keyxpand(C4,-2) B3 C4 _keyxpand(C4,2) {D4 E4}
+
+[Using _keymap] 
+_keymap(C3,E4,C5,C6) C4 B3 A3
+
+_keymap(48,64,72,84) C4 B3 A3
+
+_tempo(6) _mapcont _keymap(C3,C3,C5,C5) C4 C#4 D4 G4 C4 C#4 D4 G4 C4 C#4 D4 G4 C4 C#4 D4 G4 _keymap(C3,C2,C5,C6)

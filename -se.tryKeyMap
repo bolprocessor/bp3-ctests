@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.tryKeyMap'. Date: 2026-08-29 15:48:36 15AugGMT",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.tryKeyMap'. Date: 2026-08-30 15:45:52 15AugGMT",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -343,7 +343,7 @@
         "boolean": "1"
     },
     "IgnoreFields": {
-        "name": "Ignore field separators ','",
+        "name": "Ignore field separators",
         "value": "0",
         "unit": "False by default, not advised",
         "boolean": "1"

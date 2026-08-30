@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Visser.Waves'. Date: 2026-08-28 15:15:38 15AugGMT",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Visser.Waves'. Date: 2026-08-30 16:32:20 16AugGMT",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -342,6 +342,18 @@
         "unit": "(not implemented)",
         "boolean": "1"
     },
+    "IgnoreFields": {
+        "name": "Ignore field separators",
+        "value": "1",
+        "unit": "False by default, not advised",
+        "boolean": "1"
+    },
+    "TraceZouleb": {
+        "name": "Trace serial tools Zouleb()",
+        "value": "0",
+        "unit": "For geeks!",
+        "boolean": "1"
+    },
     "TraceMIDIinteraction": {
         "name": "Trace MIDI interactions",
         "value": "0",
@@ -418,18 +430,6 @@
         "name": "Respond to  Stop\/Continue",
         "value": "1",
         "unit": "(if a MIDI input is active)",
-        "boolean": "1"
-    },
-    "IgnoreFields": {
-        "name": "Ignore field separators ','",
-        "value": "1",
-        "unit": "False by default, not advised",
-        "boolean": "1"
-    },
-    "TraceZouleb": {
-        "name": "Trace serial tools Zouleb()",
-        "value": "0",
-        "unit": "For geeks!",
         "boolean": "1"
     },
     "DefaultBlockKey": {

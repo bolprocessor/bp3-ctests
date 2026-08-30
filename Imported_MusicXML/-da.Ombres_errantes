@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-da.Ombres_errantes". Date: 2025-01-18 12:37:41
+// Data saved as "-da.Ombres_errantes". Date: 2026-08-25 10:52:37
 // MusicXML file ‘Couperin_Francois_-_Les_ombres_errantes.musicxml’ converted
 // Score part ‘P1’: instrument = Piano
 // Reading all metronome markers
@@ -9,7 +9,7 @@
 // Including mordents
 // Including turns
 // Interpreting slurs as _legato(20)
-// Interpreting breaths as 1/6 beat with tag [🌱]
+// Interpreting breaths as 1/6 beat with tag [🌱] 
 
 -se.Ombres_errantes
 

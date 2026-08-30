@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.koto3'. Date: 2026-08-03 12:01:41 12AugGMT",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.koto3'. Date: 2026-08-30 16:24:01 16AugGMT",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -116,7 +116,7 @@
     },
     "MaxItemsGraphic": {
         "name": "Max items displayed",
-        "value": "3",
+        "value": "15",
         "unit": "in real-time MIDI",
         "boolean": "0"
     },
@@ -340,6 +340,18 @@
         "name": "Time setting step",
         "value": "0",
         "unit": "(not implemented)",
+        "boolean": "1"
+    },
+    "IgnoreFields": {
+        "name": "Ignore field separators",
+        "value": "0",
+        "unit": "False by default, not advised",
+        "boolean": "1"
+    },
+    "TraceZouleb": {
+        "name": "Trace serial tools Zouleb()",
+        "value": "0",
+        "unit": "For geeks!",
         "boolean": "1"
     },
     "TraceMIDIinteraction": {
