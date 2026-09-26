@@ -1,0 +1,208 @@
+// Bol Processor BP3
+// Data saved as "-da.tryMiscObjects". Date: 2026-09-26 10:56:36
+-se.cyclicobjects
+-al.tryObjects
+-so.tryObjects
+-cs.tryTunings
+-to.tryScales
+
+oscar
+
+oscar-purecsound
+
+_ins(1) oscar-purecsound -- _ins(2) oscar-purecsound -- _ins(3) oscar-purecsound
+
+oscar-2instruments
+
+[Read the event list] 
+_ins(3) C4 - oscar-2instruments
+
+oscar - _tempo(1/3) oscar
+
+[Try this with restrictions of dilation ratio range] 
+oscar - _tempo(4) oscar ---- _tempo(1/3) oscar
+
+[Try this with 'no relocate' and postroll = 300 ms] 
+_tempo(0.5) oscar _tempo(1) oscar
+
+[Try this with pivot at 0 then 800 ms] 
+C4__ oscar2
+
+[A cyclic object, both MIDI and Csound] 
+cycle1_
+
+[This one has an integer number of repetitions] 
+cycle1-force_
+
+[MIDI or Csound] 
+C4 oscar2-trunc
+
+[MIDI or Csound, try with Never break in 'oscar2-trunc'] 
+C4 oscar2-trunc -- f
+
+[Only Csound, doesn't work] 
+C4 oscar2-trunc-csound -- f
+
+[Here, a constraint needs to be broken] 
+C4 oscar2-trunc f
+
+[The same with 'break tempo' allowed] 
+{C4 oscar2-trunc f, D4 E4 B3 F3, A4 B4}
+
+[Truncate the beginning of 'oscar2-trunc'] 
+crac oscar2-trunc
+
+[Longer truncation] 
+crac crac crac crac crac oscar2-trunc
+
+[Only Csound] 
+crac oscar2-trunc-csound
+
+[Only Csound] 
+crac crac crac crac crac oscar2-trunc-csound
+
+// $$$$$$
+
+[Only Csound] 
+C4 oscar2-trunc-csound -- f
+
+C4 oscar2-trunc-csound
+
+[Slight displacement] 
+{oscar, 2/10 oscar}
+
+[No effect] 
+_pitchrange(200) oscar - _pitchbend(150) oscar
+
+[try] 
+oscar - _keymap(C2,C1,C7,C8) oscar C#4
+
+oscar - _transpose(3) oscar
+
+oscar-purecsound - _transpose(3) oscar-purecsound
+
+oscar - _keyxpand(F#4,-1) oscar
+
+oscar-purecsound - _keyxpand(F#4,-1) oscar-purecsound
+
+oscar - _keymap(C4,C2,C6,C7) oscar
+
+oscar-purecsound - _keymap(C4,C2,C6,C7) oscar-purecsound
+
+_tempo(2/3) G3 C4 oscar - _scale(Bohlen-Pierce,60) G3 C4 oscar
+
+_chan(4) _ins(3) C4
+
+_ins(2) C4 - oscar-purecsound
+
+_ins(3) C4 - oscar-2instruments
+
+_ins(1) oscar-purecsound -- _ins(2) oscar-purecsound -- _ins(3) oscar-purecsound
+
+sync
+
+_ins(1) C4 _ins(2) C4 _ins(3) C4
+
+[Only Csound] 
+truc_ C4 oscar-purecsound g
+
+C4 <<D4>> E4
+
+_chan(2) D4 oscar E4
+
+[This requires 'Never cover'] 
+oscar _tempo(2) oscar
+
+oscar - _tempo(1/3) oscar - _tempo(3) oscar
+
+oscar - _tempo(4) oscar ---- _tempo(1/3) oscar
+
+[This requires 'Never cover'] 
+_tempo(0.5) oscar _tempo(1) oscar
+
+[Pivot on the last NoteOff] 
+C4_______ oscar2
+
+[Creates a loop] 
+cycle1_
+
+cycle1 D4
+
+cycle1_ D4
+
+cycle1_ cycle1
+
+cycle1-force_
+
+cycle1-force_ cycle1-force
+
+C4 D4 E4 cycle1 _ D4
+
+_scale(Bohlen-Pierce,0) C4 D4 E4 cycle1_
+
+_scale(Bohlen-Pierce,0) C4 D4 E4 cycle1_ _scale(0,0) cycle1_
+
+[The end of the second cycle is truncated to match the duration] 
+C4 cycle1 _
+
+{cycle1 _, G4}
+
+[With forced integer number of cycles] 
+C4 cycle1-force _
+
+{cycle1-force _, G4}
+
+C4 cycle1-midi_
+
+C4 cycle1-midi - cycle1-midi
+
+D4 _tempo(2/3) cycle1
+
+d C5
+
+d
+
+[Only Csound since 'g' is not MIDI] 
+C4 g
+
+[Only Csound] 
+truc__
+
+C4 D4 cycle1____
+
+_rndtime(100) C4 D4 cycle1____
+
+cycle2
+
+D4 cycle2__ C4
+
+[It works because the loop starts at 0 ms] 
+cycle2 cycle2___
+
+['velcont' does not change velocities within sound-objects] 
+_velcont _vel(30) C4 D4 cycle1____ _vel(63) E4
+
+[Same with a pure MIDI object: 'cycle1-midi'] 
+_velcont _vel(30) C4 D4 cycle1-midi____ _vel(63) E4
+
+_vel(5) cycle1 -- _vel(63) cycle1
+
+_volume(66) C4 _volume(77) D4
+
+_volumecont _volume(44) C4 b a a b b a C4 _volume(77)
+
+_tempo(1/2) _chan(3) _pitchcont _pitchrange(200) _pitchbend(0) a b _pitchbend(100)
+
+a <<chik>> Truc a - chik
+
+cycle1____
+
+cycle2____
+
+C4 cycle1_ D4
+
+cycle1 cycle2
+
+cycle2 cycle1_ cycle2_
+
+C4 cycle1 D4

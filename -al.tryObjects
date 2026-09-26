@@ -1,0 +1,26 @@
+// Bol Processor BP3
+// Alphabet file saved as ‘-al.tryObjects’. Date: 2026-09-25 15:47:45 GMT
+-so.abc1
+*
+chik
+a --> a'
+b
+c --> c'
+d --> d'
+e
+f --> f'
+g --> g'
+h
+cycle1
+cycle1-midi
+cycle1-force
+sync
+truc
+cycle2
+oscar
+oscar2
+oscar-purecsound
+oscar-2instruments
+oscar2-trunc
+oscar2-trunc-csound
+crac
