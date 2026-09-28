@@ -1,20 +1,33 @@
 // Bol Processor BP3
-// Data saved as "-da.tryMiscObjects". Date: 2026-09-26 10:56:36
--se.cyclicobjects
+// Data saved as "-da.tryMiscObjects". Date: 2026-09-28 16:13:13
+-se.tryObjects
 -al.tryObjects
 -so.tryObjects
 -cs.tryTunings
 -to.tryScales
 
-oscar
+[The score for creating sound-object 'mixed'] 
+C4 _chan(2) _legato(30) D4 E4
 
-oscar-purecsound
+[Now play this in MIDI and Csound] 
+_ins(3) mixed G3
 
+[Out-time sound-object] 
+C4 <<chik>> C5
+
+[The out-time object is not heard in Csound because of the instrument's design] 
+<<oscar>> C5 oscar
+
+[Only in Csound] 
+oscar-purecsound - <<oscar-purecsound>>
+
+[Changing instrument in Csound] 
 _ins(1) oscar-purecsound -- _ins(2) oscar-purecsound -- _ins(3) oscar-purecsound
 
+[In Csound, this object calls 2 instruments] 
 oscar-2instruments
 
-[Read the event list] 
+[Try the Event list] 
 _ins(3) C4 - oscar-2instruments
 
 oscar - _tempo(1/3) oscar
@@ -29,10 +42,10 @@ _tempo(0.5) oscar _tempo(1) oscar
 C4__ oscar2
 
 [A cyclic object, both MIDI and Csound] 
-cycle1_
+cycle1 _
 
 [This one has an integer number of repetitions] 
-cycle1-force_
+cycle1-force _
 
 [MIDI or Csound] 
 C4 oscar2-trunc
@@ -40,7 +53,10 @@ C4 oscar2-trunc
 [MIDI or Csound, try with Never break in 'oscar2-trunc'] 
 C4 oscar2-trunc -- f
 
-[Only Csound, doesn't work] 
+[MIDI or Csound] 
+_tempo(3/2) C4 oscar2-trunc -- f
+
+[Only Csound] 
 C4 oscar2-trunc-csound -- f
 
 [Here, a constraint needs to be broken] 
@@ -61,12 +77,20 @@ crac oscar2-trunc-csound
 [Only Csound] 
 crac crac crac crac crac oscar2-trunc-csound
 
+[Truncating a cyclic object] 
+crac cycle1 _
+
+[Truncating a cyclic object forced to integer number of cycles] 
+crac cycle1-force _
+
+[Tonal scale] 
+_scale(Bohlen-Pierce,0) C4 D4 E4 cycle1_
+
+[Two tonal scales] 
+_scale(Bohlen-Pierce,0) C4 D4 E4 cycle1_ _scale(0,0) cycle1_
+
 // $$$$$$
 
-[Only Csound] 
-C4 oscar2-trunc-csound -- f
-
-C4 oscar2-trunc-csound
 
 [Slight displacement] 
 {oscar, 2/10 oscar}
@@ -132,15 +156,11 @@ cycle1_ D4
 
 cycle1_ cycle1
 
-cycle1-force_
+cycle1-force _
 
-cycle1-force_ cycle1-force
+cycle1-force _ cycle1-force
 
 C4 D4 E4 cycle1 _ D4
-
-_scale(Bohlen-Pierce,0) C4 D4 E4 cycle1_
-
-_scale(Bohlen-Pierce,0) C4 D4 E4 cycle1_ _scale(0,0) cycle1_
 
 [The end of the second cycle is truncated to match the duration] 
 C4 cycle1 _
