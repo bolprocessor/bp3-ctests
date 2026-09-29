@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Alphabet file saved as ‘-al.tryObjects’. Date: 2026-09-28 06:12:38 GMT
+// Alphabet file saved as ‘-al.tryObjects’. Date: 2026-09-29 08:00:15 GMT
 -so.abc1
 *
 chik
@@ -25,3 +25,4 @@ oscar2-trunc
 oscar2-trunc-csound
 crac
 mixed
+glue

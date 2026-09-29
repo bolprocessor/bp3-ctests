@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-da.tryMiscObjects". Date: 2026-09-28 16:13:13
+// Data saved as "-da.tryMiscObjects". Date: 2026-09-29 08:35:19
 -se.tryObjects
 -al.tryObjects
 -so.tryObjects
@@ -68,6 +68,9 @@ C4 oscar2-trunc f
 [Truncate the beginning of 'oscar2-trunc'] 
 crac oscar2-trunc
 
+[Same with 2 instruments in Csound] 
+crac oscar-2instruments
+
 [Longer truncation] 
 crac crac crac crac crac oscar2-trunc
 
@@ -77,20 +80,26 @@ crac oscar2-trunc-csound
 [Only Csound] 
 crac crac crac crac crac oscar2-trunc-csound
 
+[Truncate on both sides] 
+crac oscar2-trunc -- f
+
+[Truncate on both sides, try Csound] 
+crac oscar-2instruments - _tempo(1/4) f
+
 [Truncating a cyclic object] 
 crac cycle1 _
 
 [Truncating a cyclic object forced to integer number of cycles] 
 crac cycle1-force _
 
+[An out-time object is never truncated] 
+crac <<oscar2-trunc>>
+
 [Tonal scale] 
-_scale(Bohlen-Pierce,0) C4 D4 E4 cycle1_
+_tempo(0.65) _scale(Bohlen-Pierce,0) C4 D4 E4 cycle1_
 
 [Two tonal scales] 
-_scale(Bohlen-Pierce,0) C4 D4 E4 cycle1_ _scale(0,0) cycle1_
-
-// $$$$$$
-
+_tempo(0.55) _scale(Bohlen-Pierce,0) C4 D4 E4 cycle1_ _scale(0,0) cycle1_
 
 [Slight displacement] 
 {oscar, 2/10 oscar}
@@ -98,16 +107,28 @@ _scale(Bohlen-Pierce,0) C4 D4 E4 cycle1_ _scale(0,0) cycle1_
 [No effect] 
 _pitchrange(200) oscar - _pitchbend(150) oscar
 
-[try] 
+[Key mapping] 
 oscar - _keymap(C2,C1,C7,C8) oscar C#4
 
-oscar - _transpose(3) oscar
+[Key mapping only Csound] 
+oscar-purecsound - _keymap(C2,C1,C7,C8) oscar-purecsound
 
-oscar-purecsound - _transpose(3) oscar-purecsound
-
+[Key expand] 
 oscar - _keyxpand(F#4,-1) oscar
 
+[Key expand only Csound] 
 oscar-purecsound - _keyxpand(F#4,-1) oscar-purecsound
+
+[Transposition] 
+oscar - _transpose(3) oscar
+
+[Transposition only Csound] 
+oscar-purecsound - _transpose(3) oscar-purecsound
+
+[Continuity at the beginning for 'glue'] 
+cycle1-force _ - glue
+
+// $$$$$$
 
 oscar - _keymap(C4,C2,C6,C7) oscar
 
