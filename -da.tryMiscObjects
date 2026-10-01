@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-da.tryMiscObjects". Date: 2026-09-30 11:08:45
+// Data saved as "-da.tryMiscObjects". Date: 2026-10-01 15:47:21
 -se.tryObjects
 -al.tryObjects
 -so.tryObjects
@@ -10,19 +10,17 @@
 _tempo(4) C4 {F3, G4} C5
 
 [Try pivotplus] 
-pivotplus
-
 C3 F2 pivotplus
+
+_tempo(2) C3 F2 pivotplus
 
 [Score for pivotminus] 
 _tempo(5) C5 {F#3 C4&, G4, - E4} &C4
 
 [Try pivotminus] 
-pivotminus
+_tempo(2) C3 F2 pivotminus
 
-C3 F2 pivotminus
-
-[The score for creating sound-object 'mixed'] 
+[Score for creating sound-object 'mixed'] 
 C4 _chan(2) _legato(30) D4 E4
 
 [Now play this in MIDI and Csound] 
@@ -51,11 +49,14 @@ oscar - _tempo(1/3) oscar
 [Try this with restrictions of dilation ratio range] 
 oscar - _tempo(4) oscar ---- _tempo(1/3) oscar
 
+[This requires 'Never cover'] 
+_tempo(0.5) oscar _tempo(1) oscar
+
 [Try this with 'no relocate' and postroll = 300 ms] 
 _tempo(0.5) oscar _tempo(1) oscar
 
 [Try this with pivot at 0 then 800 ms] 
-C4__ oscar2
+C4 _ _ oscar2
 
 [A cyclic object, both MIDI and Csound] 
 cycle1 _
@@ -178,9 +179,6 @@ _chan(2) D4 oscar E4
 oscar _tempo(2) oscar
 
 oscar - _tempo(1/3) oscar - _tempo(3) oscar
-
-[This requires 'Never cover'] 
-_tempo(0.5) oscar _tempo(1) oscar
 
 [Pivot on the last NoteOff] 
 C4_______ oscar2

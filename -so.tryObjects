@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Object prototypes file saved as "-so.tryObjects". Date: 2026-09-30 12:37:21 GMT
+// Object prototypes file saved as "-so.tryObjects". Date: 2026-10-01 16:42:04 GMT
 84
 1
 64
@@ -547,7 +547,7 @@ _endCsoundScore_
 1
 1
 1
-0
+150
 0
 -1
 -1
@@ -1224,7 +1224,7 @@ _endCsoundScore_
 1
 1
 0
-0
+300
 -1
 -1
 1
@@ -2658,7 +2658,7 @@ _endCsoundScore_
 1
 0
 0
--50
+-75
 -1
 0
 1
