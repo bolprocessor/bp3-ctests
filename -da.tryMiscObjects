@@ -1,49 +1,46 @@
 // Bol Processor BP3
-// Data saved as "-da.tryMiscObjects". Date: 2026-10-01 15:47:21
+// Data saved as "-da.tryMiscObjects". Date: 2026-10-05 09:37:37
+// Examples of sound-objects
+// Explanations: https://bolprocessor.org/sound-objects/
+
 -se.tryObjects
 -al.tryObjects
 -so.tryObjects
 -cs.tryTunings
 -to.tryScales
 
-[Score for pivotplus] 
-_tempo(4) C4 {F3, G4} C5
+// Create a sound-object
 
-[Try pivotplus] 
-C3 F2 pivotplus
+[Score for 'oscar'] 
+{_vel(64) _chan(1){4, {{3,D5&}{1,&D5 G5 Bb5 D6 C6 Bb5}, {3/2,- F4 Gb4}{1/2,A4 Gb4}{2,G4}}}, _vel(64) _chan(2){4,{{3/2,- F3 Gb3}{1/2,A3 Gb3}G3&{1,&G3 G3 Bb3 D4 C4 Bb3}, 1/2{3/2,Bb2}--}}}
 
-_tempo(2) C3 F2 pivotplus
+[Now, play 'oscar'] 
+oscar
 
-[Score for pivotminus] 
-_tempo(5) C5 {F#3 C4&, G4, - E4} &C4
+// Csound instruments
 
-[Try pivotminus] 
-_tempo(2) C3 F2 pivotminus
-
-[Score for creating sound-object 'mixed'] 
-C4 _chan(2) _legato(30) D4 E4
-
-[Now play this in MIDI and Csound] 
-_ins(3) mixed G3
-
-[Out-time sound-object] 
-C4 <<chik>> C5
-
-[The out-time object is not heard in Csound because of the instrument's design] 
-<<oscar>> C5 oscar
+[Playing 3 Csound instruments] 
+_ins(1) oscar-purecsound -- _ins(2) oscar-purecsound -- _ins(3) oscar-purecsound
 
 [Only in Csound] 
 oscar-purecsound - <<oscar-purecsound>>
 
-[Changing instrument in Csound] 
-_ins(1) oscar-purecsound -- _ins(2) oscar-purecsound -- _ins(3) oscar-purecsound
-
 [In Csound, this object calls 2 instruments] 
 oscar-2instruments
 
-[Try the Event list] 
+[Score for creating sound-object 'mixed'] 
+C4 _chan(2) _legato(30) D4 E4
+
+[Play 'mixed' in MIDI and Csound] 
+_ins(3) mixed G3
+
+// Event list
+
 _ins(3) C4 - oscar-2instruments
 
+// Dilation and expansion
+
+[Changing speed] 
 oscar - _tempo(1/3) oscar
 
 [Try this with restrictions of dilation ratio range] 
@@ -55,14 +52,69 @@ _tempo(0.5) oscar _tempo(1) oscar
 [Try this with 'no relocate' and postroll = 300 ms] 
 _tempo(0.5) oscar _tempo(1) oscar
 
-[Try this with pivot at 0 then 800 ms] 
-C4 _ _ oscar2
+// Smooth time
+
+[Try this in striated and smooth time] 
+oscar - _tempo(4/3) oscar - _tempo(2) oscar
+
+// Silent sound-objects
+
+[Created from an unused variable] 
+_tempo(2) C4 Somevariable D4
+
+[The 'gold' silent sound-object is defined in '-so.tryObjects'] 
+C4 gold gold D4
+
+['gold' is a resizable silent sound-object] 
+_tempo(3) C4 gold gold D4
+
+// Out-time objects
+
+[Out-time sound-object] 
+C4 <<chik>> C5
+
+[The out-time object is not heard in Csound because of the instrument's design] 
+<<oscar>> C5 oscar
+
+[Out-time sound-object attached to a silent sounnd-object] 
+a <<chik>> Truc a - chik
+
+// Pivot
+
+[Score for pivotplus] 
+_tempo(4) C4 {F3, G4} C5
+
+[Try pivotplus] 
+C3 F2 pivotplus
+
+[The same at twice the speed] 
+_tempo(2) C3 F2 pivotplus
+
+[Score for pivotminus] 
+_tempo(5) C5 {F#3 C4&, G4, - E4} &C4
+
+[Try pivotminus] 
+_tempo(2) C3 F2 pivotminus
+
+[Pivot on the last NoteOff] 
+C4_______ oscar2
+
+// Cyclic sound-objects
 
 [A cyclic object, both MIDI and Csound] 
 cycle1 _
 
 [This one has an integer number of repetitions] 
 cycle1-force _
+
+[Truncate the beginning of a cyclic sound-object with pre-roll and post-roll] 
+C4 cycle1-roll _ D4
+
+[Repeat a cyclic sound-object] 
+cycle1- _ cycle1 _
+
+[Repeat a cyclic sound-object with pre-roll and truncations] 
+cycle1-roll _ cycle1-roll _
 
 [MIDI or Csound] 
 C4 oscar2-trunc
@@ -82,6 +134,20 @@ C4 oscar2-trunc f
 [The same with 'break tempo' allowed] 
 {C4 oscar2-trunc f, D4 E4 B3 F3, A4 B4}
 
+[Cycle in polymetric structure] 
+{cycle1 _, G4}
+
+[With forced integer number of cycles] 
+{cycle1-force _, G4}
+
+[It works because the loop starts at 0 ms] 
+cycle2 cycle2___
+
+[Same remark] 
+D4 cycle2__ C4
+
+// Truncation
+
 [Truncate the beginning of 'oscar2-trunc'] 
 crac oscar2-trunc
 
@@ -100,7 +166,7 @@ crac crac crac crac crac oscar2-trunc-csound
 [Truncate on both sides] 
 crac oscar2-trunc -- f
 
-[Truncate on both sides, try Csound] 
+[Truncate on both sides, only Csound] 
 crac oscar-2instruments - _tempo(1/4) f
 
 [Truncating a cyclic object] 
@@ -112,17 +178,23 @@ crac cycle1-force _
 [An out-time object is never truncated] 
 crac <<oscar2-trunc>>
 
-[Tonal scale] 
+// Continuity
+
+[Continuity at the beginning for 'glue'] 
+cycle1-force - glue
+
+cycle1-force _ - glue
+
+// Tonal scale
+
 _tempo(0.65) _scale(Bohlen-Pierce,0) C4 D4 E4 cycle1_
+
+_tempo(2/3) G3 C4 oscar - _scale(Bohlen-Pierce,60) G3 C4 oscar
 
 [Two tonal scales] 
 _tempo(0.55) _scale(Bohlen-Pierce,0) C4 D4 E4 cycle1_ _scale(0,0) cycle1_
 
-[Slight displacement] 
-{oscar, 2/10 oscar}
-
-[No effect] 
-_pitchrange(200) oscar - _pitchbend(150) oscar
+// Serial tools
 
 [Key mapping] 
 oscar - _keymap(C2,C1,C7,C8) oscar C#4
@@ -142,98 +214,15 @@ oscar - _transpose(3) oscar
 [Transposition only Csound] 
 oscar-purecsound - _transpose(3) oscar-purecsound
 
-[Continuity at the beginning for 'glue'] 
-cycle1-force _ - glue
-
-[Try this in striated and smooth time] 
-oscar - _tempo(4/3) oscar - _tempo(2) oscar
-
-// $$$$$$
-
+[Key map] 
 oscar - _keymap(C4,C2,C6,C7) oscar
 
 oscar-purecsound - _keymap(C4,C2,C6,C7) oscar-purecsound
 
-_tempo(2/3) G3 C4 oscar - _scale(Bohlen-Pierce,60) G3 C4 oscar
+// Controls
 
-_chan(4) _ins(3) C4
-
-_ins(2) C4 - oscar-purecsound
-
-_ins(3) C4 - oscar-2instruments
-
-_ins(1) oscar-purecsound -- _ins(2) oscar-purecsound -- _ins(3) oscar-purecsound
-
-sync
-
-_ins(1) C4 _ins(2) C4 _ins(3) C4
-
-[Only Csound] 
-truc_ C4 oscar-purecsound g
-
-C4 <<D4>> E4
-
-_chan(2) D4 oscar E4
-
-[This requires 'Never cover'] 
-oscar _tempo(2) oscar
-
-oscar - _tempo(1/3) oscar - _tempo(3) oscar
-
-[Pivot on the last NoteOff] 
-C4_______ oscar2
-
-[Creates a loop] 
-cycle1_
-
-cycle1 D4
-
-cycle1_ D4
-
-cycle1_ cycle1
-
-cycle1-force _
-
-cycle1-force _ cycle1-force
-
-C4 D4 E4 cycle1 _ D4
-
-[The end of the second cycle is truncated to match the duration] 
-C4 cycle1 _
-
-{cycle1 _, G4}
-
-[With forced integer number of cycles] 
-C4 cycle1-force _
-
-{cycle1-force _, G4}
-
-C4 cycle1-midi_
-
-C4 cycle1-midi - cycle1-midi
-
-D4 _tempo(2/3) cycle1
-
-d C5
-
-d
-
-[Only Csound since 'g' is not MIDI] 
-C4 g
-
-[Only Csound] 
-truc__
-
-C4 D4 cycle1____
-
+[Random time] 
 _rndtime(100) C4 D4 cycle1____
-
-cycle2
-
-D4 cycle2__ C4
-
-[It works because the loop starts at 0 ms] 
-cycle2 cycle2___
 
 ['velcont' does not change velocities within sound-objects] 
 _velcont _vel(30) C4 D4 cycle1____ _vel(63) E4
@@ -243,22 +232,9 @@ _velcont _vel(30) C4 D4 cycle1-midi____ _vel(63) E4
 
 _vel(5) cycle1 -- _vel(63) cycle1
 
-_volume(66) C4 _volume(77) D4
-
 _volumecont _volume(44) C4 b a a b b a C4 _volume(77)
 
-_tempo(1/2) _chan(3) _pitchcont _pitchrange(200) _pitchbend(0) a b _pitchbend(100)
+// Misc
 
-a <<chik>> Truc a - chik
-
-cycle1____
-
-cycle2____
-
-C4 cycle1_ D4
-
-cycle1 cycle2
-
-cycle2 cycle1_ cycle2_
-
-C4 cycle1 D4
+[Slight displacement] 
+{oscar, 2/10 oscar}

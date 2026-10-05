@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Alphabet file saved as ‘-al.tryObjects’. Date: 2026-09-30 08:34:48 GMT
+// Alphabet file saved as ‘-al.tryObjects’. Date: 2026-10-04 12:57:46 GMT
 -so.abc1
 *
 chik
@@ -14,6 +14,7 @@ h
 cycle1
 cycle1-midi
 cycle1-force
+cycle1-roll
 sync
 truc
 cycle2
@@ -28,3 +29,4 @@ mixed
 glue
 pivotminus
 pivotplus
+gold
