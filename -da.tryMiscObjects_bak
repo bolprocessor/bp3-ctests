@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-da.tryMiscObjects". Date: 2026-10-05 09:37:37
+// Data saved as "-da.tryMiscObjects". Date: 2026-10-07 05:41:27
 // Examples of sound-objects
 // Explanations: https://bolprocessor.org/sound-objects/
 
@@ -8,6 +8,14 @@
 -so.tryObjects
 -cs.tryTunings
 -to.tryScales
+
+t1 t2 t3 t4
+
+{3,t1 t2}
+
+{t1 t2,{t1 t3 t4,C4 D4 E4 F4 - A4}{t3 t1,B4 C5 _ E5}}
+
+{5,t1 t2,{t1 t3 t4,C4 D4 E4 F4 - A4}{t3 t1,B4 C5 _ E5}}
 
 // Create a sound-object
 
@@ -63,10 +71,15 @@ oscar - _tempo(4/3) oscar - _tempo(2) oscar
 _tempo(2) C4 Somevariable D4
 
 [The 'gold' silent sound-object is defined in '-so.tryObjects'] 
-C4 gold gold D4
+Thisvariable C4 gold gold h D4
 
 ['gold' is a resizable silent sound-object] 
-_tempo(3) C4 gold gold D4
+_tempo(2) C4 gold gold D4
+
+[Tied silent sound-object] 
+_tempo(2) C4 h& D4 &h E4
+
+_tempo(2) C4 gold& D4 &gold E4
 
 // Out-time objects
 
@@ -76,7 +89,7 @@ C4 <<chik>> C5
 [The out-time object is not heard in Csound because of the instrument's design] 
 <<oscar>> C5 oscar
 
-[Out-time sound-object attached to a silent sounnd-object] 
+[Out-time sound-object attached to a silent sound-object] 
 a <<chik>> Truc a - chik
 
 // Pivot

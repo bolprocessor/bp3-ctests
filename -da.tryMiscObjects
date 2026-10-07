@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-da.tryMiscObjects". Date: 2026-10-05 10:15:31
+// Data saved as "-da.tryMiscObjects". Date: 2026-10-07 13:39:12
 // Examples of sound-objects
 // Explanations: https://bolprocessor.org/sound-objects/
 
@@ -63,10 +63,24 @@ oscar - _tempo(4/3) oscar - _tempo(2) oscar
 _tempo(2) C4 Somevariable D4
 
 [The 'gold' silent sound-object is defined in '-so.tryObjects'] 
-C4 gold gold D4
+Thisvariable C4 gold gold h D4
 
 ['gold' is a resizable silent sound-object] 
-_tempo(3) C4 gold gold D4
+_tempo(2) C4 gold gold D4
+
+[Tied silent sound-object (undeclared)] 
+_tempo(2) C4 h& D4 &h E4
+
+[Tied silent sound-object (declared with Tref =700 ms)] 
+_tempo(2) C4 gold& D4 &gold E4
+
+// Smooth sound-objects
+
+['chik-smooth' is a smooth sound-object with Tref = 0] 
+_tempo(2) chik D#4 chik-smooth - _tempo(1) chik-smooth
+
+['gold2' is a smooth silent sound-object with Tref = 0] 
+_tempo(2) C4 gold gold2 gold2 D4
 
 // Out-time objects
 
@@ -76,7 +90,7 @@ C4 <<chik>> C5
 [The out-time object is not heard in Csound because of the instrument's design] 
 <<oscar>> C5 oscar
 
-[Out-time sound-object attached to a silent sounnd-object] 
+[Out-time sound-object attached to a silent sound-object] 
 a <<chik>> Truc a - chik
 
 // Pivot
@@ -238,3 +252,10 @@ _volumecont _volume(44) C4 b a a b b a C4 _volume(77)
 
 [Slight displacement] 
 {oscar, 2/10 oscar}
+
+t1 t2 t3 t4
+
+{3,t1 t2}
+
+[This is not a correct rendering of time patterns; see -gr.tryTimePatterns and the use of smooth time] 
+{5,t1 t2,{t1 t3 t4,C4 D4 E4 F4 - A4}{t3 t1,B4 C5 _ E5}}
