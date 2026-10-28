@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-da.tryMiscObjects". Date: 2026-10-11 16:53:58
+// Data saved as "-da.tryMiscObjects". Date: 2026-10-28 06:51:31
 // Examples of sound-objects
 // Explanations: https://bolprocessor.org/sound-objects/
 
@@ -11,9 +11,16 @@
 
 // Check Csound instruments
 
-
 [Play this in Csound and look at the Csound score. Since there is no instrument #267, you get a warning and 'E3' is played with instrument #1] 
 _ins(1) C3 _ins(2) D3 _ins(3) G3 _ins(Synth_brass) D3 _ins(267) E3
+
+// In '-cs.tryTunings', instrument #3 is assigned to MIDI channel #1
+
+[This one is channel #1 by default, therefore instrument #3] 
+C4 D4 _pitchcont _pitchrange(200) _pitchbend(0) E4 _ _pitchbend(200) _ _ _pitchbend(0)
+
+[This one is channel #2, therefore default instrument #1] 
+_chan(2) C4 D4 E4
 
 // Create a sound-object
 
@@ -28,11 +35,11 @@ oscar
 [Playing 3 Csound instruments] 
 _ins(1) oscar-purecsound -- _ins(2) oscar-purecsound -- _ins(3) oscar-purecsound
 
-[Only in Csound] 
-oscar-purecsound - <<oscar-purecsound>>
+[Only in Csound, we use channel 2 to prevent the setting of instrument #3 on channel 1] 
+_chan(2) oscar-purecsound - <<oscar-purecsound>>
 
 [In Csound, this object calls 2 instruments] 
-oscar-2instruments
+_ins(3) C4 - oscar-2instruments - D4
 
 [Score for creating sound-object 'mixed'] 
 C4 _chan(2) _legato(30) D4 E4
@@ -66,7 +73,7 @@ _tempo(2) C4 Somevariable D4
 _tempo(2) C4 gold gold D4
 
 [With silent (undeclared) sound-object 'h'] 
-Thisvariable C4 gold gold h D4
+Thisvariable C4 gold gold h D4 h
 
 // Tied sound-objects
 

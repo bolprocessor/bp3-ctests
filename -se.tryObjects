@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.tryObjects'. Date: 2026-10-11 16:54:10 16OctGMT",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.tryObjects'. Date: 2026-10-28 06:50:51 6OctGMT",
     "Quantization": {
         "name": "Quantization",
         "value": "1",
@@ -345,7 +345,7 @@
     "IgnoreFields": {
         "name": "Ignore field separators",
         "value": "0",
-        "unit": "False by default, not advised",
+        "unit": "Unchecked by default, not advised",
         "boolean": "1"
     },
     "TraceZouleb": {

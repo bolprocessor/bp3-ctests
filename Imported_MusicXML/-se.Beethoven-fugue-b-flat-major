@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Beethoven-fugue-b-flat-major'. Date: 2026-08-30 16:28:38 16AugGMT",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Beethoven-fugue-b-flat-major'. Date: 2026-10-12 20:48:04 20OctGMT",
     "Quantization": {
         "name": "Quantization",
         "value": "20",
@@ -290,7 +290,7 @@
     },
     "ResetNotes": {
         "name": "Reset Notes",
-        "value": "0",
+        "value": "1",
         "unit": "Send AllNotesOff at the end of item",
         "boolean": "1"
     },
@@ -308,7 +308,7 @@
     },
     "ResetControllers": {
         "name": "Reset controllers",
-        "value": "0",
+        "value": "1",
         "unit": "volume, panoramic, pressure, pitchbend, modulation, pedal",
         "boolean": "1"
     },
@@ -345,7 +345,7 @@
     "IgnoreFields": {
         "name": "Ignore field separators",
         "value": "0",
-        "unit": "False by default, not advised",
+        "unit": "Unchecked by default, not advised",
         "boolean": "1"
     },
     "TraceZouleb": {
