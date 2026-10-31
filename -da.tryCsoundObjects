@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-da.tryCsoundObjects". Date: 2026-10-27 09:20:05
+// Data saved as "-da.tryCsoundObjects". Date: 2026-10-30 16:09:11
 -so.tryCsoundObjects
 -cs.tryCsoundObjects
 -se.tryCsoundObjects
@@ -132,8 +132,7 @@ i2 4.250 0.250 9.02 83.495 88.995 77.466 80.807 0.000 0.000 0.000 ; D5 + 83 cent
 i2 4.500 0.250 9.04 88.995 94.494 117.300 122.150 0.000 0.000 0.000 ; E5 + 88 cents
 i2 4.750 0.250 9.05 94.494 99.994 122.150 127.000 0.000 0.000 0.000 ; F5 + 94 cents
 
-// Checking an arbitrary parameter "burb" which affects arguments 9, 10 and 11 of instrument 2
-// In sound-object 'e', the 3d event (D3) already sets 'blurb' to start value 10 and to end value 30. These values are added to the ones interpolated on the 'blurb' variation, yielding 72.8 and 130 respectively.
+// Checking an arbitrary parameter "burb" which affects arguments 9, 10 and 11 of 'Instrument_2'. In sound-object 'e', the 3d event 'D3' already sets 'blurb' to start value 10 and to end value 30. These values are added to the ones interpolated on the 'blurb' variation, yielding 72.8 and 130 respectively.
 
 _ins(2) _cont(blurb) _value(blurb,25.6) e _value(blurb,100)
 
@@ -142,8 +141,7 @@ i2 0.000 1.000 7.00 8191.500 8191.500 64.000 64.000 25.600 62.800 0.000 ; C3
 i2 1.000 1.000 7.02 8191.500 8191.500 64.000 64.000 72.800 130.000 0.000 ; D3
 i2 1.333 0.667 7.07 8191.500 8191.500 64.000 64.000 75.188 100.000 0.000 ; G3
 
-// Here the variation of 'blurb' is more complex, therefore the Bol Processor will describe it
-// with function tables. Total duration s 20 seconds.
+// Here the variation of 'blurb' is more complex, therefore the Bol Processor will describe it with function tables. Total duration s 20 seconds.
 
 _ins(2) _cont(blurb) _value(blurb,12) e _value(blurb,110) _ _value(blurb,130) _ _ _value(blurb,80) _ _ _value(blurb,-20) _ _value(blurb,-10) _ _ _ _value(blurb,40)
 
@@ -151,7 +149,7 @@ f101 0.000 256 -7 12.000 76 110.000 76 130.000 104 96.750
 i2 0.000 6.660 7.04 8191.500 8191.500 64.000 64.000 12.000 96.750 101.000 ; E3
 f102 0.000 256 -7 12.000 51 110.000 51 130.000 102 80.000 52 30.000
 i2 0.000 10.000 7.00 8191.500 8191.500 64.000 64.000 12.000 30.000 102.000 ; C3
-f103 10.000 256 -7 40.000 51 -6.000 51 8.000 154 70.000
+f103 10.000 256 -7 30.000 51 -20.000 51 -10.000 154 40.000
 i2 10.000 10.000 7.02 8191.500 8191.500 64.000 64.000 40.000 70.000 103.000 ; D3
 f104 13.330 256 -7 -13.350 25 -10.000 231 40.000
 i2 13.330 6.670 7.07 8191.500 8191.500 64.000 64.000 -13.350 40.000 104.000 ; G3
@@ -160,42 +158,43 @@ i2 13.330 6.670 7.07 8191.500 8191.500 64.000 64.000 -13.350 40.000 104.000 ; G3
 
 // Bol Processor combines Csound parameters either additively or multiplicatively. For the predefined parameters mapped to MIDI the combination mode is preset: all parameters are combined additively expect volume. For other parameters the user may choose both the default value and the combination mode. For instance, instrument 6 deals with a 'oops' parameter combining multiplicatively. Sound-object 'f' contains calls to this instrument, with values of 'oops' that are not the default ones.
 
-[Showing the '231.5' default value of 'blah' on arguments 15 and 16] 
+[Due to '231.5' default value of 'blah' on arguments 15 and 16, it is set to '-231.5'] 
 f
 
-i6 0.000 0.500 7.00 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.000 0.000 0.000 231.500 231.500 0.000 ; C3
-i6 0.500 0.500 7.02 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.000 0.000 0.000 231.500 231.500 0.000 ; D3
-i6 1.000 0.500 7.04 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.000 0.000 0.000 231.500 231.500 0.000 ; E3
+i6 0.000 0.500 7.00 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.000 0.000 0.000 -231.500 -231.500 0.000 ; C3
+i6 0.500 0.500 7.02 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.000 0.000 0.000 -231.500 -231.500 0.000 ; D3
+i6 1.000 0.500 7.04 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.000 0.000 0.000 -231.500 -231.500 0.000 ; E3
 
-[Arguments 15 and 16: 'blah' is combined in ADD mode, i;e. 231.5 + 105 = 336.5] 
-_ins(6) _value(blah,105) _value(blurb2,0) _value(oops,0) f
+[Arguments 15 and 16: 'blah' is combined in ADD mode, i.e. 105 - 231.5 = -126.5. The '_value()' instruction guesses '_ins(6)'] 
+_value(blah,105) f
 
-i6 0.000 0.500 7.00 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.000 0.000 0.000 336.500 336.500 0.000 ; C3
-i6 0.500 0.500 7.02 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.000 0.000 0.000 336.500 336.500 0.000 ; D3
-i6 1.000 0.500 7.04 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.000 0.000 0.000 336.500 336.500 0.000 ; E3
+i6 0.000 0.500 7.00 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.000 0.000 0.000 -126.500 -126.500 0.000 ; C3
+i6 0.500 0.500 7.02 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.000 0.000 0.000 -126.500 -126.500 0.000 ; D3
+i6 1.000 0.500 7.04 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.000 0.000 0.000 -126.500 -126.500 0.000 ; E3
 
 [Arguments 9 and 10: "blurb2' is combined in ADD mode] 
-_ins(6) _value(blah,0) _value(blurb2,55) _value(oops,0) f
+_value(blurb2,55) _value(oops,0) f
+
+i6 0.000 0.500 7.00 0.000 0.000 90.000 90.000 55.000 55.000 0.000 0.000 0.000 0.000 -231.500 -231.500 0.000 ; C3
+i6 0.500 0.500 7.02 0.000 0.000 90.000 90.000 55.000 55.000 0.000 0.000 0.000 0.000 -231.500 -231.500 0.000 ; D3
+i6 1.000 0.500 7.04 0.000 0.000 90.000 90.000 55.000 55.000 0.000 0.000 0.000 0.000 -231.500 -231.500 0.000 ; E3
 
 [Arguments 12 and 13: 'oops' is combined in MULT mode] 
-_ins(6) _value(blah,0) _value(blurb2,0) _value(oops,44) f
+_value(oops,44) f
 
-i6 0.000 0.500 7.00 0.000 0.000 90.000 90.000 0.000 0.000 0.000 22.000 66.000 0.000 231.500 231.500 0.000 ; C3
-i6 0.500 0.500 7.02 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.000 206.800 0.000 231.500 231.500 0.000 ; D3
-i6 1.000 0.500 7.04 0.000 0.000 90.000 90.000 0.000 0.000 0.000 11.000 110.000 0.000 231.500 231.500 0.000 ; E3
+i6 0.000 0.500 7.00 0.000 0.000 90.000 90.000 0.000 0.000 0.000 22.000 66.000 0.000 -231.500 -231.500 0.000 ; C3
+i6 0.500 0.500 7.02 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.000 206.800 0.000 -231.500 -231.500 0.000 ; D3
+i6 1.000 0.500 7.04 0.000 0.000 90.000 90.000 0.000 0.000 0.000 11.000 110.000 0.000 -231.500 -231.500 0.000 ; E3
 
 [As expected, 'oops' start value in 'C3' is zero, and its end value in 'E3' is 10 = 4 * 2.5/1, where '1' is the default value.] 
-_ins(6) _value(blah,0) _value(blurb2,0) _cont(oops) _value(oops,0) f _value(oops,4)
-
-i6 0.000 0.500 7.00 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.000 2.000 0.000 231.500 231.500 0.000 ; C3
-i6 0.500 0.500 7.02 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.000 12.533 0.000 231.500 231.500 0.000 ; D3
-i6 1.000 0.500 7.04 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.667 10.000 0.000 231.500 231.500 0.000 ; E3
-
-[Check this] 
-_value(blah,0) _value(blurb2,0) _cont(oops) _value(oops,0) f _value(oops,4)
-
-[Check this] 
 _ins(6) _cont(oops) _value(oops,0) f _value(oops,4)
+
+i6 0.000 0.500 7.00 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.000 2.000 0.000 -231.500 -231.500 0.000 ; C3
+i6 0.500 0.500 7.02 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.000 12.533 0.000 -231.500 -231.500 0.000 ; D3
+i6 1.000 0.500 7.04 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.667 10.000 0.000 -231.500 -231.500 0.000 ; E3
+
+[Same result, because '_ins(6)' is guessed by '_value()' and '_cont()'] 
+_cont(oops) _value(oops,0) f _value(oops,4)
 
 // -------- GENERAL REMARK -------------
 // The time resolution (10ms) has no effect on the accuracy of timings in Csound scores. It concerns only the dates of MIDI messages.
