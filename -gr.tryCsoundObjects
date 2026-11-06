@@ -1,9 +1,9 @@
-// Bol Processor BP3 compatible with version BP2.9.8
-// Grammar file saved as "-gr.tryCsoundObjects". Date: 2022-02-18 14:55:34
--mi.tryCsoundObjects
+// Bol Processor BP3
+// Data saved as "-gr.tryCsoundObjects". Date: 2026-11-06 15:40:04
+-so.tryCsoundObjects
 -cs.tryCsoundObjects
 -se.tryCsoundObjects
--ho.tryCsoundObjects
+-al.tryCsoundObjects
 
 // Check the production of Csound scores using sound-objects whose prototypes contain Csound scores.
 // Productions of these rules are listed and fully explained on article Csound objects (https://bolprocessor.org/csound-objects/).

@@ -1,11 +1,12 @@
 // Bol Processor BP3
-// Data saved as "-gr.cloches1". Date: 2026-07-19 11:16:36
+// Data saved as "-gr.cloches1". Date: 2026-11-06 17:47:44
 -se.cloches
 -al.cloches1
 
-[Airs de sonneurs de cloches: 4 cloches A,B,C,D]
+// Airs de sonneurs de cloches : 4 cloches A,B,C,D
+// Set the seed for randomisation to 2 or 3, 4, 5, 6, 8, but not to 1 or 7 as these will produce a timeout
 
-RND [Prendre une règle au hasard.]
+RND [Prendre une règle au hasard.] 
 
 gram#1[1] S --> /4 Air
 gram#1[2] Air --> Fixe Nouv B A C D X12 F
@@ -15,9 +16,9 @@ gram#1[5] Air --> Fixe Nouv TR(= B A D C X1234) F
 
 ----------------------------------------------------------
 
-LIN [Prendre une règle au hasard, en cherchant l'occurrence la plus à gauche de son premier argument.]
+LIN [Prendre une règle au hasard, en cherchant l'occurrence la plus à gauche de son premier argument.] 
 
-[Règles sans contexte éloigné, de faible poids:]
+[Règles sans contexte éloigné, de faible poids:] 
 
 gram#2[1] <1> ?1 ?2 ?3 ?4 X12 --> ?1 ?2 ?3 ?4 TR(=?1 ?2 ?4 ?3 X34)
 gram#2[2] <1> ?1 ?2 ?3 ?4 X12 --> ?1 ?2 ?3 ?4 TR(=?2 ?1 ?4 ?3 X1234)
@@ -31,11 +32,11 @@ gram#2[6] <1> ?1 ?2 ?3 ?4 X1234 --> ?1 ?2 ?3 ?4 TR(=?2 ?1 ?3 ?4 X12)
 gram#2[7] <1> ?1 ?2 ?3 ?4 X1234 --> ?1 ?2 ?3 ?4 TR(=?1 ?3 ?2 ?4 X23)
 gram#2[8] <1> ?1 ?2 ?3 ?4 X1234 --> ?1 ?2 ?3 ?4 TR(= ?1 ?2 ?4 ?3 X34)
 
-[Règle de poids infini:]
+[Règle de poids infini:] 
 
-gram#2[9] <inf> A B C D ?1 F --> A B C D [Fin de l'air: volée canonique.]
+gram#2[9] <inf> A B C D ?1 F --> A B C D [Fin de l'air: volée canonique.] 
 
-[Règles avec contexte éloigné, de fort poids:]
+[Règles avec contexte éloigné, de fort poids:] 
 
 gram#2[10] <1000> #(?1 ?2 ?4 ?3) ?1 ?2 ?3 ?4 X12 --> ?1 ?2 ?3 ?4 Nouv ?1 ?2 ?4 ?3 X34
 gram#2[11] <1000> #(?2 ?1 ?4 ?3) ?1 ?2 ?3 ?4 X12 --> ?1 ?2 ?3 ?4 Nouv ?2 ?1 ?4 ?3 X1234
@@ -51,27 +52,27 @@ gram#2[17] <1000> #(?1 ?2 ?4 ?3) ?1 ?2 ?3 ?4 X1234 --> ?1 ?2 ?3 ?4 Nouv ?1 ?2 ?4
 
 -----------------------------------------------------------
 
-ORD [Prendre ces règles dans l'ordre: pas de choix.]
+ORD [Prendre ces règles dans l'ordre: pas de choix.] 
 
-[Règles d'effacement au cas où on a quitté la grammaire précédente par une interruption:]
+[Règles d'effacement au cas où on a quitté la grammaire précédente par une interruption:] 
 
-gram#3[1] LEFT X12 -->[?LEFT? force la réécriture de gauche à droite. Plus rapide ici.]
+gram#3[1] LEFT X12 -->[?LEFT? force la réécriture de gauche à droite. Plus rapide ici.] 
 gram#3[2] LEFT X34 -->
 gram#3[3] LEFT X23 -->
 gram#3[4] LEFT X1234 -->
 gram#3[5] LEFT F -->
 
-[Effacer les marques de début de volée:]
+[Effacer les marques de début de volée:] 
 
 gram#3[6] LEFT Nouv -->
 
-[Ecriture de la volée canonique de départ:]
+[Ecriture de la volée canonique de départ:] 
 
 gram#3[7] LEFT Fixe --> A B C D
 
 -----------------------------------------------------------
 
-SUB1 [Substitutions. Les réécritures se font en fait de gauche à droite.]
+SUB1 [Substitutions. Les réécritures se font en fait de gauche à droite.] 
 
 gram#4[1] A --> do3
 gram#4[2] B --> sol3
