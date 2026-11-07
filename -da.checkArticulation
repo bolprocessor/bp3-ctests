@@ -1,8 +1,7 @@
 // Bol Processor BP3
-// Data saved as "-da.checkArticulation". Date: 2026-08-09 17:48:39
+// Data saved as "-da.checkArticulation". Date: 2026-11-07 09:48:30
 -se.checkArticulation
 
-// -da.checkArticulation
 // These are examples of articulations (legato and staccato) that modify the durations of sound-objects in sequences.
 // These examples are not meant to sound "nice"! They have been designed to make things clear on both sounds and graphics.
 // Also for the sake of clarity I have used sound-objects that contain one single note. You should keep in mind that articulation modifies sound-object durations. If a sound-object contains several NoteOn/NoteOff pairs, the corresponding notes will not be concerned by legato or staccato. The underlying philosophy is that a sound?object is a sequence of MIDI codes whose order is immuable. A note is a particular case of sound?object containing a single NoteOn/NoteOff pair.
