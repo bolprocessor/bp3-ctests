@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.checkContControls'. Date: 2026-10-24 15:14:32 15OctGMT",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.checkContControls'. Date: 2026-11-07 19:19:14 19NovGMT",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -134,7 +134,7 @@
     },
     "ShowAllObjects": {
         "name": "Show all objects",
-        "value": "1",
+        "value": "0",
         "unit": "including inaudible ones (for geeks)",
         "boolean": "1"
     },

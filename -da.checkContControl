@@ -1,18 +1,84 @@
 // Bol Processor BP3
-// Data saved as "-da.checkContControl". Date: 2026-10-24 18:01:42
+// Data saved as "-da.checkContControl". Date: 2026-11-07 19:13:10
 // -da.checkContControl
 // Use a cello sound to check this with MIDI
 
 -se.checkContControls
 -to.Vina
 
+// Continuous control of pitchbend. These examples work in MIDI and Csound.
+
+_pitchcont _pitchrange(200) _pitchbend(0) C4 D4 _pitchbend(100) E4 F4 _pitchbend(0)
+
+i1 0.000 1.000 8.00 64.000 64.000 0.000 0.000 50.006 0.000 ; C4
+i1 1.000 1.000 8.02 64.000 64.000 0.000 50.006 100.012 0.000 ; D4 + 50 cents
+i1 2.000 1.000 8.04 64.000 64.000 0.000 100.012 50.006 0.000 ; E4 + 100 cents
+i1 3.000 1.000 8.05 64.000 64.000 0.000 50.006 0.000 0.000 ; F4 + 50 cents
+
+[Here, the pitch of 'C4' and 'D4' varies continuously, but the pitch of 'E4' and 'F4' varies by steps] 
+_pitchcont _pitchrange(200) _pitchbend(0) C4 D4 _pitchbend(100) _pitchstep E4 F4 _pitchbend(200)
+
+i1 0.000 1.000 8.00 64.000 64.000 0.000 0.000 50.006 0.000 ; C4
+i1 1.000 1.000 8.02 64.000 64.000 0.000 50.006 100.012 0.000 ; D4 + 50 cents
+i1 2.000 1.000 8.04 64.000 64.000 0.000 100.012 100.012 0.000 ; E4 + 100 cents
+i1 3.000 1.000 8.05 64.000 64.000 0.000 150.006 150.006 0.000 ; F4 + 149 cents
+
+[Continuous pitchbend goes on changing over silences] 
+_pitchcont _pitchrange(200) _pitchbend(0) C4 - D4 _pitchbend(100) - E4 - F4 - _pitchbend(0)
+
+i1 0.000 1.000 8.00 64.000 64.000 0.000 0.000 33.337 0.000 ; C4
+i1 2.000 1.000 8.02 64.000 64.000 0.000 66.675 100.012 0.000 ; D4 + 66 cents
+i1 4.000 1.000 8.04 64.000 64.000 0.000 80.010 60.007 0.000 ; E4 + 79 cents
+i1 6.000 1.000 8.05 64.000 64.000 0.000 40.005 20.002 0.000 ; F4 + 39 cents
+
+[Here, a table is required to accommodate new pitchbend values inside note 'D4'] 
+_pitchcont _pitchrange(200) _pitchbend(0) C4 _ D4 _pitchbend(100) _ E4 _ F4 _ _pitchbend(0)
+
+i1 0.000 2.000 8.00 64.000 64.000 0.000 0.000 66.675 0.000 ; C4
+f101 2.000 256 -7 66.675 128 100.012 128 80.010
+i1 2.000 2.000 8.02 64.000 64.000 0.000 66.675 80.010 101.000 ; D4 + 66 cents
+i1 4.000 2.000 8.04 64.000 64.000 0.000 80.010 40.005 0.000 ; E4 + 79 cents
+i1 6.000 2.000 8.05 64.000 64.000 0.000 40.005 0.000 0.000 ; F4 + 39 cents
+
+// Continuous change of volume
+
 _volumecont _volume(0) C4 D4 E4 F4 _volume(127)
 
+i1 0.000 1.000 8.00 0.000 31.750 0.000 0.000 0.000 0.000 ; C4
+i1 1.000 1.000 8.02 31.750 63.500 0.000 0.000 0.000 0.000 ; D4
+i1 2.000 1.000 8.04 63.500 95.250 0.000 0.000 0.000 0.000 ; E4
+i1 3.000 1.000 8.05 95.250 127.000 0.000 0.000 0.000 0.000 ; F4
+
+[Volume change is applied to both fields of the polymetric expression] 
 _volumecont _volume(0) C4 {B3 A3,D4 E4} F4 _volume(127)
 
+i1 0.000 1.000 8.00 0.000 31.750 0.000 0.000 0.000 0.000 ; C4
+i1 1.000 1.000 7.11 31.750 63.500 0.000 0.000 0.000 0.000 ; B3
+i1 1.000 1.000 8.02 31.750 63.500 0.000 0.000 0.000 0.000 ; D4
+i1 2.000 1.000 7.09 63.500 95.250 0.000 0.000 0.000 0.000 ; A3
+i1 2.000 1.000 8.04 63.500 95.250 0.000 0.000 0.000 0.000 ; E4
+i1 3.000 1.000 8.05 95.250 127.000 0.000 0.000 0.000 0.000 ; F4
+
+[Here it applies to both MIDI channels] 
 _volumecont _volume(0) C4 {B3 A3, _chan(2) D4 E4} F4 _volume(127)
 
-// #4
+i1 0.000 1.000 8.00 0.000 31.750 0.000 0.000 0.000 0.000 ; C4
+i1 1.000 1.000 7.11 31.750 63.500 0.000 0.000 0.000 0.000 ; B3
+i1 1.000 1.000 8.02 31.750 63.500 0.000 0.000 0.000 0.000 ; D4
+i1 2.000 1.000 7.09 63.500 95.250 0.000 0.000 0.000 0.000 ; A3
+i1 2.000 1.000 8.04 63.500 95.250 0.000 0.000 0.000 0.000 ; E4
+i1 3.000 1.000 8.05 95.250 127.000 0.000 0.000 0.000 0.000 ; F4
+
+[Here it does not apply to MIDI channel 2 because of '_volumefixed'. So, 'D4' and 'E4' stay at the volume reached after 'C4'. However, in MIDI 'D4' and 'E4' are set to the default volume] 
+_volumecont _volume(0) C4 {B3 A3, _chan(2) _volumefixed D4 E4} F4 _volume(127)
+
+i1 0.000 1.000 8.00 0.000 31.750 0.000 0.000 0.000 0.000 ; C4
+i1 1.000 1.000 7.11 31.750 63.500 0.000 0.000 0.000 0.000 ; B3
+i1 1.000 1.000 8.02 31.750 31.750 0.000 0.000 0.000 0.000 ; D4
+i1 2.000 1.000 7.09 63.500 95.250 0.000 0.000 0.000 0.000 ; A3
+i1 2.000 1.000 8.04 31.750 31.750 0.000 0.000 0.000 0.000 ; E4
+i1 3.000 1.000 8.05 95.250 127.000 0.000 0.000 0.000 0.000 ; F4
+
 // This one works in Csound, not in MIDI because two streams can't be superimposed on the
 // same channel
 
@@ -25,7 +91,6 @@ i1 2.000 1.000 7.09 63.500 0.000 0.000 0.000 0.000 0.000 ; A3
 i1 2.000 1.000 8.04 63.500 95.250 0.000 0.000 0.000 0.000 ; E4
 i1 3.000 1.000 8.05 95.250 127.000 0.000 0.000 0.000 0.000 ; F4
 
-// #5
 // Same problem
 
 _volumecont _volume(0) C4 {B3 A3,_volume(127) D4 E4 _volume(0)} F4 _volume(127)
@@ -37,7 +102,7 @@ i1 2.000 1.000 7.09 63.500 95.250 0.000 0.000 0.000 0.000 ; A3
 i1 2.000 1.000 8.04 63.500 0.000 0.000 0.000 0.000 0.000 ; E4
 i1 3.000 1.000 8.05 95.250 127.000 0.000 0.000 0.000 0.000 ; F4
 
-// #6
+
 // This should also work in MIDI except with some synths (such as D-50) that cannot
 // control volumes independently on separate channels
 
@@ -50,25 +115,29 @@ i1 2.000 1.000 7.09 63.500 0.000 0.000 0.000 0.000 0.000 ; A3
 i1 2.000 1.000 8.04 63.500 95.250 0.000 0.000 0.000 0.000 ; E4
 i1 3.000 1.000 8.05 95.250 127.000 0.000 0.000 0.000 0.000 ; F4
 
-// #7 (needs to be fixed)
-// This one works in MIDI but not in Csound:
 // MIDI merges streams on the same channel, Csound doesn't.
 
-_volumecont{_volume(0) - -_volume(127) - - _volume(60), C4 D4 E4 F4}
+[Needs to be checked in MIDI] 
+{_volumecont _volume(0) - - - _volume(127) - _volume(60), C4 D4 E4 F4}
 
 i1 0.000 1.000 8.00 64.000 64.000 0.000 0.000 0.000 0.000 ; C4
 i1 1.000 1.000 8.02 64.000 64.000 0.000 0.000 0.000 0.000 ; D4
 i1 2.000 1.000 8.04 64.000 64.000 0.000 0.000 0.000 0.000 ; E4
 i1 3.000 1.000 8.05 64.000 64.000 0.000 0.000 0.000 0.000 ; F4
 
-// #8
+[Works both in MIDI and Csound] 
+{4, _volumecont _volume(0) C4 _ D4 _volume(127) _ E4 _ F4 _ _volume(60)}
+
+i1 0.000 1.000 8.00 0.000 84.667 0.000 0.000 0.000 0.000 ; C4
+f101 1.000 256 -7 84.667 128 127.000 128 113.600
+i1 1.000 1.000 8.02 84.667 113.600 101.000 0.000 0.000 0.000 ; D4
+i1 2.000 1.000 8.04 113.600 86.800 0.000 0.000 0.000 0.000 ; E4
+i1 3.000 1.000 8.05 86.800 60.000 0.000 0.000 0.000 0.000 ; F4
 
 _pitchcont _pitchrange(200) _pitchbend(200) C4 B3 _pitchbend(5)
 
 i1 0.000 1.000 8.00 64.000 64.000 0.000 200.000 102.500 0.000 ; C4 + 199 cents
 i1 1.000 1.000 7.11 64.000 64.000 0.000 102.500 5.001 0.000 ; B3 + 102 cents
-
-// #9
 
 _chan(5) _pitchcont _pitchrange(200) _pitchbend(0) C4 {B3 A3,D4 E4} F4 _pitchbend(200)
 
@@ -79,14 +148,10 @@ i1 2.000 1.000 7.09 64.000 64.000 0.000 100.000 150.000 0.000 ; A3 + 99 cents
 i1 2.000 1.000 8.04 64.000 64.000 0.000 100.000 150.000 0.000 ; E4 + 99 cents
 i1 3.000 1.000 8.05 64.000 64.000 0.000 150.000 200.000 0.000 ; F4 + 149 cents
 
-// #10
-
 {_chan(5) _pitchcont _pitchrange(200) _pitchbend(200) C4 _pitchbend(0),_chan(7) _pitchrange(200) _pitchcont _pitchbend(0) G4 _pitchbend(200)}
 
 i1 0.000 1.000 8.00 64.000 64.000 0.000 200.000 0.000 0.000 ; C4 + 199 cents
 i1 0.000 1.000 8.07 64.000 64.000 0.000 0.000 200.000 0.000 ; G4
-
-// #11
 
 _chan(7) _pitchcont _pitchrange(200) _chan(5) _pitchcont _pitchrange(200) _pitchbend(0) C4 {C4 _,_chan(7) _pitchbend(200) D4 _pitchbend(0)} C4 _pitchbend(200)
 
@@ -95,8 +160,6 @@ i1 1.000 2.000 8.00 64.000 64.000 0.000 50.000 150.000 0.000 ; C4 + 49 cents
 i1 1.000 2.000 8.02 64.000 64.000 0.000 200.000 0.000 0.000 ; D4 + 199 cents
 i1 3.000 1.000 8.00 64.000 64.000 0.000 150.000 200.000 0.000 ; C4 + 149 cents
 
-// #12
-
 _chan(7) _pitchcont _pitchrange(200) _chan(5) _pitchcont _pitchrange(200) _pitchbend(0) C4 {_pitchbend(200) C5 _ _pitchbend(0), _chan(7) C4} C4 _pitchbend(200)
 
 i1 0.000 1.000 8.00 64.000 64.000 0.000 0.000 50.000 0.000 ; C4
@@ -104,10 +167,10 @@ i1 1.000 2.000 9.00 64.000 64.000 0.000 200.000 0.000 0.000 ; C5 + 199 cents
 i1 1.000 2.000 8.00 64.000 64.000 0.000 50.000 150.000 0.000 ; C4 + 49 cents
 i1 3.000 1.000 8.00 64.000 64.000 0.000 150.000 200.000 0.000 ; C4 + 149 cents
 
-_velcont _vel(5) C4 {B3 A3 B3,D4 F4 E4} F4 _vel(127)
+_velcont _vel(5) C4 {B3 A3 B3, D4 F4 E4} F4 _vel(127)
 
-_velcont _vel(5) C4 {B3 _vel(127) A3 B3,D4 F4 E4} F4 _vel(127)
+_velcont _vel(5) C4 {B3 _vel(127) A3 B3, D4 F4 E4} F4 _vel(127)
 
 _velcont _vel(5) C4 {B3 _vel(127) A3 B3,_chan(2) D4 F4 E4} F4 _vel(127)
 
-_chan(2) _velcont _chan(1) _velcont _vel(5) C4 {B3 _vel(127) A3 B3,_chan(2) D4 F4 E4} F4 _vel(127)
+_chan(2) _velcont _chan(1) _velcont _vel(5) C4 {B3 _vel(127) A3 B3, _chan(2) D4 F4 E4} F4 _vel(127)

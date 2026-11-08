@@ -1,15 +1,21 @@
 // Bol Processor BP3
-// Data saved as "-da.trySerialTools". Date: 2026-08-30 16:09:42
+// Data saved as "-da.trySerialTools". Date: 2026-11-08 12:10:59
+
 -se.trySerialTools
+
 
 // This is temporary set of examples using serial tools:
 // "_retro", "_rndseq", "_randomize", "_rotate", "_ordseq", "_keymap" and "_keyxpand".
 
+
 // Only visual results are significant. No need to listen to sound rendering! To save time, select the "Event list" output format.
+
 
 // Since the seed for randomisation is set to a positive number, random productions should remain unchanged when restarting productions.
 
+
 // More information: https://bolprocessor.org/serial-tools/
+
 
 -al.abc1
 -to.tryTunings
@@ -152,6 +158,7 @@ _rotate(-2) {_rndseq {a b c d}}
 {_rndseq _rotate(1) {C4 D4 E4 F4}} C3 D3 E3 F3
 
 {_rndseq _retro {C4 D4 E4 F4}} C3 D3 E3 F3
+
 
 // Serial tools modifying pitches
 
