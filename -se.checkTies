@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.checkTies'. Date: 2025-01-17 13:42:55",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.checkTies'. Date: 2026-11-09 09:42:14 9NovGMT",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -114,6 +114,12 @@
         "unit": "Bol Processor score",
         "boolean": "1"
     },
+    "MaxItemsGraphic": {
+        "name": "Max items displayed",
+        "value": "10",
+        "unit": "in real-time MIDI",
+        "boolean": "0"
+    },
     "ShowGraphic": {
         "name": "Show graphics",
         "value": "1",
@@ -128,7 +134,7 @@
     },
     "ShowAllObjects": {
         "name": "Show all objects",
-        "value": "1",
+        "value": "0",
         "unit": "including inaudible ones (for geeks)",
         "boolean": "1"
     },
@@ -168,6 +174,12 @@
         "unit": "",
         "boolean": "1"
     },
+    "SplitLines": {
+        "name": "Add lines between items",
+        "value": "0",
+        "unit": "",
+        "boolean": "1"
+    },
     "CsoundTrace": {
         "name": "Trace Csound",
         "value": "0",
@@ -180,17 +192,17 @@
         "unit": "",
         "boolean": "1"
     },
-    "MaxItemsProduce": {
-        "name": "Max items produced",
-        "value": "0",
-        "unit": "Except in real-time MIDI (deft 20)",
-        "boolean": "0"
-    },
     "AllItems": {
         "name": "Produce all items",
         "value": "0",
         "unit": "",
         "boolean": "1"
+    },
+    "MaxItemsProduce": {
+        "name": "Max items produced",
+        "value": "1",
+        "unit": "Except in real-time MIDI (deft 20)",
+        "boolean": "0"
     },
     "UseEachSub": {
         "name": "Play each substitution",
@@ -204,8 +216,26 @@
         "unit": "(not implemented)",
         "boolean": "1"
     },
+    "ParseMode": {
+        "name": "Parse mode",
+        "value": "ANAL",
+        "unit": "when grammar is parsing a data file",
+        "boolean": "0"
+    },
+    "LearnFromWeights": {
+        "name": "Start from latest weights file instead of grammar",
+        "value": "1",
+        "unit": "when learning rule weights from a data file",
+        "boolean": "1"
+    },
+    "TraceDetail": {
+        "name": "Detailed trace",
+        "value": "0",
+        "unit": "(for special use)",
+        "boolean": "1"
+    },
     "TraceProduce": {
-        "name": "Trace production",
+        "name": "Trace production or parsing",
         "value": "0",
         "unit": "",
         "boolean": "1"
@@ -214,6 +244,12 @@
         "name": "Choose candidate rule",
         "value": "0",
         "unit": "(not implemented)",
+        "boolean": "1"
+    },
+    "AllTemplates": {
+        "name": "When parsing, check all templates",
+        "value": "0",
+        "unit": "",
         "boolean": "1"
     },
     "DeftBufferSize": {
@@ -225,7 +261,7 @@
     "MaxConsoleTime": {
         "name": "Max computation time",
         "value": "15",
-        "unit": "seconds. Time for console's work (0 = no limit) Except in Improvize mode",
+        "unit": "seconds. Time for console's work (0 = no limit).<br >(Except in Improvize mode)",
         "boolean": "0"
     },
     "ComputeWhilePlay": {
@@ -255,7 +291,7 @@
     "ResetNotes": {
         "name": "Reset Notes",
         "value": "0",
-        "unit": "Send AllNotesOff, pedals off and reset pitchbend at the end of item",
+        "unit": "Send AllNotesOff at the end of item",
         "boolean": "1"
     },
     "ResetWeights": {
@@ -273,7 +309,7 @@
     "ResetControllers": {
         "name": "Reset controllers",
         "value": "1",
-        "unit": "volume, panoramic, pressure, pitchbend, modulation",
+        "unit": "volume, panoramic, pressure, pitchbend, modulation, pedal",
         "boolean": "1"
     },
     "EndFadeOut": {
@@ -306,6 +342,18 @@
         "unit": "(not implemented)",
         "boolean": "1"
     },
+    "IgnoreFields": {
+        "name": "Ignore field separators",
+        "value": "0",
+        "unit": "Unchecked by default, not advised",
+        "boolean": "1"
+    },
+    "TraceZouleb": {
+        "name": "Trace serial tools Zouleb()",
+        "value": "0",
+        "unit": "For geeks!",
+        "boolean": "1"
+    },
     "TraceMIDIinteraction": {
         "name": "Trace MIDI interactions",
         "value": "0",
@@ -336,11 +384,23 @@
         "unit": "Hz (usually 440)",
         "boolean": "0"
     },
+    "PedalReleaseDefault": {
+        "name": "Pedals 64 to 69",
+        "value": "1",
+        "unit": "Release pedal before pressing it again (set by default)",
+        "boolean": "1"
+    },
     "StrikeAgainDefault": {
         "name": "Strike again NoteOn's",
         "value": "1",
-        "unit": "Keep checked unless you know why!<br>(Read https:\/\/bp3.tech\/csound-checkup\/)",
+        "unit": "Keep checked unless you know why!<br>(Read https:\/\/bolprocessor.org\/control-noteon-noteoff\/)",
         "boolean": "1"
+    },
+    "DeftVelocity": {
+        "name": "Default velocity",
+        "value": "64",
+        "unit": "(1..127)",
+        "boolean": "0"
     },
     "DeftVolume": {
         "name": "Default volume",
@@ -354,12 +414,6 @@
         "unit": "(0..127) usually 7",
         "boolean": "0"
     },
-    "DeftVelocity": {
-        "name": "Default velocity",
-        "value": "64",
-        "unit": "(1..127)",
-        "boolean": "0"
-    },
     "DeftPanoramic": {
         "name": "Default panoramic",
         "value": "64",
@@ -370,6 +424,12 @@
         "name": "Panoramic controller",
         "value": "10",
         "unit": "(0..127) usually 10",
+        "boolean": "0"
+    },
+    "DeftPitchbendRange": {
+        "name": "Default pitchbend range",
+        "value": "0",
+        "unit": "cents, for all MIDI channels (e.g. 200); _pitchrange() changes it for one channel. With 0, _pitchbend() values are raw (0..16383, centre 8192)",
         "boolean": "0"
     },
     "StopPauseContinue": {
@@ -387,7 +447,7 @@
     "MinPeriod": {
         "name": "Minimum period",
         "value": "200",
-        "unit": "ms (deft 200, at least 2 times the Quantization)<br>This is used for positioning sound-objects",
+        "unit": "ms (deft 200, at least 2 times the Quantization)<br>This is used for positioning sound-objects<br>(Read https:\/\/bolprocessor.org\/control-noteon-noteoff\/)",
         "boolean": "0"
     },
     "TraceCaptureAnalysis": {
@@ -395,5 +455,40 @@
         "value": "1",
         "unit": "",
         "boolean": "1"
+    },
+    "LiveGrammar": {
+        "name": "Follow grammar(s)",
+        "value": "0",
+        "unit": "(Read https:\/\/bolprocessor.org\/live-coding\/)",
+        "boolean": "1"
+    },
+    "SyncChange": {
+        "name": "Synchronised change",
+        "value": "0",
+        "unit": "",
+        "boolean": "1"
+    },
+    "LiveSettings": {
+        "name": "Follow settings",
+        "value": "0",
+        "unit": "",
+        "boolean": "1"
+    },
+    "TraceLive": {
+        "name": "Trace changes",
+        "value": "0",
+        "unit": "",
+        "boolean": "1"
+    },
+    "TraceMinimise": {
+        "name": "Trace item #",
+        "value": "0",
+        "unit": "(0 for none)",
+        "boolean": "0"
+    },
+    "UrlToPush": {
+        "name": "url_to_push",
+        "value": "http:\/\/localhost\/bolprocessor\/php\/note_push.php",
+        "boolean": "0"
     }
 }

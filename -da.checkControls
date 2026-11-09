@@ -1,7 +1,9 @@
 // Bol Processor BP3
-// Data saved as "-da.checkControls". Date: 2026-11-08 10:22:24
+// Data saved as "-da.checkControls". Date: 2026-11-09 00:08:38
+
 -gl.GeneralMIDI
 -se.checkControls
+
 
 // These are examples of effects controlled by BP3
 // They can be played with a General MIDI synth or QuickTime MIDI.
@@ -12,9 +14,11 @@
 
 Shakuhachi -- do4 re4 mi4 _transpose(-5) do4 re4 mi4 {fa4 mi4 re4,si4 la4 sol4 } _transpose(0) do4 {_transpose(-5) fa4 mi4 re4,si4 la4 sol4 } {fa4 mi4 re4,si4 la4 sol4} Shakuhachi -- do4 re4 mi4 _transpose(-5) do4 re4 mi4 mi4 re4 do4
 
+
 // #2 Transposition. Note that BP2 clips key numbers within the MIDI range (0..127) by shifting octaves on notes beyond that range.
 
 LoudPiano -- do4 re4 mi4 _transpose(-128) do4 re4 mi4 {fa4 mi4 re4,si4 la4 sol4 } Shakuhachi -- do4 re4 mi4 _transpose(-5) do4 re4 mi4 _transpose(0) do4
+
 
 // Velocity controls.
 // Note that default velocity is 64.
@@ -22,35 +26,43 @@ LoudPiano -- do4 re4 mi4 _transpose(-128) do4 re4 mi4 {fa4 mi4 re4,si4 la4 sol4 
 
 Shakuhachi -- _vel(40) do4 re4 mi4 fa4 _vel(120) sol4 {2,fa4 mi4 re4 mi4 re4} Shakuhachi -- do4 re4 mi4 _transpose(-5) do4 re4 mi4 _vel(30) do4 re4 mi4 fa4
 
+
 // #4 Stepwise variation 5 to 127, and from 127 down to 10, with random velocity = 3 and random time = 100 ms
 
 Shakuhachi -- _rndvel(3) _rndtime(100) _vel(5) _velstep do4 re4 mi4 fa4 _vel(127) do4 re4 mi4 fa4 _vel(10) re4 do4
+
 
 // #5 Stepwise variation 5 to 127, then keep value 127, eventually change suddenly to 10
 // Reduce tempo if you can't hear!
 
 Shakuhachi -- _vel(5) _velstep do4 re4 mi4 fa4 sol4 fa4 mi4 re4 do4 re4 mi4 fa4 _vel(127) _velfixed do4 re4 mi4 fa4 sol4 fa4 mi4 _vel(20) re4 do4
 
+
 // #6 Stepwise variation until "_velfixed", then constant value (82) until "_vel(127)", then stepwise down from 127 to 10. The constant value is approximately 70.
 
 Shakuhachi -- _vel(20) _velstep do4 re4 mi4 fa4 sol4 fa4 mi4 _velfixed re4 do4 re4 mi4 fa4 _vel(127) _velstep do4 re4 mi4 fa4 sol4 fa4 mi4 _vel(10) re4 do4
+
 
 // #7 Here we control several fields of a polymetric structure with the same velocity value that keeps increasing from 10 to 127.
 
 Shakuhachi -- _vel(10) _velstep do4 re4 mi4 fa4 sol4 fa4 mi4 re4 do4 re4 mi4 fa4 {do4 mi4 re4 fa4, sol4 si4 do5} Shakuhachi -- do4 re4 mi4 _transpose(-5) do4 re4 mi4 _vel(127)
 
+
 // #8 Multichannel and polyphonic version.
 
 TheBlueNoteJazz -- _chan(K1=2) _vel(10) _velstep do4 re4 mi4 fa4 sol4 fa4 mi4 re4 do4 re4 mi4 fa4 _vel(127) _velfixed do4 _vel(30) mi4 re4 fa4 _chan(4) sol4 si4 do5 {_chan(K1) do4 _vel(30) mi4 re4 fa4,_vel(70) _chan(4) sol4 si4 do5} Shakuhachi -- do4 re4 mi4 _transpose(-5) do4 re4 mi4 _script(MIDI all notes off channel 2)
+
 
 // #9 Also multi-timbral. We keep a separate control "_vel(40)" on one voice.
 
 TheBlueNoteJazz -- _vel(10) _velstep _chan(K1=2) do4 re4 mi4 fa4 sol4 fa4 mi4 re4 do4 re4 mi4 fa4 do4 mi4 re4 fa4 {_chan(K1) do4 mi4 re4 fa4, _chan(4) _vel(40) sol4 si4 do5} Shakuhachi -- do4 re4 mi4 _transpose(-5) do4 re4 mi4 _chan(K1) fa4 mi4 re4 do4 _vel(127)
 
+
 // Volume control.
 // #10 Stepwise control. "_volumecontrol(7)" is not necessary because controller 7 is the default volume controller.
 
 Shakuhachi -- _volumecontrol(7) _volume(30) _volumestep do4 re4 mi4 fa4 sol4 fa4 mi4 re4 do4 re4 mi4 fa4 _volume(127)
+
 
 // #11 Continuous control.
 // Note that parameters K1, K2, etc. may also be controlled by external MIDI devices.
@@ -58,16 +70,19 @@ Shakuhachi -- _volumecontrol(7) _volume(30) _volumestep do4 re4 mi4 fa4 sol4 fa4
 
 Shakuhachi -- _volumerate(40) _volumecont _volume(K1=64) re4_______ _volume(127) ________ _volume(K2=10) _____ _volume(K1)
 
+
 // #12 Controlling volume on channel 4. This will work if the synth is in "OMNI ON" mode or its keyboard is on channel 4.
 // Here we expect that the keyboard is not on channel 4, so we put the synth in OMNI mode
 // This is done by the "_script()" command which is only effective if the "Internal" bank is selected! There are also lots of silences in the beginning to give time to the D-50 to set-up changes.
 
 Internal - _script(MIDI Omni mode ON channel 1) -- TheBlueNoteJazz --- _chan(4) _volumestep _volume(30) do4 re4 mi4 fa4 sol4 fa4 mi4 re4 do4 re4 mi4 fa4 _volume(127)
 
+
 // #13 Almost the same example except that "_volume(20)" is placed before "_chan(4)".
 // Consequently, control is sent on channel 1 (the default channel). This will work if the synth is in "OMNI ON" mode or its keyboard is on channel 1.
 
 Internal - _script(MIDI Omni mode ON channel 1) -- TheBlueNoteJazz --- _volumestep _volume(20) _chan(4) do4 re4 mi4 fa4 sol4 fa4 mi4 re4 do4 re4 mi4 fa4 _volume(127)
+
 
 // #14 Continuous control of volume, channel 2. Same remark regarding channels.
 // "_volumerate(10)" must be placed after "_chan(2)" so that the rate is fixed on the
@@ -76,12 +91,14 @@ Internal - _script(MIDI Omni mode ON channel 1) -- TheBlueNoteJazz --- _volumest
 
 Internal - _script(MIDI Omni mode ON channel 1) -- TheBlueNoteJazz --- _chan(2) _volumerate(10) _volumecont _volume(127) do4 _ _volume(10) __ _volume(127) __ _volume(0) __ _volume(100)_______
 
+
 // #15 Controlling volume on several channels. This may not work
 // properly if the synth (e.g. D-50) does not recognize positions of volume pedals on
 // separate channels. Either the setting is "OMNI ON" and all _volume() will change the unique pedal (the one with the same MIDI channel as the keyboard), or "OMNI OFF" and only
 // _volume() on the same channel as the keyboard will be recognized.
 
 TheBlueNoteJazz -- {_chan(2) _volumerate(50) _volumecont _volume(127) do4________volume(0)____ _volume(127),_chan(4) _volumefixed _volume(64) sol4 ________} Shakuhachi -- do4 re4 mi4 _transpose(-5) do4 re4 mi4
+
 
 // #16 Similar example producing different results on D-50.
 // With "OMNI ON" and keyboard on channel 1, volume is changed on both channels. In fact,
@@ -92,6 +109,7 @@ TheBlueNoteJazz -- {_chan(2) _volumerate(50) _volumecont _volume(127) do4_______
 // pedal of your synth and it would remain silent, unless 'Reset controllers' is checked!
 
 TheBlueNoteJazz -- _chan(2) _volumestep _volume(127) do4 re4 mi4 fa4 sol4 fa4 mi4 re4 do4 _chan(4) sol4 si4 do5 {_chan(2) do4 mi4 re4 fa4 do4 mi4 re4 fa4, _chan(4) _volumecont _volume(127) sol4 si4 do5 sol4 si4 do5 _volume(30)} Shakuhachi -- do4 re4 mi4 _transpose(-5) do4 re4 mi4 _chan(2) _volume(0) --- _volume(64)
+
 
 // There are other remarks regarding the continuous or stepwise control of parameters like velocity, articulation, volume, pitchbender, modulation and pressure on several
 // channels in a single sequence. See the last examples of pitchbend control below and apply the same principles
@@ -106,34 +124,42 @@ TheBlueNoteJazz -- _chan(2) _volumestep _volume(127) do4 re4 mi4 fa4 sol4 fa4 mi
 // "_pitchrange(200)" must be placed after "_chan(1)" so that it is assigned to the proper channel
 
 Cello -- _chan(1) _pitchrange(200) do4 re4 _pitchbend(0) mi4 fa4 sol4 fa4 mi4 re4 do4 re4 mi4 fa4 _pitchbend(50) mi4 fa4 sol4 fa4 mi4 re4 do4 _pitchbend(0)
+
+
 // #18 A stepwise portamento: bender values are interpolated between -200 and +200 cents
 
 Cello -- _pitchrange(200) _pitchbend(-50) _pitchstep re4 re4 re4 re4 re4 re4 _pitchbend(50) _pitchbend(0)
+
 
 // #19 Also stepwise, but notes are not stroked again. Will only produce effect if the 'hold' pedal is on, which is done automatically by _switchon(64,1). But not in Csound.
 
 Cello -- _chan(1) _pitchrange(200) _switchon(64,1) _pitchbend(+200) _pitchstep re4 ------- _pitchbend(-200) _switchoff(64,1)
 
-i1 0.347 0.601 9.02 90.000 90.000 0.000 200.000 0.000 0.000 ; re4 -> + 199 cents
+i1 1.000 0.333 9.02 90.000 90.000 0.000 200.000 200.000 0.000 ; re4 -> + 200 to + 200 cents
+
 
 // #20 A simple continuous portamento
 
 Cello -- _pitchrange(200) _pitchcont _pitchbend(+200) re4_ _ _ _ _ _ _ _pitchbend(-200)
 
-i1 1.000 2.666 9.02 90.000 90.000 0.000 200.000 -200.000 0.000 ; re4 -> + 199 to -200 cents
+i1 1.000 2.666 9.02 90.000 90.000 0.000 200.000 -200.000 0.000 ; re4 -> + 200 to -200 cents
+
+
 // #21 Continuous portamento down and up. Csound creates a 'f101' table to produce it.
 
 Cello -- _pitchrange(200) _pitchcont _pitchbend(+200) re4 _ _ _ _ _ _ _ _pitchbend(-200) _ _ _ _ _ _ _ _ _ _ _pitchbend(+160) _ _ _ _ _ _ _pitchbend(-200) _ _ _pitchbend(0) _ _ _ _
 
 f101 1.000 256 -7 200.000 68 -200.000 85 160.020 51 -200.000 17 0.000 35 0.000
-i1 1.000 10.000 9.02 90.000 90.000 0.000 200.000 0.000 101.000 ; re4 -> + 199 cents
+i1 1.000 10.000 9.02 90.000 90.000 0.000 200.000 0.000 101.000 ; re4 -> + 200 to 0 cents
+
 
 // #22 Same portamento, faster.
 
 Cello -- /4 _pitchrange(200) _pitchcont _pitchbend(+200) re4 _ _ _ _ _ _ _ _pitchbend(-200) _ _ _ _ _ _ _ _ _ _ _pitchbend(+160) _ _ _ _ _ _ _pitchbend(-200) _ _ _pitchbend(0) _ _ _ _
 
 f101 1.000 256 -7 200.000 68 -200.000 85 160.020 51 -200.000 17 0.000 35 0.000
-i1 1.000 2.500 9.02 90.000 90.000 0.000 200.000 0.000 101.000 ; re4 -> + 199 cents
+i1 1.000 2.500 9.02 90.000 90.000 0.000 200.000 0.000 101.000 ; re4 -> + 200 to 0 cents
+
 
 // #23 Same portamento played twice and very fast. The limitation for obtaining accuracy is only the sampling period of the pitch bender (default 50 samples per second).
 // Remember that PitchBend messages are produced in real time, not stored in memory, so that the movement may be quite complex.
@@ -141,8 +167,9 @@ i1 1.000 2.500 9.02 90.000 90.000 0.000 200.000 0.000 101.000 ; re4 -> + 199 cen
 
 Cello /32 _pitchrange(200) _pitchcont _pitchrate(60) _pitchbend(+200) re4 _ _ _ _ _ _ _ _pitchbend(-200) _ _ _ _ _ _ _ _ _ _ _pitchbend(+160) _ _ _ _ _ _ _pitchbend(-200) _ _ _pitchbend(0) _ _ _ _pitchbend(+200) _ _ _ _ _ _ _ _pitchbend(-200) _ _ _ _ _ _ _ _ _ _ _pitchbend(+160) _ _ _ _ _ _ _pitchbend(-200) _ _ _pitchbend(0) _ _ _
 
-[This item is not correct in Csound. Needs to be checked] 
-i1 0.347 0.601 9.02 90.000 90.000 0.000 200.000 0.000 0.000 ; re4 -> + 199 cents
+f101 0.347 512 -7 200.000 71 -200.000 89 160.020 53 -200.000 17 0.000 26 200.000 62 -200.000 89 160.020 53 -200.000 17 0.000 35 0.000
+i1 0.347 0.601 9.02 90.000 90.000 0.000 200.000 0.000 101.000 ; re4 -> + 200 to 0 cents
+
 
 // #24 Portamento on multichannel item
 // Unlike volume control, pitch control is properly separated on each channel in most
@@ -153,84 +180,148 @@ i1 0.347 0.601 9.02 90.000 90.000 0.000 200.000 0.000 0.000 ; re4 -> + 199 cents
 
 TheBlueNoteJazz -- _chan(4) _pitchrange(200) _pitchbend(0) - - do4___ { _vel(127) _pitchbend(-200) _pitchcont do4______________ _pitchbend(+200),_chan(2) sol4______________} Shakuhachi -- do4 re4 mi4 _transpose(-5) do4 re4 mi4
 
+
 // #25 Here no portamento is produced on sol4 because it is on channel 2. But the
 // pitchbend continues going down on channel 4.
 
 TheBlueNoteJazz -- _chan(4) _pitchrange(200) _pitchbend(+200) _pitchcont do4____ do4_____ _chan(2) sol4________ _chan(4) do4______ do4______ _pitchbend(-200)
+
+i1 1.000 1.666 9.00 90.000 90.000 0.000 200.000 141.173 0.000 ; do4 -> + 200 to + 141 cents
+i1 2.666 2.000 9.00 90.000 90.000 0.000 141.173 70.580 0.000 ; do4 -> + 141 to + 71 cents
+i1 4.666 3.000 9.07 90.000 90.000 0.000 0.000 0.000 0.000 ; sol4
+i1 7.666 2.334 9.00 90.000 90.000 0.000 -35.304 -117.652 0.000 ; do4 -> -35 to -118 cents
+i1 10.000 2.333 9.00 90.000 90.000 0.000 -117.652 -200.000 0.000 ; do4 -> -118 to -200 cents
+
 
 // #26 In a polyphonic piece, by default, the parameter in every sequence follows a linear variation that is determined by outside values, regardless of the channel.
 // It's fair to ignore channels in this case so that Csound, which works rather instrumentwise, will get the same interpretation.
 
 TheBlueNoteJazz -- _chan(4) _pitchrange(200) _pitchbend(-200) _pitchcont do4___ {do4______________, _chan(2) _volume(30) sol4______________} Shakuhachi -- do4 re4 mi4 _transpose(-5) do4 re4 mi4 do4___ _pitchbend(+200)
 
+
 // #27 To avoid 'sol4' to change pitch, do as follows:
 
 TheBlueNoteJazz -- _chan(4) _pitchrange(200) _pitchbend(-200) _pitchcont do4___ {do4______________, _chan(2) _pitchfixed _volume(30) sol4______________} Shakuhachi -- do4 re4 mi4 _transpose(-5) do4 re4 mi4 do4___ _pitchbend(+200)
 
+
 // #28 Using object concatenation '&' to extend durations
 
 TheBlueNoteJazz -- _chan(4) _pitchrange(200) _pitchbend(-200) _pitchcont do4___& {&do4______________&,_chan(2) _pitchfixed _volume(30) sol4______________} Shakuhachi -- do4 re4 mi4 _transpose(-5) do4 re4 mi4 &do4___ _pitchbend(+200)
+
 
 // #29 Controlling pitchbenders on two separate channels. You can use up to 16 channels with separate simultaneous movements.
 // "_pitchrange()" must be placed after each "_chan()" so that it is assigned to the proper channel.
 
 TheBlueNoteJazz -- _volume(70) {_chan(4) _pitchrange(200) _pitchbend(+200) _pitchcont do4________pitchbend(-200)_________ _pitchbend(0),_chan(2) _vel(30) _pitchrange(200) _pitchbend(-200) _pitchcont sol4 _______________pitchbend(+200)} Shakuhachi -- do4 re4 mi4 _transpose(-5) do4 re4 mi4
 
-// #30 Here is an example that will not work: attempting to control pitchbend of two separate channels on overlapping time intervals in the same sequence. The portamento on channel 5 will resume at value (150) after 'sol4' instead of continuing the initial line.
+f101 1.074 256 -7 200.000 120 -200.000 136 0.000
+i1 1.074 5.706 9.00 70.000 70.000 0.000 200.000 0.000 101.000 ; do4 -> + 200 to 0 cents
+i1 1.074 5.706 9.07 70.000 70.000 0.000 -200.000 200.000 0.000 ; sol4 -> -200 to + 200 cents
+i1 7.787 0.335 9.00 70.000 70.000 0.000 0.000 0.000 0.000 ; do4
+i1 8.122 0.336 9.02 70.000 70.000 0.000 0.000 0.000 0.000 ; re4
+i1 8.458 0.335 9.04 70.000 70.000 0.000 0.000 0.000 0.000 ; mi4
+i1 8.793 0.336 8.07 70.000 70.000 0.000 0.000 0.000 0.000 ; sol3
+i1 9.129 0.336 8.09 70.000 70.000 0.000 0.000 0.000 0.000 ; la3
+i1 9.465 0.335 8.11 70.000 70.000 0.000 0.000 0.000 0.000 ; si3
+
+
+// #30 Controlling pitchbend of two separate channels on overlapping time intervals in the same sequence. This works both in MIDI and Csound.
 
 TheBlueNoteJazz -- _volume(80) _chan(4) _pitchrange(200) _pitchbend(+200) _pitchcont do4_____ _chan(2) _pitchrange(200) _pitchcont _pitchbend(-150) sol4__ _pitchbend(150) _chan(4) do4______ do4______ _pitchbend(-200)
-// #31 These are proper ways of writing the previous example.
 
-TheBlueNoteJazz -- _volume(80) _chan(4) _pitchrange(200) _pitchbend(+200) _pitchcont do4_____ {---,_chan(2) _pitchrange(200) _pitchcont _pitchbend(-150) sol4__ _pitchbend(150)} Shakuhachi -- do4 re4 mi4 _transpose(-5) do4 re4 mi4 do4______ do4______ _pitchbend(-200)
+i1 1.000 2.000 9.00 80.000 80.000 0.000 200.000 95.646 0.000 ; do4 -> + 200 to + 96 cents
+i1 3.000 1.000 9.07 80.000 80.000 0.000 -150.000 150.018 0.000 ; sol4 -> -150 to + 150 cents
+i1 4.000 2.333 9.00 80.000 80.000 0.000 43.469 -78.268 0.000 ; do4 -> + 43 to -78 cents
+i1 6.333 2.333 9.00 80.000 80.000 0.000 -78.268 -200.000 0.000 ; do4 -> -78 to -200 cents
 
-TheBlueNoteJazz -- _volume(80) _chan(4) _pitchrange(200) _pitchbend(+200) _pitchcont do4_____ {_chan(2) _pitchrange(200) _pitchcont _pitchbend(-150) sol4__ _pitchbend(150)}
-do4______ do4______ _pitchbend(-200)
+
+// #31 An alternative ways of writing the previous example.
+
+TheBlueNoteJazz -- _volume(80) _chan(4) _pitchrange(200) _pitchbend(+200) _pitchcont do4_____ {_chan(2) _pitchrange(200) _pitchcont _pitchbend(-150) sol4__ _pitchbend(150)} do4______ do4______ _pitchbend(-200)
+
+i1 1.000 2.000 9.00 80.000 80.000 0.000 200.000 95.646 0.000 ; do4 -> + 200 to + 96 cents
+i1 3.000 1.000 9.07 80.000 80.000 0.000 -150.000 150.018 0.000 ; sol4 -> -150 to + 150 cents
+i1 4.000 2.333 9.00 80.000 80.000 0.000 43.469 -78.268 0.000 ; do4 -> + 43 to -78 cents
+i1 6.333 2.333 9.00 80.000 80.000 0.000 -78.268 -200.000 0.000 ; do4 -> -78 to -200 cents
+
+
+// #32 A variant
+
+TheBlueNoteJazz -- _volume(80) _chan(4) _pitchrange(200) _pitchbend(+200) _pitchcont do4_____ {---,_chan(2) _pitchrange(200) _pitchcont _pitchbend(-150) sol4__ _pitchbend(150)}
+
+i1 1.000 2.000 9.00 80.000 80.000 0.000 200.000 200.000 0.000 ; do4 -> + 200 to + 200 cents
+i1 3.000 1.000 9.07 80.000 80.000 0.000 -150.000 150.018 0.000 ; sol4 -> -150 to + 150 cents
+
 
 // Modulation
-// #32 Step changes of modulation
+// #33 Step changes of modulation
 // It is advised to reset modulation to 0 at the end.
 
 Shakuhachi -- _modstep _mod(0) re4_____ re4_____ re4_____ re4_____ re4_____ _mod(16383) _mod(0)
 
-// #33 Continuous change of modulation
+
+// #34 Continuous change of modulation
 // The rate of sampling (default 50 samples per second) is declared by _modrate()
 // Be careful to write "_modcont" before the first "_mod()" instruction.
 
 Shakuhachi -- _modrate(30) _modcont _mod(0) re4 ________________ _mod(16383) mi4______________________ _mod(0)_________
 
-// #34 Changing both pitch and modulation
 
-Violin -- _pitchrange(200) _modcont _pitchcont _mod(16383) _pitchbend(+200) re4_____ _pitchbend(-200) ________________ _pitchbend(0) _mod(0)
+// #35 Changing both pitch and modulation. No modulation effect here in Csound. The "_pitchrange(200)" statement is not required because the default range is 200 cents in the settings of this project.
+
+Violin -- _modcont _pitchcont _mod(16383) _pitchbend(+200) re4_____ _pitchbend(-200) ________________ _pitchbend(0) _mod(0)
+
+f101 1.000 256 -7 200.000 69 -200.000 187 0.000
+i1 1.000 7.333 9.02 90.000 90.000 0.000 200.000 0.000 101.000 ; re4 -> + 200 to 0 cents
+
 
 // Channel pressure
-// #35 Changing channel pressure by steps
+// #36 Changing channel pressure by steps
 // Note: on this patch of D-50 channel pressure produces the same effect as modulation
 // It is advised to reset to 0 at the end of the item (unless "Reset controllers" is checked).
 
 Violin -- _chan(1) _presstep _press(5) do4 _ _ _ do4 _ _ _ do4 _ _ _ do4 _ _ _ _ _ _ _ _press(127) _press(0)
-// #36 Changing channel pressure continuously
+
+
+// #37 Changing channel pressure continuously
 // The rate of sampling (default 50 samples per second) is declared by _pressrate()
 
 Violin -- _pressrate(30) _presscont _press(0) do4 ___ do4 ___ do4 ___ do4 _______ _press(127) _press(0)
-// #37 Here the initial value (0) is stored in K1
+
+
+// #38 Here the initial value (0) is stored in K1
 
 Violin -- _chan(1) _presscont _press(K1=0) do4 _________________ _press(127) ____________ _press(K1) ____
-// #38 Changing pitch and channel pressure independently
+
+
+// #39 Changing pitch and channel pressure independently. No effect of pressure in Csound.
 
 Violin -- _pressrate(30) _pitchrate(40) _pitchrange(200) _press(0) _pitchbend(0) _pitchcont _presscont do4 ____________ _pitchbend(+200) _____ _press(127) ___ _pitchbend(-200) _________ _press(0) ____ _pitchbend(0)
 
-// #39 Panoramic control
+f101 1.000 256 -7 0.000 97 200.000 60 -200.000 99 0.000
+i1 1.000 11.333 9.00 90.000 90.000 0.000 0.000 0.000 101.000 ; do4
+
+
+// #40 Panoramic control
 // Works only if a MIDI controller is assigned to panoramic control, as per General MIDI specs, by default controller 10.
 // I haven't been able to check this on D-50, so please report if successful and tell me whether "left" is 0 or 127.
-// This also may not work with QuickTime Music.
 // Here, "_pancontrol(10)" is not needed because it's the default value.
 
 Shakuhachi -- _pancontrol(10) _panrate(40) _pancont _pan(0) re4_______ _pan(127) ________ _pan(K2=10) _____ _pan(80) _________ _pan(K2)
 
+
 // Of course, you can combine all the effects described above: controlling velocity, volume, articulation, pitch, modulation, pressure, in polyphonic and multichannel items.
 // The limitation is only the MIDI system: you can't, for instance, assign different PitchBend values to simultaneous notes on the same MIDI channel.
-// #40 Controlling switches 64 to 95 (64 is the 'hold' pedal)
+// #41 Controlling switches 64 to 95 (64 is the 'hold' pedal)
 
 Violin -- do4 --- do4 --- _switchon(64,1) do4 --- do4 _switchoff(64,1) --- do4
 
-//--------------------------------------------------------+
+
+// #42 Waiting tables are now saved per channel together with the variation. You can delete "_pitchrange(200)" if the default pitch range is set to 200 in the settings.
+
+_chan(4) _pitchrange(200) _pitchbend(+200) _pitchcont do4_____ _chan(2) _pitchrange(200) _pitchcont _pitchbend(-150) sol4__ _pitchbend(150) _chan(4) do4_____ _pitchbend(-200) _ _ _ _ _pitchbend(0)
+
+i1 0.000 2.000 9.00 90.000 90.000 0.000 200.000 39.990 0.000 ; do4 -> + 200 to + 40 cents
+i1 2.000 1.000 9.07 90.000 90.000 0.000 -150.000 150.018 0.000 ; sol4 -> -150 to + 150 cents
+f101 3.000 256 -7 -40.010 153 -200.000 103 0.000
+i1 3.000 3.333 9.00 90.000 90.000 0.000 -40.010 0.000 101.000 ; do4 -> -40 to 0 cents

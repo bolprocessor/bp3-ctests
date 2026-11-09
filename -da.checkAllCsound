@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-da.checkAllCsound". Date: 2026-11-08 16:48:28
+// Data saved as "-da.checkAllCsound". Date: 2026-11-08 19:20:19
 
 -cs.checkAllCsound
 -se.checkAllCsound
@@ -276,9 +276,9 @@ i1 10.000 4.000 8.02 64.000 64.000 0.000 107.143 150.000 0.000 ; D4
 
 _pitchcont _pitchrange(200) _pitchbend(0) - _ _ _ {C4 _ _ _ _pitchbend(200) _ _, _chan(2) _pitchrange(200) E4 _ _pitchbend(180) _ _} D4 _ _ _ _pitchbend(150)
 
-i2 4.000 6.000 268.18 64.000 0.000 0.000 0.000 ; C4
-i3 4.000 6.000 329.63 9946.821 15563.850 0.000 0.000 0.000 0.000 0.000 0.000 0.000 ; E4
-i2 10.000 4.000 312.41 64.000 0.000 0.000 0.000 ; D4
+i2 4.000 6.000 268.183 64.000 0.000 0.000 0.000 ; C4 -> + 43 cents
+i3 4.000 6.000 329.628 9947.429 15564.800 0.000 0.000 0.000 0.000 0.000 0.000 0.000 ; E4 -> + 43 to + 180 cents
+i2 10.000 4.000 312.413 64.000 0.000 0.000 0.000 ; D4 -> + 107 cents
 
 
 // Let us now try arbitrary parameters 'blurb' and 'blurb3' (which have no MIDI equivalent)
@@ -350,7 +350,7 @@ f101 0.000 256 -8 544.500 96 120.000 64 -37.000 96 130.000
 i4 0.000 8.000 8.00 64.000 64.000 0.000 0.000 0.000 0.000 544.500 130.000 101.000 ; C4
 
 
-// The same instrument also uses GENO8 for the pitchbend.
+// Instrument 'Splashmachine' also uses GENO8 for the pitchbend.
 
 _ins(Splashmachine) _cont(pitchbend) _pitchrange(200) _value(pitchbend,120) C4__ _value(pitchbend,34) __ _value(pitchbend,55)___ _value(pitchbend,-160)
 
@@ -364,3 +364,10 @@ _ins(Splashmachine) _cont(pitchbend) _pitchrange(200) _pitchbend(120) C4__ _pitc
 
 f101 0.000 256 -8 120.000 96 34.000 64 55.000 96 -160.000
 i4 0.000 8.000 8.00 64.000 64.000 0.000 120.000 -160.000 101.000 0.000 0.000 0.000 ; C4
+
+[Additional parameter 'splash' is a vibrato] 
+_ins(Splashmachine) _cont(splash) _value(splash,540) _cont(pitchbend) _pitchrange(200) _pitchbend(120) C4_ _ _pitchbend(34) _ _value(splash,250) _ _pitchbend(55)_ _ _ _pitchbend(-160) _value(splash,-30)
+
+f101 0.000 256 -8 120.020 96 34.014 64 55.016 96 -159.998
+f102 0.000 256 -8 540.000 128 250.000 128 -30.000
+i4 0.000 8.000 8.00 64.000 64.000 0.000 120.020 -159.998 101.000 540.000 -30.000 102.000 ; C4 -> + 120 to -159 cents
