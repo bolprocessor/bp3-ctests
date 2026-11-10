@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.koto3'. Date: 2026-08-30 16:24:01 16AugGMT",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.koto3'. Date: 2026-11-10 09:35:43 9NovGMT",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -345,7 +345,7 @@
     "IgnoreFields": {
         "name": "Ignore field separators",
         "value": "0",
-        "unit": "False by default, not advised",
+        "unit": "Unchecked by default, not advised",
         "boolean": "1"
     },
     "TraceZouleb": {
@@ -424,6 +424,12 @@
         "name": "Panoramic controller",
         "value": "10",
         "unit": "(0..127) usually 10",
+        "boolean": "0"
+    },
+    "DeftPitchbendRange": {
+        "name": "Default pitchbend range",
+        "value": "0",
+        "unit": "cents, for all MIDI channels (e.g. 200); _pitchrange() changes it for one channel. With 0, _pitchbend() values are raw (0..16383, centre 8192)",
         "boolean": "0"
     },
     "StopPauseContinue": {

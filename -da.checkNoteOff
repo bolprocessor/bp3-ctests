@@ -1,7 +1,9 @@
 // Bol Processor BP3
-// Data saved as "-da.checkNoteOff". Date: 2026-04-23 15:34:50
+// Data saved as "-da.checkNoteOff". Date: 2026-11-10 13:43:00
+
 // Examples are commented on page https://bolprocessor.org/control-noteon-noteoff/
 // Set the quantization to 20 ms and the time resolution to 1 ms
+
 
 -se.checkNoteOff
 -to.tryTunings
@@ -24,15 +26,17 @@ _tempo(1/2) _scale(rameau_en_sib,0) {{3, _legato(20) C5 _legato(0){1/4,C5 B4 C5}
 
 _tempo(1/2) _rndtime(50) _scale(rameau_en_sib,0) {{3, _legato(20) C5 _legato(0){1/4,C5 B4 C5}{3/4,B4}_legato(20) Eb5,{1/2,Eb4}{5/2,G4 D4 F4 C4 Eb4},Eb4 D4 C4}}
 
-// Here, the quantization needs to be set at 10 ms
+
+// Here, the quantization is 20 ms
 
 {1/16, C4 - E4 F4} {15/16, G4 A4 B4}
-i1 0.000 0.015 8.00 90.000 90.000 0.000 0.000 0.000 0.000 ; C4
-i1 0.031 0.015 8.04 90.000 90.000 0.000 0.000 0.000 0.000 ; E4
-i1 0.046 0.016 8.05 90.000 90.000 0.000 0.000 0.000 0.000 ; F4
-i1 0.062 0.313 8.07 90.000 90.000 0.000 0.000 0.000 0.000 ; G4
-i1 0.375 0.312 8.09 90.000 90.000 0.000 0.000 0.000 0.000 ; A4
-i1 0.687 0.313 8.11 90.000 90.000 0.000 0.000 0.000 0.000 ; B4
+i1 0.000 0.031 8.00 90.000 90.000 0.000 0.000 0.000 0.000 ; C4
+i1 0.062 0.031 8.04 90.000 90.000 0.000 0.000 0.000 0.000 ; E4
+i1 0.062 0.031 8.05 90.000 90.000 0.000 0.000 0.000 0.000 ; F4
+i1 0.093 0.313 8.07 90.000 90.000 0.000 0.000 0.000 0.000 ; G4
+i1 0.406 0.312 8.09 90.000 90.000 0.000 0.000 0.000 0.000 ; A4
+i1 0.718 0.313 8.11 90.000 90.000 0.000 0.000 0.000 0.000 ; B4
+
 
 // More examples
 
