@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-da.tryCsoundObjects". Date: 2026-11-10 14:29:42
+// Data saved as "-da.tryCsoundObjects". Date: 2026-11-11 15:31:43
 
 -so.tryCsoundObjects
 -cs.tryCsoundObjects
@@ -186,7 +186,7 @@ i6 0.000 0.500 7.00 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.500 1.500 0.00
 i6 0.500 0.500 7.02 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.000 4.700 0.000 -126.500 -126.500 0.000 ; D3
 i6 1.000 0.500 7.04 0.000 0.000 90.000 90.000 0.000 0.000 0.000 0.250 2.500 0.000 -126.500 -126.500 0.000 ; E3
 
-[Arguments 9 and 10: "blurb2' is combined in ADD mode] 
+[Arguments 9 and 10: 'blurb2' is combined in ADD mode] 
 _value(blurb2,55) _value(oops,0) f
 
 i6 0.000 0.500 7.00 0.000 0.000 90.000 90.000 55.000 55.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 ; C3
