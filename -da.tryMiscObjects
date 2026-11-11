@@ -1,7 +1,9 @@
 // Bol Processor BP3
-// Data saved as "-da.tryMiscObjects". Date: 2026-10-28 17:31:06
+// Data saved as "-da.tryMiscObjects". Date: 2026-11-10 22:00:50
+
 // Examples of sound-objects
 // Explanations: https://bolprocessor.org/sound-objects/
+
 
 -se.tryObjects
 -al.tryObjects
@@ -9,10 +11,16 @@
 -cs.tryTunings
 -to.tryScales
 
+
 // Check Csound instruments
+
+
+
+
 
 [Play this in Csound and look at the Csound score. Since there is no instrument #267, you get a warning and 'E3' is played with instrument #1] 
 _ins(1) C3 _ins(2) D3 _ins(3) G3 _ins(Synth_brass) D3 _ins(267) E3
+
 
 // In '-cs.tryTunings', instrument #3 is assigned to MIDI channel #1
 
@@ -22,6 +30,7 @@ C4 D4 _pitchcont _pitchrange(200) _pitchbend(0) E4 _ _pitchbend(200) _ _ _pitchb
 [This one is channel #2, therefore default instrument #1] 
 _chan(2) C4 D4 E4
 
+
 // Create a sound-object
 
 [Score for 'oscar'] 
@@ -29,6 +38,7 @@ _chan(2) C4 D4 E4
 
 [Now, play 'oscar'] 
 oscar
+
 
 // Csound instruments
 
@@ -47,9 +57,11 @@ C4 _chan(2) _legato(30) D4 E4
 [Play 'mixed' in MIDI and Csound] 
 _ins(3) mixed G3
 
+
 // Event list
 
 _ins(3) C4 - oscar-2instruments
+
 
 // Dilation and expansion
 
@@ -59,10 +71,12 @@ oscar - _tempo(1/3) oscar
 [Try this to check the limits of dilation ratio range] 
 oscar - _tempo(4) oscar ---- _tempo(1/3) oscar
 
+
 // Smooth time
 
 [Try this in striated and smooth time] 
 oscar - _tempo(4/3) oscar - _tempo(2) oscar
+
 
 // Silent sound-objects
 
@@ -74,6 +88,7 @@ _tempo(2) C4 gold gold D4
 
 [With silent (undeclared) sound-object 'h'] 
 Thisvariable C4 gold gold h D4 h
+
 
 // Tied sound-objects
 
@@ -89,6 +104,7 @@ oscar& C4 &oscar
 [Tied silent sound-object (declared with Tref =700 ms). It cannot be extended by a tie because it is not resizable] 
 _tempo(2) C4 gold& D4 &gold E4 F4
 
+
 // Smooth sound-objects
 
 ['chik-smooth' is a smooth sound-object with Tref = 0] 
@@ -96,6 +112,7 @@ _tempo(2) chik D#4 chik-smooth - _tempo(1) chik-smooth
 
 ['gold2' is a smooth silent sound-object with Tref = 0] 
 _tempo(2) C4 gold gold2 gold2 D4
+
 
 // Out-time objects
 
@@ -108,6 +125,7 @@ C4 <<chik>> C5
 [Out-time sound-object attached to a silent sound-object] 
 a <<chik>> Truc a - chik
 
+
 // Pivot
 
 [Score for pivotplus] 
@@ -115,6 +133,8 @@ _tempo(4) C4 {F3, G4} C5
 
 [Try pivotplus] 
 C3 F2 pivotplus
+
+pivotplus C3
 
 [The same at twice the speed] 
 _tempo(2) C3 F2 pivotplus
@@ -125,8 +145,11 @@ _tempo(5) C5 {F#3 C4&, G4, - E4} &C4
 [Try pivotminus] 
 _tempo(2) C3 F2 pivotminus
 
+pivotminus C3
+
 [Pivot on the last NoteOff] 
 C4_______ oscar2
+
 
 // Cyclic sound-objects
 
@@ -175,6 +198,7 @@ cycle2 cycle2___
 [Same remark] 
 D4 cycle2__ C4
 
+
 // Truncation
 
 [Truncate the beginning of 'oscar2-trunc'] 
@@ -207,12 +231,14 @@ crac cycle1-force _
 [An out-time object is never truncated] 
 crac <<oscar2-trunc>>
 
+
 // Continuity
 
 [Continuity at the beginning for 'glue'] 
 cycle1-force - glue
 
 cycle1-force _ - glue
+
 
 // Tonal scale
 
@@ -222,6 +248,7 @@ _tempo(2/3) G3 C4 oscar - _scale(Bohlen-Pierce,60) G3 C4 oscar
 
 [Two tonal scales] 
 _tempo(0.75) _scale(Bohlen-Pierce,0) C4 D4 E4 cycle1_ _scale(0,0) cycle1_
+
 
 // Serial tools
 
@@ -248,6 +275,7 @@ oscar - _keymap(C4,C2,C6,C7) oscar
 
 oscar-purecsound - _keymap(C4,C2,C6,C7) oscar-purecsound
 
+
 // Controls
 
 [Random time] 
@@ -264,6 +292,7 @@ _vel(5) cycle1 -- _vel(63) cycle1
 
 [Only in MIDI] 
 _volumecont _volume(44) C4 b a a b b a C4 _volume(77)
+
 
 // Misc
 
