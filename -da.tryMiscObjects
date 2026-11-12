@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-da.tryMiscObjects". Date: 2026-11-10 22:00:50
+// Data saved as "-da.tryMiscObjects". Date: 2026-11-11 16:53:03
 
 // Examples of sound-objects
 // Explanations: https://bolprocessor.org/sound-objects/
@@ -13,10 +13,6 @@
 
 
 // Check Csound instruments
-
-
-
-
 
 [Play this in Csound and look at the Csound score. Since there is no instrument #267, you get a warning and 'E3' is played with instrument #1] 
 _ins(1) C3 _ins(2) D3 _ins(3) G3 _ins(Synth_brass) D3 _ins(267) E3

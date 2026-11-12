@@ -1,1 +1,1445 @@
-// Bol Processor version BP2.9.8// Object Prototypes file saved as '-mi.tryStrikeMode'. Date: Sam 18 juil 2020 -- 9:33841646<HTML>tryme</HTML>11010000.00001000001011100011000000.00000.0000-10-1011-10-1001000100-10-10-10.0000255-11111110000-20.000000-1-1-118655356553565535_beginCsoundScore__endCsoundScore_4214460641446001446064256144256062256064341376341308341312341392341310341248341392341310341312512144512060512064682624682558682560682640682556682496682640682556682560768144768060768000768144768060768064102412810240601024064000000000000000000000000000000000000000000<HTML>[Comment on this prototype]</HTML><HTML>trymealso</HTML>11010000.00001000001011100011000000.00000.0000-10-1011-10-1001000100-10-10-10.0000255-11111110000-20.000000-1-1-13255655356553565535_beginCsoundScore__endCsoundScore_181446064256144256062256064341376341308341312512144512060512064682624682558682560102412810240601024064000000000000000000<HTML>[Comment on this prototype]</HTML><HTML>one</HTML>11010000.00001000000100000011000000.00000.0000000011-10-1001000100-10-10-10.0000255-11111110000-20.000000-1-1-10655356553565535_beginCsoundScore__endCsoundScore_121446464256128256064256064256144256065256064512128512065512064000000000000<HTML>This prototype contains the sequence E5 F5</HTML><HTML>two</HTML>11010000.00000000000100000011001000.00000.0000000011-10-1001000100-10-10045.4500255-11111110000-20.000000-1-1-12148655356553565535_beginCsoundScore__endCsoundScore_361446064426244255642560426404255842560853768531085312853928531285312128128128064128064128144128065128064170624170561170560170640170563170560213376213315213312213392213317213312469376469317469312000000000000000000000000000000000000<HTML>This prototype contains {5/6,C5 D5 E5 F5 G5} A5.  Note its pivot position</HTML>DATA:<HTML>[Comment on this file]</HTML>_endSoundObjectFile_
+{
+    "header": "// Bol Processor version BP2.9.8\n// Object Prototypes file saved as '-mi.tryStrikeMode'.  Date: Sam 18 juil 2020 -- 9:33\n// Converted to JSON format. Date: 2026-11-11 18:48:36 GMT",
+    "Prototype tick key": {
+        "key": "PrototypeTickKey",
+        "value": 84
+    },
+    "Prototype tick channel": {
+        "key": "PrototypeTickChannel",
+        "value": 1
+    },
+    "Prototype tick velocity": {
+        "key": "PrototypeTickVelocity",
+        "value": 64
+    },
+    "Csound resource file": {
+        "key": "CsoundInstrumentsFile",
+        "value": ""
+    },
+    "Comment on this file": {
+        "key": "PrototypesComment",
+        "value": "[Comment on this file]"
+    },
+    "Prototypes": [
+        {
+            "Name": {
+                "key": "Name",
+                "value": "tryme"
+            },
+            "Object type": {
+                "key": "Type",
+                "value": "MIDI_TYPE",
+                "unit": "enum"
+            },
+            "Resolution": {
+                "key": "Resolution",
+                "value": 1,
+                "unit": "ms"
+            },
+            "Default MIDI channel": {
+                "key": "DefaultChannel",
+                "value": "GLOBAL_CH",
+                "unit": "enum"
+            },
+            "Tref": {
+                "key": "Tref",
+                "value": 1000,
+                "unit": "ms"
+            },
+            "Quantization": {
+                "key": "Quan",
+                "value": 0,
+                "unit": "ms"
+            },
+            "Pivot type": {
+                "key": "PivType",
+                "value": "PIVBEG",
+                "unit": "enum"
+            },
+            "Pivot mode": {
+                "key": "PivMode",
+                "value": "FIXVALUE",
+                "unit": "enum"
+            },
+            "Pivot position": {
+                "key": "PivPos",
+                "value": 0.0,
+                "unit": "ms or percent"
+            },
+            "Rescale mode": {
+                "key": "RescaleMode",
+                "value": "OK_RESCALE",
+                "unit": "enum"
+            },
+            "Never rescale": {
+                "key": "FixScale",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Expand": {
+                "key": "OkExpand",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Compress": {
+                "key": "OkCompress",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Minimum ratio": {
+                "key": "AlphaMin",
+                "value": 0.0
+            },
+            "Maximum ratio": {
+                "key": "AlphaMax",
+                "value": 0.0
+            },
+            "Alpha control": {
+                "key": "AlphaCtrl",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Send ratio to controller number": {
+                "key": "AlphaCtrlNr",
+                "value": 255
+            },
+            "Send ratio to controller channel": {
+                "key": "AlphaCtrlChan",
+                "value": -1
+            },
+            "Accept transposition": {
+                "key": "OkTransp",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Accept articulation": {
+                "key": "OkArticul",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Accept volume changes": {
+                "key": "OkVolume",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Accept panoramic changes": {
+                "key": "OkPan",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Accept key expand and mapping": {
+                "key": "OkMap",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Accept velocity changes": {
+                "key": "OkVelocity",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Relocate": {
+                "key": "OkRelocate",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Delay mode": {
+                "key": "DelayMode",
+                "value": "FIXVALUE",
+                "unit": "enum"
+            },
+            "Max delay": {
+                "key": "MaxDelay",
+                "value": 0,
+                "unit": "ms"
+            },
+            "Forward mode": {
+                "key": "ForwardMode",
+                "value": "FIXVALUE",
+                "unit": "enum"
+            },
+            "Max forward": {
+                "key": "MaxForward",
+                "value": 0,
+                "unit": "ms"
+            },
+            "Break tempo after this object (organum)": {
+                "key": "BreakTempo",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Force continuity at the beginning": {
+                "key": "ContBeg",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Max gap at beginning mode": {
+                "key": "ContBegMode",
+                "value": "FIXVALUE",
+                "unit": "enum"
+            },
+            "Max gap at beginning": {
+                "key": "MaxBegGap",
+                "value": 0,
+                "unit": "ms"
+            },
+            "Force continuity at the end": {
+                "key": "ContEnd",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Max gap at end mode": {
+                "key": "ContEndMode",
+                "value": "FIXVALUE",
+                "unit": "enum"
+            },
+            "Max gap at end (ms or percent)": {
+                "key": "MaxEndGap",
+                "value": 0,
+                "unit": "ms"
+            },
+            "Cover beginning": {
+                "key": "CoverBeg",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Cover beginning mode": {
+                "key": "CoverBegMode",
+                "value": "PERCENT",
+                "unit": "enum"
+            },
+            "Max cover at beginning": {
+                "key": "MaxCoverBeg",
+                "value": 100,
+                "unit": "ms or percent"
+            },
+            "Cover end": {
+                "key": "CoverEnd",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Cover end mode": {
+                "key": "CoverEndMode",
+                "value": "PERCENT",
+                "unit": "enum"
+            },
+            "Max cover at end": {
+                "key": "MaxCoverEnd",
+                "value": 100,
+                "unit": "ms or percent"
+            },
+            "Truncate beginning": {
+                "key": "TruncBeg",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Truncate beginning mode": {
+                "key": "TruncBegMode",
+                "value": "FIXVALUE",
+                "unit": "enum"
+            },
+            "Max truncate beginning": {
+                "key": "MaxTruncBeg",
+                "value": 0,
+                "unit": "ms or percent"
+            },
+            "Truncate end": {
+                "key": "TruncEnd",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Truncate end mode": {
+                "key": "TruncEndMode",
+                "value": "FIXVALUE",
+                "unit": "enum"
+            },
+            "Max truncate end": {
+                "key": "MaxTruncEnd",
+                "value": 0,
+                "unit": "ms or percent"
+            },
+            "Preroll mode": {
+                "key": "PreRollMode",
+                "value": "PERCENT",
+                "unit": "enum"
+            },
+            "Preroll value": {
+                "key": "Preroll",
+                "value": 0.0,
+                "unit": "ms or percent"
+            },
+            "Postroll mode": {
+                "key": "PostRollMode",
+                "value": "PERCENT",
+                "unit": "enum"
+            },
+            "Postroll value": {
+                "key": "Postroll",
+                "value": 0.0,
+                "unit": "ms or percent"
+            },
+            "Cyclic mode": {
+                "key": "CyclicMode",
+                "value": "IRRELEVANT",
+                "unit": "enum"
+            },
+            "Cyclic after": {
+                "key": "CyclicAfter",
+                "value": 0.0,
+                "unit": "ms or percent"
+            },
+            "Force integer number of cycles": {
+                "key": "ForceIntegerCycles",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Strike again NoteOn's": {
+                "key": "StrikeAgain",
+                "value": "DEFAULT",
+                "unit": "enum"
+            },
+            "Csound instrument mode": {
+                "key": "CsoundInstrumentMode",
+                "value": "LOCAL_CS",
+                "unit": "enum"
+            },
+            "Csound instrument #": {
+                "key": "CsoundInstr",
+                "value": -1
+            },
+            "Tempo of MF2T code": {
+                "key": "Tpict",
+                "value": 18,
+                "unit": "ms"
+            },
+            "Division of MF2T code": {
+                "key": "division",
+                "value": 1
+            },
+            "Csound score": "<HTML></HTML>",
+            "Size of MIDI code": {
+                "key": "MIDIcodesize",
+                "value": 42
+            },
+            "byte_1": 144,
+            "time_1": 0,
+            "byte_2": 60,
+            "time_2": 0,
+            "byte_3": 64,
+            "time_3": 0,
+            "byte_4": 144,
+            "time_4": 0,
+            "byte_5": 60,
+            "time_5": 0,
+            "byte_6": 0,
+            "time_6": 0,
+            "byte_7": 144,
+            "time_7": 0,
+            "byte_8": 60,
+            "time_8": 0,
+            "byte_9": 64,
+            "time_9": 0,
+            "byte_10": 144,
+            "time_10": 1000,
+            "byte_11": 62,
+            "time_11": 1000,
+            "byte_12": 64,
+            "time_12": 1000,
+            "byte_13": 128,
+            "time_13": 1333,
+            "byte_14": 60,
+            "time_14": 1333,
+            "byte_15": 64,
+            "time_15": 1333,
+            "byte_16": 144,
+            "time_16": 1333,
+            "byte_17": 62,
+            "time_17": 1333,
+            "byte_18": 0,
+            "time_18": 1333,
+            "byte_19": 144,
+            "time_19": 1333,
+            "byte_20": 62,
+            "time_20": 1333,
+            "byte_21": 64,
+            "time_21": 1333,
+            "byte_22": 144,
+            "time_22": 2000,
+            "byte_23": 60,
+            "time_23": 2000,
+            "byte_24": 64,
+            "time_24": 2000,
+            "byte_25": 128,
+            "time_25": 2666,
+            "byte_26": 62,
+            "time_26": 2666,
+            "byte_27": 64,
+            "time_27": 2666,
+            "byte_28": 144,
+            "time_28": 2666,
+            "byte_29": 60,
+            "time_29": 2666,
+            "byte_30": 0,
+            "time_30": 2666,
+            "byte_31": 144,
+            "time_31": 2666,
+            "byte_32": 60,
+            "time_32": 2666,
+            "byte_33": 64,
+            "time_33": 2666,
+            "byte_34": 144,
+            "time_34": 3000,
+            "byte_35": 60,
+            "time_35": 3000,
+            "byte_36": 0,
+            "time_36": 3000,
+            "byte_37": 144,
+            "time_37": 3000,
+            "byte_38": 60,
+            "time_38": 3000,
+            "byte_39": 64,
+            "time_39": 3000,
+            "byte_40": 128,
+            "time_40": 4000,
+            "byte_41": 60,
+            "time_41": 4000,
+            "byte_42": 64,
+            "time_42": 4000,
+            "Comment": "[Comment on this prototype]"
+        },
+        {
+            "Name": {
+                "key": "Name",
+                "value": "trymealso"
+            },
+            "Object type": {
+                "key": "Type",
+                "value": "MIDI_TYPE",
+                "unit": "enum"
+            },
+            "Resolution": {
+                "key": "Resolution",
+                "value": 1,
+                "unit": "ms"
+            },
+            "Default MIDI channel": {
+                "key": "DefaultChannel",
+                "value": "GLOBAL_CH",
+                "unit": "enum"
+            },
+            "Tref": {
+                "key": "Tref",
+                "value": 1000,
+                "unit": "ms"
+            },
+            "Quantization": {
+                "key": "Quan",
+                "value": 0,
+                "unit": "ms"
+            },
+            "Pivot type": {
+                "key": "PivType",
+                "value": "PIVBEG",
+                "unit": "enum"
+            },
+            "Pivot mode": {
+                "key": "PivMode",
+                "value": "FIXVALUE",
+                "unit": "enum"
+            },
+            "Pivot position": {
+                "key": "PivPos",
+                "value": 0.0,
+                "unit": "ms or percent"
+            },
+            "Rescale mode": {
+                "key": "RescaleMode",
+                "value": "OK_RESCALE",
+                "unit": "enum"
+            },
+            "Never rescale": {
+                "key": "FixScale",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Expand": {
+                "key": "OkExpand",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Compress": {
+                "key": "OkCompress",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Minimum ratio": {
+                "key": "AlphaMin",
+                "value": 0.0
+            },
+            "Maximum ratio": {
+                "key": "AlphaMax",
+                "value": 0.0
+            },
+            "Alpha control": {
+                "key": "AlphaCtrl",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Send ratio to controller number": {
+                "key": "AlphaCtrlNr",
+                "value": 255
+            },
+            "Send ratio to controller channel": {
+                "key": "AlphaCtrlChan",
+                "value": -1
+            },
+            "Accept transposition": {
+                "key": "OkTransp",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Accept articulation": {
+                "key": "OkArticul",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Accept volume changes": {
+                "key": "OkVolume",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Accept panoramic changes": {
+                "key": "OkPan",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Accept key expand and mapping": {
+                "key": "OkMap",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Accept velocity changes": {
+                "key": "OkVelocity",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Relocate": {
+                "key": "OkRelocate",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Delay mode": {
+                "key": "DelayMode",
+                "value": "FIXVALUE",
+                "unit": "enum"
+            },
+            "Max delay": {
+                "key": "MaxDelay",
+                "value": 0,
+                "unit": "ms"
+            },
+            "Forward mode": {
+                "key": "ForwardMode",
+                "value": "FIXVALUE",
+                "unit": "enum"
+            },
+            "Max forward": {
+                "key": "MaxForward",
+                "value": 0,
+                "unit": "ms"
+            },
+            "Break tempo after this object (organum)": {
+                "key": "BreakTempo",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Force continuity at the beginning": {
+                "key": "ContBeg",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Max gap at beginning mode": {
+                "key": "ContBegMode",
+                "value": "FIXVALUE",
+                "unit": "enum"
+            },
+            "Max gap at beginning": {
+                "key": "MaxBegGap",
+                "value": 0,
+                "unit": "ms"
+            },
+            "Force continuity at the end": {
+                "key": "ContEnd",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Max gap at end mode": {
+                "key": "ContEndMode",
+                "value": "FIXVALUE",
+                "unit": "enum"
+            },
+            "Max gap at end (ms or percent)": {
+                "key": "MaxEndGap",
+                "value": 0,
+                "unit": "ms"
+            },
+            "Cover beginning": {
+                "key": "CoverBeg",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Cover beginning mode": {
+                "key": "CoverBegMode",
+                "value": "PERCENT",
+                "unit": "enum"
+            },
+            "Max cover at beginning": {
+                "key": "MaxCoverBeg",
+                "value": 100,
+                "unit": "ms or percent"
+            },
+            "Cover end": {
+                "key": "CoverEnd",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Cover end mode": {
+                "key": "CoverEndMode",
+                "value": "PERCENT",
+                "unit": "enum"
+            },
+            "Max cover at end": {
+                "key": "MaxCoverEnd",
+                "value": 100,
+                "unit": "ms or percent"
+            },
+            "Truncate beginning": {
+                "key": "TruncBeg",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Truncate beginning mode": {
+                "key": "TruncBegMode",
+                "value": "FIXVALUE",
+                "unit": "enum"
+            },
+            "Max truncate beginning": {
+                "key": "MaxTruncBeg",
+                "value": 0,
+                "unit": "ms or percent"
+            },
+            "Truncate end": {
+                "key": "TruncEnd",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Truncate end mode": {
+                "key": "TruncEndMode",
+                "value": "FIXVALUE",
+                "unit": "enum"
+            },
+            "Max truncate end": {
+                "key": "MaxTruncEnd",
+                "value": 0,
+                "unit": "ms or percent"
+            },
+            "Preroll mode": {
+                "key": "PreRollMode",
+                "value": "PERCENT",
+                "unit": "enum"
+            },
+            "Preroll value": {
+                "key": "Preroll",
+                "value": 0.0,
+                "unit": "ms or percent"
+            },
+            "Postroll mode": {
+                "key": "PostRollMode",
+                "value": "PERCENT",
+                "unit": "enum"
+            },
+            "Postroll value": {
+                "key": "Postroll",
+                "value": 0.0,
+                "unit": "ms or percent"
+            },
+            "Cyclic mode": {
+                "key": "CyclicMode",
+                "value": "IRRELEVANT",
+                "unit": "enum"
+            },
+            "Cyclic after": {
+                "key": "CyclicAfter",
+                "value": 0.0,
+                "unit": "ms or percent"
+            },
+            "Force integer number of cycles": {
+                "key": "ForceIntegerCycles",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Strike again NoteOn's": {
+                "key": "StrikeAgain",
+                "value": "DEFAULT",
+                "unit": "enum"
+            },
+            "Csound instrument mode": {
+                "key": "CsoundInstrumentMode",
+                "value": "LOCAL_CS",
+                "unit": "enum"
+            },
+            "Csound instrument #": {
+                "key": "CsoundInstr",
+                "value": -1
+            },
+            "Tempo of MF2T code": {
+                "key": "Tpict",
+                "value": 3255,
+                "unit": "ms"
+            },
+            "Division of MF2T code": {
+                "key": "division",
+                "value": 1
+            },
+            "Csound score": "<HTML></HTML>",
+            "Size of MIDI code": {
+                "key": "MIDIcodesize",
+                "value": 18
+            },
+            "byte_1": 144,
+            "time_1": 0,
+            "byte_2": 60,
+            "time_2": 0,
+            "byte_3": 64,
+            "time_3": 0,
+            "byte_4": 144,
+            "time_4": 1000,
+            "byte_5": 62,
+            "time_5": 1000,
+            "byte_6": 64,
+            "time_6": 1000,
+            "byte_7": 128,
+            "time_7": 1333,
+            "byte_8": 60,
+            "time_8": 1333,
+            "byte_9": 64,
+            "time_9": 1333,
+            "byte_10": 144,
+            "time_10": 2000,
+            "byte_11": 60,
+            "time_11": 2000,
+            "byte_12": 64,
+            "time_12": 2000,
+            "byte_13": 128,
+            "time_13": 2666,
+            "byte_14": 62,
+            "time_14": 2666,
+            "byte_15": 64,
+            "time_15": 2666,
+            "byte_16": 128,
+            "time_16": 4000,
+            "byte_17": 60,
+            "time_17": 4000,
+            "byte_18": 64,
+            "time_18": 4000,
+            "Comment": "[Comment on this prototype]"
+        },
+        {
+            "Name": {
+                "key": "Name",
+                "value": "one"
+            },
+            "Object type": {
+                "key": "Type",
+                "value": "MIDI_TYPE",
+                "unit": "enum"
+            },
+            "Resolution": {
+                "key": "Resolution",
+                "value": 1,
+                "unit": "ms"
+            },
+            "Default MIDI channel": {
+                "key": "DefaultChannel",
+                "value": "GLOBAL_CH",
+                "unit": "enum"
+            },
+            "Tref": {
+                "key": "Tref",
+                "value": 1000,
+                "unit": "ms"
+            },
+            "Quantization": {
+                "key": "Quan",
+                "value": 0,
+                "unit": "ms"
+            },
+            "Pivot type": {
+                "key": "PivType",
+                "value": "PIVBEG",
+                "unit": "enum"
+            },
+            "Pivot mode": {
+                "key": "PivMode",
+                "value": "FIXVALUE",
+                "unit": "enum"
+            },
+            "Pivot position": {
+                "key": "PivPos",
+                "value": 0.0,
+                "unit": "ms or percent"
+            },
+            "Rescale mode": {
+                "key": "RescaleMode",
+                "value": "OK_RESCALE",
+                "unit": "enum"
+            },
+            "Never rescale": {
+                "key": "FixScale",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Expand": {
+                "key": "OkExpand",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Compress": {
+                "key": "OkCompress",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Minimum ratio": {
+                "key": "AlphaMin",
+                "value": 0.0
+            },
+            "Maximum ratio": {
+                "key": "AlphaMax",
+                "value": 0.0
+            },
+            "Alpha control": {
+                "key": "AlphaCtrl",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Send ratio to controller number": {
+                "key": "AlphaCtrlNr",
+                "value": 255
+            },
+            "Send ratio to controller channel": {
+                "key": "AlphaCtrlChan",
+                "value": -1
+            },
+            "Accept transposition": {
+                "key": "OkTransp",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Accept articulation": {
+                "key": "OkArticul",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Accept volume changes": {
+                "key": "OkVolume",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Accept panoramic changes": {
+                "key": "OkPan",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Accept key expand and mapping": {
+                "key": "OkMap",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Accept velocity changes": {
+                "key": "OkVelocity",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Relocate": {
+                "key": "OkRelocate",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Delay mode": {
+                "key": "DelayMode",
+                "value": "PERCENT",
+                "unit": "enum"
+            },
+            "Max delay": {
+                "key": "MaxDelay",
+                "value": 0,
+                "unit": "ms"
+            },
+            "Forward mode": {
+                "key": "ForwardMode",
+                "value": "PERCENT",
+                "unit": "enum"
+            },
+            "Max forward": {
+                "key": "MaxForward",
+                "value": 0,
+                "unit": "ms"
+            },
+            "Break tempo after this object (organum)": {
+                "key": "BreakTempo",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Force continuity at the beginning": {
+                "key": "ContBeg",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Max gap at beginning mode": {
+                "key": "ContBegMode",
+                "value": "FIXVALUE",
+                "unit": "enum"
+            },
+            "Max gap at beginning": {
+                "key": "MaxBegGap",
+                "value": 0,
+                "unit": "ms"
+            },
+            "Force continuity at the end": {
+                "key": "ContEnd",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Max gap at end mode": {
+                "key": "ContEndMode",
+                "value": "FIXVALUE",
+                "unit": "enum"
+            },
+            "Max gap at end (ms or percent)": {
+                "key": "MaxEndGap",
+                "value": 0,
+                "unit": "ms"
+            },
+            "Cover beginning": {
+                "key": "CoverBeg",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Cover beginning mode": {
+                "key": "CoverBegMode",
+                "value": "PERCENT",
+                "unit": "enum"
+            },
+            "Max cover at beginning": {
+                "key": "MaxCoverBeg",
+                "value": 100,
+                "unit": "ms or percent"
+            },
+            "Cover end": {
+                "key": "CoverEnd",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Cover end mode": {
+                "key": "CoverEndMode",
+                "value": "PERCENT",
+                "unit": "enum"
+            },
+            "Max cover at end": {
+                "key": "MaxCoverEnd",
+                "value": 100,
+                "unit": "ms or percent"
+            },
+            "Truncate beginning": {
+                "key": "TruncBeg",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Truncate beginning mode": {
+                "key": "TruncBegMode",
+                "value": "FIXVALUE",
+                "unit": "enum"
+            },
+            "Max truncate beginning": {
+                "key": "MaxTruncBeg",
+                "value": 0,
+                "unit": "ms or percent"
+            },
+            "Truncate end": {
+                "key": "TruncEnd",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Truncate end mode": {
+                "key": "TruncEndMode",
+                "value": "FIXVALUE",
+                "unit": "enum"
+            },
+            "Max truncate end": {
+                "key": "MaxTruncEnd",
+                "value": 0,
+                "unit": "ms or percent"
+            },
+            "Preroll mode": {
+                "key": "PreRollMode",
+                "value": "PERCENT",
+                "unit": "enum"
+            },
+            "Preroll value": {
+                "key": "Preroll",
+                "value": 0.0,
+                "unit": "ms or percent"
+            },
+            "Postroll mode": {
+                "key": "PostRollMode",
+                "value": "PERCENT",
+                "unit": "enum"
+            },
+            "Postroll value": {
+                "key": "Postroll",
+                "value": 0.0,
+                "unit": "ms or percent"
+            },
+            "Cyclic mode": {
+                "key": "CyclicMode",
+                "value": "IRRELEVANT",
+                "unit": "enum"
+            },
+            "Cyclic after": {
+                "key": "CyclicAfter",
+                "value": 0.0,
+                "unit": "ms or percent"
+            },
+            "Force integer number of cycles": {
+                "key": "ForceIntegerCycles",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Strike again NoteOn's": {
+                "key": "StrikeAgain",
+                "value": "DEFAULT",
+                "unit": "enum"
+            },
+            "Csound instrument mode": {
+                "key": "CsoundInstrumentMode",
+                "value": "LOCAL_CS",
+                "unit": "enum"
+            },
+            "Csound instrument #": {
+                "key": "CsoundInstr",
+                "value": -1
+            },
+            "Tempo of MF2T code": {
+                "key": "Tpict",
+                "value": 0,
+                "unit": "ms"
+            },
+            "Division of MF2T code": {
+                "key": "division",
+                "value": 1
+            },
+            "Csound score": "<HTML></HTML>",
+            "Size of MIDI code": {
+                "key": "MIDIcodesize",
+                "value": 12
+            },
+            "byte_1": 144,
+            "time_1": 0,
+            "byte_2": 64,
+            "time_2": 0,
+            "byte_3": 64,
+            "time_3": 0,
+            "byte_4": 128,
+            "time_4": 1000,
+            "byte_5": 64,
+            "time_5": 1000,
+            "byte_6": 64,
+            "time_6": 1000,
+            "byte_7": 144,
+            "time_7": 1000,
+            "byte_8": 65,
+            "time_8": 1000,
+            "byte_9": 64,
+            "time_9": 1000,
+            "byte_10": 128,
+            "time_10": 2000,
+            "byte_11": 65,
+            "time_11": 2000,
+            "byte_12": 64,
+            "time_12": 2000,
+            "Comment": "This prototype contains the sequence E5 F5"
+        },
+        {
+            "Name": {
+                "key": "Name",
+                "value": "two"
+            },
+            "Object type": {
+                "key": "Type",
+                "value": "MIDI_TYPE",
+                "unit": "enum"
+            },
+            "Resolution": {
+                "key": "Resolution",
+                "value": 1,
+                "unit": "ms"
+            },
+            "Default MIDI channel": {
+                "key": "DefaultChannel",
+                "value": "GLOBAL_CH",
+                "unit": "enum"
+            },
+            "Tref": {
+                "key": "Tref",
+                "value": 1000,
+                "unit": "ms"
+            },
+            "Quantization": {
+                "key": "Quan",
+                "value": 0,
+                "unit": "ms"
+            },
+            "Pivot type": {
+                "key": "PivType",
+                "value": "SETPIVOT",
+                "unit": "enum"
+            },
+            "Pivot mode": {
+                "key": "PivMode",
+                "value": "PERCENT",
+                "unit": "enum"
+            },
+            "Pivot position": {
+                "key": "PivPos",
+                "value": 45.45,
+                "unit": "ms or percent"
+            },
+            "Rescale mode": {
+                "key": "RescaleMode",
+                "value": "OK_RESCALE",
+                "unit": "enum"
+            },
+            "Never rescale": {
+                "key": "FixScale",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Expand": {
+                "key": "OkExpand",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Compress": {
+                "key": "OkCompress",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Minimum ratio": {
+                "key": "AlphaMin",
+                "value": 0.0
+            },
+            "Maximum ratio": {
+                "key": "AlphaMax",
+                "value": 0.0
+            },
+            "Alpha control": {
+                "key": "AlphaCtrl",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Send ratio to controller number": {
+                "key": "AlphaCtrlNr",
+                "value": 255
+            },
+            "Send ratio to controller channel": {
+                "key": "AlphaCtrlChan",
+                "value": -1
+            },
+            "Accept transposition": {
+                "key": "OkTransp",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Accept articulation": {
+                "key": "OkArticul",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Accept volume changes": {
+                "key": "OkVolume",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Accept panoramic changes": {
+                "key": "OkPan",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Accept key expand and mapping": {
+                "key": "OkMap",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Accept velocity changes": {
+                "key": "OkVelocity",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Relocate": {
+                "key": "OkRelocate",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Delay mode": {
+                "key": "DelayMode",
+                "value": "PERCENT",
+                "unit": "enum"
+            },
+            "Max delay": {
+                "key": "MaxDelay",
+                "value": 0,
+                "unit": "ms"
+            },
+            "Forward mode": {
+                "key": "ForwardMode",
+                "value": "PERCENT",
+                "unit": "enum"
+            },
+            "Max forward": {
+                "key": "MaxForward",
+                "value": 0,
+                "unit": "ms"
+            },
+            "Break tempo after this object (organum)": {
+                "key": "BreakTempo",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Force continuity at the beginning": {
+                "key": "ContBeg",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Max gap at beginning mode": {
+                "key": "ContBegMode",
+                "value": "FIXVALUE",
+                "unit": "enum"
+            },
+            "Max gap at beginning": {
+                "key": "MaxBegGap",
+                "value": 0,
+                "unit": "ms"
+            },
+            "Force continuity at the end": {
+                "key": "ContEnd",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Max gap at end mode": {
+                "key": "ContEndMode",
+                "value": "FIXVALUE",
+                "unit": "enum"
+            },
+            "Max gap at end (ms or percent)": {
+                "key": "MaxEndGap",
+                "value": 0,
+                "unit": "ms"
+            },
+            "Cover beginning": {
+                "key": "CoverBeg",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Cover beginning mode": {
+                "key": "CoverBegMode",
+                "value": "PERCENT",
+                "unit": "enum"
+            },
+            "Max cover at beginning": {
+                "key": "MaxCoverBeg",
+                "value": 100,
+                "unit": "ms or percent"
+            },
+            "Cover end": {
+                "key": "CoverEnd",
+                "value": 1,
+                "unit": "boolean"
+            },
+            "Cover end mode": {
+                "key": "CoverEndMode",
+                "value": "PERCENT",
+                "unit": "enum"
+            },
+            "Max cover at end": {
+                "key": "MaxCoverEnd",
+                "value": 100,
+                "unit": "ms or percent"
+            },
+            "Truncate beginning": {
+                "key": "TruncBeg",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Truncate beginning mode": {
+                "key": "TruncBegMode",
+                "value": "FIXVALUE",
+                "unit": "enum"
+            },
+            "Max truncate beginning": {
+                "key": "MaxTruncBeg",
+                "value": 0,
+                "unit": "ms or percent"
+            },
+            "Truncate end": {
+                "key": "TruncEnd",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Truncate end mode": {
+                "key": "TruncEndMode",
+                "value": "FIXVALUE",
+                "unit": "enum"
+            },
+            "Max truncate end": {
+                "key": "MaxTruncEnd",
+                "value": 0,
+                "unit": "ms or percent"
+            },
+            "Preroll mode": {
+                "key": "PreRollMode",
+                "value": "PERCENT",
+                "unit": "enum"
+            },
+            "Preroll value": {
+                "key": "Preroll",
+                "value": 0.0,
+                "unit": "ms or percent"
+            },
+            "Postroll mode": {
+                "key": "PostRollMode",
+                "value": "PERCENT",
+                "unit": "enum"
+            },
+            "Postroll value": {
+                "key": "Postroll",
+                "value": 0.0,
+                "unit": "ms or percent"
+            },
+            "Cyclic mode": {
+                "key": "CyclicMode",
+                "value": "IRRELEVANT",
+                "unit": "enum"
+            },
+            "Cyclic after": {
+                "key": "CyclicAfter",
+                "value": 0.0,
+                "unit": "ms or percent"
+            },
+            "Force integer number of cycles": {
+                "key": "ForceIntegerCycles",
+                "value": 0,
+                "unit": "boolean"
+            },
+            "Strike again NoteOn's": {
+                "key": "StrikeAgain",
+                "value": "DEFAULT",
+                "unit": "enum"
+            },
+            "Csound instrument mode": {
+                "key": "CsoundInstrumentMode",
+                "value": "LOCAL_CS",
+                "unit": "enum"
+            },
+            "Csound instrument #": {
+                "key": "CsoundInstr",
+                "value": -1
+            },
+            "Tempo of MF2T code": {
+                "key": "Tpict",
+                "value": 2148,
+                "unit": "ms"
+            },
+            "Division of MF2T code": {
+                "key": "division",
+                "value": 1
+            },
+            "Csound score": "<HTML></HTML>",
+            "Size of MIDI code": {
+                "key": "MIDIcodesize",
+                "value": 36
+            },
+            "byte_1": 144,
+            "time_1": 0,
+            "byte_2": 60,
+            "time_2": 0,
+            "byte_3": 64,
+            "time_3": 0,
+            "byte_4": 128,
+            "time_4": 166,
+            "byte_5": 60,
+            "time_5": 166,
+            "byte_6": 64,
+            "time_6": 166,
+            "byte_7": 144,
+            "time_7": 166,
+            "byte_8": 62,
+            "time_8": 166,
+            "byte_9": 64,
+            "time_9": 166,
+            "byte_10": 128,
+            "time_10": 333,
+            "byte_11": 62,
+            "time_11": 333,
+            "byte_12": 64,
+            "time_12": 333,
+            "byte_13": 144,
+            "time_13": 333,
+            "byte_14": 64,
+            "time_14": 333,
+            "byte_15": 64,
+            "time_15": 333,
+            "byte_16": 128,
+            "time_16": 500,
+            "byte_17": 64,
+            "time_17": 500,
+            "byte_18": 64,
+            "time_18": 500,
+            "byte_19": 144,
+            "time_19": 500,
+            "byte_20": 65,
+            "time_20": 500,
+            "byte_21": 64,
+            "time_21": 500,
+            "byte_22": 128,
+            "time_22": 666,
+            "byte_23": 65,
+            "time_23": 666,
+            "byte_24": 64,
+            "time_24": 666,
+            "byte_25": 144,
+            "time_25": 666,
+            "byte_26": 67,
+            "time_26": 666,
+            "byte_27": 64,
+            "time_27": 666,
+            "byte_28": 128,
+            "time_28": 833,
+            "byte_29": 67,
+            "time_29": 833,
+            "byte_30": 64,
+            "time_30": 833,
+            "byte_31": 144,
+            "time_31": 833,
+            "byte_32": 69,
+            "time_32": 833,
+            "byte_33": 64,
+            "time_33": 833,
+            "byte_34": 128,
+            "time_34": 1833,
+            "byte_35": 69,
+            "time_35": 1833,
+            "byte_36": 64,
+            "time_36": 1833,
+            "Comment": "This prototype contains {5/6,C5 D5 E5 F5 G5} A5.  Note its pivot position"
+        }
+    ]
+}
