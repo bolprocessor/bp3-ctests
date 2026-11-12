@@ -1,0 +1,85 @@
+// Bol Processor BP3
+// Data saved as "-da.checkCarryOver". Date: 2026-11-12 20:42:51
+
+// -da.checkCarryOver
+// Explanations: https://bolprocessor.org/carrying-over-controls/
+
+
+-cs.Beethoven-fugue-b-flat-major
+
+
+// Carrying over the values of _volume(), _pan(), _mod(), _press(), _pitchbend() and additional parameters
+// to the following expressions (2026-11-12).
+// A fixed value is attached to the instrument if _ins() was given, or else to the part if _part() was given,
+// or else to the MIDI channel if _chan() was given, or else to instrument 1: an item starts with the implicit
+// values _ins(1) _part(1) _chan(1).
+// An expression that does not set the parameter takes the most recent value attached to its instrument,
+// its part or its channel (implicit values included).
+// A value of a continuous or stepwise variation (_volumecont, _pitchcont, etc.) is not carried over:
+// it erases the remembered value, and the following expressions get the default value.
+// A value only applies to expressions starting after it: fields of the same polymetric expression
+// starting at the same time do not share it.
+// The '-cs' file declares instruments 1 to 4, used by _ins(). The default volume is 90 in Csound
+// scores. In MIDI, the volume is a channel controller: a note with the default volume sends 90.
+
+[Within a sequence, a new channel keeps the current values. Expected volumes: C4 20, D4 20, E4 20] 
+_volume(20) C4 _chan(2) D4 _chan(3) E4
+
+[Across expressions, the value is attached to the implicit _ins(1), shared by all channels. Expected volumes: C4 20, D4 20, E4 20] 
+{_volume(20) C4} {_chan(2) D4} {_chan(3) E4}
+
+[Values attached to channels. Expected volumes: C4 50, E4 100, D4 50, F4 100] 
+{_chan(2) _volume(50) C4, _chan(3) _volume(100) E4} {_chan(2) D4, _chan(3) F4}
+
+[Values attached to parts, on the same MIDI channel. Expected volumes: C4 30, E4 110, D4 30, F4 110] 
+{_part(1) _volume(30) C4, _part(2) _volume(110) E4} {_part(1) D4, _part(2) F4}
+
+[Stereo positions set once per part, as in -da.Beethoven-fugue-b-flat-major. Expected panoramic: part 1 = 23, part 2 = 48 in every measure, part 2 = 100 from the third measure] 
+{_part(1) _pan(23) C4 D4, _part(2) _pan(48) E4 F4} {_part(1) G4 A4, _part(2) B4 C5} {_part(1) D5 E5, _part(2) _pan(100) F5 G5} {_part(1) A5 B5, _part(2) C6 D6}
+
+[A value set after _ins() is not influenced by the following _part() and _chan(). Expected volumes: C4 50, D4 50, E4 50] 
+{_ins(3) _volume(50) C4} {_ins(3) _part(2) D4 _chan(5) E4}
+
+[A value attached to _ins(3) does not apply to another instrument, even with the same part. Expected volumes: C4 50, D4 90 (default), E4 90 (default)] 
+{_ins(3) _part(2) _volume(50) C4} {_ins(4) _part(2) D4} {_ins(4) _part(2) E4}
+
+[The most recent value wins. Expected volumes: C4 80, D4 30, E4 30 (part 2), F4 80 (implicit _ins(1))] 
+{_volume(80) C4} {_part(2) _volume(30) D4} {_part(2) E4} {F4}
+
+[A continuous variation is not carried over and erases the remembered value. Expected volumes: C4 80, D4 20, E4 60, F4 90 (default)] 
+{_volume(80) C4} {_volumecont _volume(20) D4 E4 _volume(100)} {F4}
+
+[The end of a pitchbend slide is not carried over. Expected pitchbend: C4 slides up, D4 0 (default)] 
+{_pitchcont _pitchrange(200) _pitchbend(0) C4 _pitchbend(100)} {D4}
+
+[Several parameters at once. Expected for D4: volume 40, modulation 5000, pressure 100, pitchbend +100 cents, panoramic 20] 
+{_pitchrange(200) _volume(40) _mod(5000) _press(100) _pitchbend(100) _pan(20) C4} {D4}
+
+[Fields of the same expression starting at the same time do not share their values. Expected volumes: C4 20, D4 90 (default), E4 20] 
+{_volume(20) C4, D4} {E4}
+
+[Values are carried over from one line (chunk) of the item to the next, as when playing "PLAY safe". Expected panoramic: part 1 = 23 (C4, D4, G4), part 2 = 48 (E4, F4) then 100 (A4)] 
+{_part(1) _pan(23) C4, _part(2) _pan(48) E4}
+{_part(1) D4, _part(2) F4}
+{_part(1) G4, _part(2) _pan(100) A4}
+
+[Values set at the same date: the implicit instrument comes last. The rank is _ins() given, part, channel, implicit _ins(1). Expected volumes: C4 80, E4 30, D4 30 (part 2), F4 80 (implicit _ins(1))] 
+{_volume(80) C4, _part(2) _volume(30) E4} {_part(2) D4} {F4}
+
+[A value set after an explicit _chan(1) is attached to channel 1, not to the implicit _ins(1). Expected volumes: C4 50, D4 90 (default). Compare with the second item] 
+{_chan(1) _volume(50) C4} {_chan(2) D4}
+
+[A stepwise variation is not carried over and erases the remembered value. Expected volumes: C4 80, D4 20, E4 60, F4 90 (default)] 
+{_volume(80) C4} {_volumestep _volume(20) D4 E4 _volume(100)} {F4}
+
+[Kept on purpose: a value written at the very end of an expression has the date of the next expression, so it does not reach it. Expected volumes: C4 90, D4 90] 
+{C4 _volume(50)} {D4}
+
+[Kept on purpose: E4 belongs to the enclosing sequence, which already got the default value with C4. Expected volumes: C4 90, D4 50, E4 90. Compare with the next item] 
+C4 {_volume(50) D4} E4
+
+[Expected volumes: C4 90, D4 50, E4 50] 
+{C4} {_volume(50) D4} {E4}
+
+[Kept on purpose: the continuous variation erases the value of part 2, so the value attached to the implicit _ins(1) applies again. Expected volumes: C4 80, D4 20 to 100, E4 80] 
+{_volume(80) C4} {_part(2) _volumecont _volume(20) D4 _volume(100)} {_part(2) E4}
