@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-da.tryMiscObjects". Date: 2026-11-11 16:53:03
+// Data saved as "-da.tryMiscObjects". Date: 2026-11-12 10:48:24
 
 // Examples of sound-objects
 // Explanations: https://bolprocessor.org/sound-objects/
@@ -16,6 +16,9 @@
 
 [Play this in Csound and look at the Csound score. Since there is no instrument #267, you get a warning and 'E3' is played with instrument #1] 
 _ins(1) C3 _ins(2) D3 _ins(3) G3 _ins(Synth_brass) D3 _ins(267) E3
+
+[Parts can be assigned Csound instruments] 
+_part(1) C3 _part(2) D3 _part(3) G3
 
 
 // In '-cs.tryTunings', instrument #3 is assigned to MIDI channel #1
