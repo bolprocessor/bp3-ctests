@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-da.tryCsoundObjects". Date: 2026-11-11 19:40:32
+// Data saved as "-da.tryCsoundObjects". Date: 2026-11-13 13:12:11
 
 -so.tryCsoundObjects
 -cs.tryCsoundObjects
@@ -221,19 +221,19 @@ _cont(oops) _value(oops,0) f _value(oops,4)
 // Instrument 6 has three additional parameters: 'blurb2' (arguments 9 and 10, default 0), 'oops' (arguments 12 and 13,
 // default 1) and 'blah' (arguments 15 and 16, default 231.5).
 
-[Additional parameters carried over to the next expression. Expected for D4: blurb2 = 40, oops = 3, blah = 100]
+[Additional parameters carried over to the next expression. Expected for D4: blurb2 = 40, oops = 3, blah = 100] 
 {_ins(6) _value(blah,100) _value(oops,3) _value(blurb2,40) C4} {_ins(6) D4}
 
 i6 0.000 1.000 8.00 0.000 0.000 90.000 90.000 40.000 40.000 0.000 3.000 3.000 0.000 100.000 100.000 0.000 ; C4
 i6 1.000 1.000 8.02 0.000 0.000 90.000 90.000 40.000 40.000 0.000 3.000 3.000 0.000 100.000 100.000 0.000 ; D4
 
-[The instrument guessed by _value() is the current instrument, so D4 on _ins(6) gets blah = 100]
+[The instrument guessed by _value() is the current instrument, so D4 on _ins(6) gets blah = 100] 
 {_value(blah,100) C4} {_ins(6) D4}
 
 i6 0.000 1.000 8.00 0.000 0.000 90.000 90.000 0.000 0.000 0.000 1.000 1.000 0.000 100.000 100.000 0.000 ; C4
 i6 1.000 1.000 8.02 0.000 0.000 90.000 90.000 0.000 0.000 0.000 1.000 1.000 0.000 100.000 100.000 0.000 ; D4
 
-[Values attached to parts. Expected: blah = 10 for part 1 (C4, D4), blah = 20 for part 2 (E4, F4)]
+[Values attached to parts. Expected: blah = 10 for part 1 (C4, D4), blah = 20 for part 2 (E4, F4)] 
 {_part(1) _value(blah,10) C4, _part(2) _value(blah,20) E4} {_part(1) _ins(6) D4, _part(2) _ins(6) F4}
 
 i6 0.000 1.000 8.00 0.000 0.000 90.000 90.000 0.000 0.000 0.000 1.000 1.000 0.000 10.000 10.000 0.000 ; C4
@@ -241,7 +241,7 @@ i6 0.000 1.000 8.04 0.000 0.000 90.000 90.000 0.000 0.000 0.000 1.000 1.000 0.00
 i6 1.000 1.000 8.02 0.000 0.000 90.000 90.000 0.000 0.000 0.000 1.000 1.000 0.000 10.000 10.000 0.000 ; D4
 i6 1.000 1.000 8.05 0.000 0.000 90.000 90.000 0.000 0.000 0.000 1.000 1.000 0.000 20.000 20.000 0.000 ; F4
 
-[With _ins(6) given, the values are attached to instrument 6 rather than to the parts: the most recent one, blah = 20, applies to D4 and F4]
+[With _ins(6) given, the values are attached to instrument 6 rather than to the parts: the most recent one, blah = 20, applies to D4 and F4] 
 {_ins(6) _part(1) _value(blah,10) C4, _ins(6) _part(2) _value(blah,20) E4} {_ins(6) _part(1) D4, _ins(6) _part(2) F4}
 
 i6 0.000 1.000 8.00 0.000 0.000 90.000 90.000 0.000 0.000 0.000 1.000 1.000 0.000 10.000 10.000 0.000 ; C4
@@ -249,28 +249,27 @@ i6 0.000 1.000 8.04 0.000 0.000 90.000 90.000 0.000 0.000 0.000 1.000 1.000 0.00
 i6 1.000 1.000 8.02 0.000 0.000 90.000 90.000 0.000 0.000 0.000 1.000 1.000 0.000 20.000 20.000 0.000 ; D4
 i6 1.000 1.000 8.05 0.000 0.000 90.000 90.000 0.000 0.000 0.000 1.000 1.000 0.000 20.000 20.000 0.000 ; F4
 
-[A value set after _ins() is not influenced by _chan(). Expected for D4: blah = 100]
+[A value set after _ins() is not influenced by _chan(). Expected for D4: blah = 100] 
 {_chan(2) _ins(6) _value(blah,100) C4} {_ins(6) _chan(3) D4}
 
 i6 0.000 1.000 8.00 0.000 0.000 90.000 90.000 0.000 0.000 0.000 1.000 1.000 0.000 100.000 100.000 0.000 ; C4
 i6 1.000 1.000 8.02 0.000 0.000 90.000 90.000 0.000 0.000 0.000 1.000 1.000 0.000 100.000 100.000 0.000 ; D4
 
-[A continuous variation is not carried over and erases the remembered value. Expected: C4 blah = 100, D4 from 0 to 50, E4 the default 231.5]
+[A continuous variation is not carried over and erases the remembered value. Expected: C4 blah = 100, D4 from 0 to 50, E4 the default 231.5] 
 {_ins(6) _value(blah,100) C4} {_ins(6) _cont(blah) _value(blah,0) D4 _value(blah,50)} {_ins(6) E4}
 
 i6 0.000 1.000 8.00 0.000 0.000 90.000 90.000 0.000 0.000 0.000 1.000 1.000 0.000 100.000 100.000 0.000 ; C4
 i6 1.000 1.000 8.02 0.000 0.000 90.000 90.000 0.000 0.000 0.000 1.000 1.000 0.000 0.000 50.000 0.000 ; D4
 i6 2.000 1.000 8.04 0.000 0.000 90.000 90.000 0.000 0.000 0.000 1.000 1.000 0.000 231.500 231.500 0.000 ; E4
 
-[Fields of the same expression starting at the same time do not share their values. Expected: C4 blah = 100, D4 the default 231.5, E4 100]
+[Fields of the same expression starting at the same time do not share their values. Expected: C4 blah = 100, D4 the default 231.5, E4 100] 
 {_ins(6) _value(blah,100) C4, _ins(6) D4} {_ins(6) E4}
 
 i6 0.000 1.000 8.00 0.000 0.000 90.000 90.000 0.000 0.000 0.000 1.000 1.000 0.000 100.000 100.000 0.000 ; C4
 i6 0.000 1.000 8.02 0.000 0.000 90.000 90.000 0.000 0.000 0.000 1.000 1.000 0.000 231.500 231.500 0.000 ; D4
 i6 1.000 1.000 8.04 0.000 0.000 90.000 90.000 0.000 0.000 0.000 1.000 1.000 0.000 100.000 100.000 0.000 ; E4
 
-
-[A carried value combines with the values in the Csound score of a sound-object as an explicit value does. 'blurb' (ADD mode): event 'D3' of 'e' adds 10 and 30, giving 60 and 80 in both occurrences of 'e']
+[A carried value combines with the values in the Csound score of a sound-object as an explicit value does. 'blurb' (ADD mode): event 'D3' of 'e' adds 10 and 30, giving 60 and 80 in both occurrences of 'e'] 
 {_ins(2) _value(blurb,50) e} {_ins(2) e}
 
 i2 0.000 0.666 7.04 8191.500 8191.500 64.000 64.000 50.000 50.000 0.000 ; E3
@@ -282,7 +281,7 @@ i2 1.333 0.667 7.07 8191.500 8191.500 64.000 64.000 50.000 50.000 0.000 ; G3
 i2 2.000 1.000 7.02 8191.500 8191.500 64.000 64.000 60.000 80.000 0.000 ; D3
 i2 2.333 0.667 7.07 8191.500 8191.500 64.000 64.000 50.000 50.000 0.000 ; G3
 
-[Same with 'oops' (MULT mode, default 1): the values of 'f' are multiplied by 3 in both occurrences of 'f']
+[Same with 'oops' (MULT mode, default 1): the values of 'f' are multiplied by 3 in both occurrences of 'f'] 
 {_ins(6) _value(oops,3) f} {_ins(6) f}
 
 i6 0.000 0.500 7.00 0.000 0.000 90.000 90.000 0.000 0.000 0.000 1.500 4.500 0.000 0.000 0.000 0.000 ; C3

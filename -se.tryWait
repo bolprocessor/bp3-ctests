@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.tryWait'. Date: 2026-11-07 08:07:49 8NovGMT",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.tryWait'. Date: 2026-11-13 21:53:16 21NovGMT",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -44,7 +44,7 @@
     },
     "NoteConvention": {
         "name": "Note convention",
-        "value": "3",
+        "value": "0",
         "unit": "0 = English: C, D, E...<br \/>1 = Italian\/Spanish\/French: do, re, mi...<br \/>2 = Indian: sa, re, ga...<br \/>3 = Keys<br \/>4 = Only from tonal scales(s)",
         "boolean": "0"
     },
@@ -104,7 +104,7 @@
     },
     "TraceMicrotonality": {
         "name": "Trace microtonality",
-        "value": "1",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
@@ -172,6 +172,12 @@
         "name": "Split |variables|",
         "value": "0",
         "unit": "",
+        "boolean": "1"
+    },
+    "ExpandExpressions": {
+        "name": "Expand expressions",
+        "value": "0",
+        "unit": "in Bol Processor score output (may be very long)",
         "boolean": "1"
     },
     "SplitLines": {
@@ -426,6 +432,12 @@
         "unit": "(0..127) usually 10",
         "boolean": "0"
     },
+    "DeftPitchbendRange": {
+        "name": "Default pitchbend range",
+        "value": "0",
+        "unit": "cents, for all MIDI channels (e.g. 200); _pitchrange() changes it for one channel. With 0, _pitchbend() values are raw (0..16383, centre 8192)",
+        "boolean": "0"
+    },
     "StopPauseContinue": {
         "name": "Respond to  Stop\/Continue",
         "value": "1",
@@ -478,6 +490,12 @@
         "name": "Trace item #",
         "value": "0",
         "unit": "(0 for none)",
+        "boolean": "0"
+    },
+    "MaxOutputFileSize": {
+        "name": "Max output file size",
+        "value": "500",
+        "unit": "MB (deft 500, at least 1). Work stops when a MIDI file, Csound score, event list, data or trace file reaches this size",
         "boolean": "0"
     },
     "UrlToPush": {

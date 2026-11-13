@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-gr.dhadhatite". Date: 2026-11-10 19:04:21
+// Data saved as "-gr.dhadhatite". Date: 2026-11-13 20:05:11
 
 -se.dhadhatite
 -al.dhadhatite
@@ -17,6 +17,7 @@ gram#1[3] <100> S64 <-> S1V S2F S1F S2F E32
 gram#1[4] <100> S64 <-> S1F S2V S1F S2F E32
 gram#1[5] <100> S64 <-> S1V S2V S1F S2F E32
 
+
 ------------------------------------------------------
 
 LIN
@@ -30,6 +31,7 @@ gram#2[7] <100> S1V S2V S1F S2F E32 <-> (=++ A1 V13 + B2 ) S1F +S2F * (:++ A1 V1
 gram#2[8] <100> S1V S2V S1F S2F E32 <-> (=++ A2 V12 + B2 ) S1F +S2F * (:++ A2 V12 + B2 ) S1F S1F
 gram#2[9] <100> S1V S2V S1F S2F E32 <-> (=++ A1 V15 ) S1F +S2F * (:++ A1 V15 ) S1F S1F
 gram#2[10] <100> S1V S2V S1F S2F E32 <-> (=++ A2 V14 ) S1F +S2F * (:++ A2 V14 ) S1F S1F
+
 
 ----------------------------------------------------------------
 
@@ -63,6 +65,7 @@ gram#3[26] <10> V3 <-> T1 V2
 gram#3[27] <100> V3 <-> T2 T1
 gram#3[28] <10> V2 <-> T1 T1
 
+
 --------------------------------------
 
 RND
@@ -73,9 +76,11 @@ gram#4[4] <100> T2 <-> tite
 gram#4[5] <50> T2 <-> dheena
 gram#4[6] <50> T2 <-> teena
 
+
 ---------------------------------------
 
 ORD
+
 
 // Markers such as '+' are only found in contexts. They will be ignored when tagging rules as "structural" before creating templates
 
@@ -88,6 +93,7 @@ gram#5[6] <100> #+ S1F <-> #+ dhadhatitedhadhadheena
 gram#5[7] <100> + S2F <-> + dhadhatitedhadhateena
 gram#5[8] ++ S2F <-- ++ dhadhatitedhadhadheena [This rule must be last] 
 
+
 ----------------------
 
 TEMPLATES:
@@ -97,3 +103,5 @@ TEMPLATES:
 [4] (@0 ++____________+____)________+________ * (@1 )________________
 [5] (@0 ++______________+__)________+________ * (@1 )________________
 [6] (@0 ++________________)________+________ * (@1 )________________
+
+-----

@@ -1,8 +1,9 @@
-// Bol Processor BP3 compatible with version BP2.9.8
-// Data saved as "-da.acceleration". Date: 2021-02-28 05:19:03
+// Bol Processor BP3
+// Data saved as "-da.acceleration". Date: 2026-11-13 21:34:37
 
 -se.Visser2
 -gr.acceleration
+
 
 // Periods are not ignored in the analysis because we find them in the grammar
 
