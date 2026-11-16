@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-da.tryMiscObjects". Date: 2026-11-12 10:48:24
+// Data saved as "-da.tryMiscObjects". Date: 2026-11-14 14:10:55
 
 // Examples of sound-objects
 // Explanations: https://bolprocessor.org/sound-objects/
@@ -304,3 +304,6 @@ t1 t2 t3 t4
 
 [This is not a correct rendering of time patterns; see -gr.tryTimePatterns and the use of smooth time] 
 {5,t1 t2,{t1 t3 t4,C4 D4 E4 F4 - A4}{t3 t1,B4 C5 _ E5}}
+
+[Constraints are released for f only, so oscar2-trunc and oscar2 do not overlap the preceding objects] 
+C4 oscar2-trunc f - oscar2 C4
