@@ -1,8 +1,14 @@
 // Bol Processor BP3
-// Data saved as "-da.tryWait". Date: 2026-11-13 21:58:07
+// Data saved as "-da.tryWait". Date: 2026-11-17 07:59:14
 
 -se.tryWait
 -to.tryWait
+
+
+// These items are used for checking the control by MIDI input/output (e.g. a MIDI keyboard)
+// They work with both real-time MIDI and real-time Csound output options
+// When the (real-time) Csound server is running, no note can be sent via the MIDI output
+// Only Start, Stop and Continue events.
 
 G2 B2 _script(MIDI send Start) D2 _script(MIDI send Continue) _chan(2) E2 _script(MIDI send Stop)
 
@@ -15,7 +21,13 @@ C4 _script(Wait forever) D4
 
 _script(wait for C3 channel 1) G2 B2 _script(MIDI send Start) _script(MIDI send Continue) D3 E3
 
+
+// This item starts playing if either the C3 or the D3 note is sent
+
 _script(wait for C3 channel 1) _script(wait for D3 channel 1) _transpose(12) . _vel(60) E2 . D2 E2 . _vel(65) B2 D2 E2 . G2 B2 D2 E2 . _script(wait for C4 channel 1) _vel(70) F#2 G2 B2 D2 E2 . Bb2 F#2 G2 B2 D2 E2 . _vel(75) C2 Bb2 F#2 G2 B2 D2 E2 . _vel(77) G#2 C2 Bb2 F#2 G2 B2 D2 E2 . _vel(80) A2 G#2 C2 Bb2 F#2 G2 B2 D2 E2 . _vel(85) Eb2 A2 G#2 C2 Bb2 F#2 G2 B2 D2 E2 . _vel(87) C#2 Eb2 A2 G#2 C2 Bb2 F#2 G2 B2 D2 E2 . _vel(90) F2 C#2 Eb2 A2 G#2 C2 Bb2 F#2 G2 B2 D2 E2
+
+
+// Setting an 'exotic' microtonal scale still recognises input notes in the convention selected in the settings, here 'English'
 
 _scale(Cmaj,69) _script(wait for C3 channel 1) key#60 key#62 key#69
 
