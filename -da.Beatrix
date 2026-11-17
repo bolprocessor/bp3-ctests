@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-da.Beatrix". Date: 2026-11-17 16:13:36
+// Data saved as "-da.Beatrix". Date: 2026-11-17 19:39:49
 
 -se.da.Beatrix
 
@@ -9,13 +9,13 @@
 // Read https://bolprocessor.org/interactions-in-midi-and-csound/ for explanations
 
 
-// This one works with real-time MIDI, but not with real-time Csound, because the notes need to be transferred, and Csound does not send them.
+// This one works with real-time MIDI, but not with real-time Csound, because the last note should be transferred, but Csound does not transfer note with duration > 0
 
 [Alan is waiting, Beatrix sends her notes and waits for Alan's phrase. She ends the performance when receiving Alan's last note 'E3'] 
 {2, C#4 Eb4 A4 G#4 C4 Bb4 F#4 G4 B4 D4 E4} _script(wait for E3 channel 1)
 
 
-// This one also works only with real-time MIDI
+// This one works both in real-time MIDI and Csound because <<E0>> of duration 0 is sent (by Alan) to both Csound and MIDI
 
 [Beatrix starts and waits for E1 which we won't hear because its velocity is 0] 
 _script(wait for E1 channel 1) _transpose(24) _vel(60) E2 . D2 E2 . _vel(65) B2 D2 E2 . G2 B2 D2 E2 . _vel(70) F#2 G2 B2 D2 E2 . Bb2 F#2 G2 B2 D2 E2 . _vel(75) C2 Bb2 F#2 G2 B2 D2 E2 . _vel(77) G#2 C2 Bb2 F#2 G2 B2 D2 E2 . _vel(80) A2 G#2 C2 Bb2 F#2 G2 B2 D2 E2 . _vel(85) Eb2 A2 G#2 C2 Bb2 F#2 G2 B2 D2 E2 . _vel(87) C#2 Eb2 A2 G#2 C2 Bb2 F#2 G2 B2 D2 E2 . _vel(90) F2 C#2 Eb2 A2 G#2 C2 Bb2 F#2 G2 B2 D2 E2 _script(MIDI send Stop)

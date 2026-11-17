@@ -1,14 +1,18 @@
 // Bol Processor BP3
-// Grammar saved as "-gr.Beatrix". Date: 2025-01-17 08:08:10
+// Data saved as "-gr.Beatrix". Date: 2026-11-17 19:43:46
+
 -se.Beatrix
 
 ORD
 
-gram#1[1] S --> _script(Wait for do#3 channel 2) _vel(80) A B _vel(0) do#2
+gram#1[1] S --> _script(Wait for do#3 channel 2) _vel(80) A B _vel(0) <<do#2>>
 gram#1[2] A --> A1 A2 A3 A4 A5 A6 A7 A8 A1 A2 A3 A4 A5 A6 A7 A'8
 gram#1[3] B --> B1 B2 B3 B4 B5 B6 B7 B8 B1 B2 B3 B4 B5 B6 B7 B8
+
+
 -------------------
-LIN [Select rules randomly and apply from left to right]
+
+LIN [Select rules randomly and apply from left to right] 
 gram#2[1] <K1=1> A1 --> T96
 gram#2[2] <K2=2> A1 --> T32
 gram#2[3] <K3=3> A1 --> T69
@@ -20,8 +24,11 @@ gram#2[8] <K8=4> A1 --> T119
 gram#2[9] <K9=3> A1 --> T98
 gram#2[10] <K10=2> A1 --> T3
 gram#2[11] <K11=1> A1 --> T54
+
+
 -------------------
-LIN [These rules could be mixed with the preceding ones. But production is faster in this way.]
+
+LIN [These rules could be mixed with the preceding ones. But production is faster in this way.] 
 gram#3[1] <K1> A2 --> T22
 gram#3[2] <K2> A2 --> T6
 gram#3[3] <K3> A2 --> T95
@@ -33,7 +40,10 @@ gram#3[8] <K8> A2 --> T84
 gram#3[9] <K9> A2 --> T142
 gram#3[10] <K10> A2 --> T87
 gram#3[11] <K11> A2 --> T130
+
+
 -------------------
+
 LIN
 gram#4[1] <K1> A3 --> T141
 gram#4[2] <K2> A3 --> T128
@@ -46,7 +56,10 @@ gram#4[8] <K8> A3 --> T114
 gram#4[9] <K9> A3 --> T42
 gram#4[10] <K10> A3 --> T165
 gram#4[11] <K11> A3 --> T10
+
+
 -------------------
+
 LIN
 gram#5[1] <K1> A4 --> T41
 gram#5[2] <K2> A4 --> T63
@@ -59,7 +72,10 @@ gram#5[8] <K8> A4 --> T50
 gram#5[9] <K9> A4 --> T156
 gram#5[10] <K10> A4 --> T61
 gram#5[11] <K11> A4 --> T103
+
+
 -------------------
+
 LIN
 gram#6[1] <K1> A5 --> T105
 gram#6[2] <K2> A5 --> T146
@@ -72,7 +88,10 @@ gram#6[8] <K8> A5 --> T140
 gram#6[9] <K9> A5 --> T75
 gram#6[10] <K10> A5 --> T135
 gram#6[11] <K11> A5 --> T28
+
+
 -------------------
+
 LIN
 gram#7[1] <K1> A6 --> T122
 gram#7[2] <K2> A6 --> T46
@@ -85,7 +104,10 @@ gram#7[8] <K8> A6 --> T86
 gram#7[9] <K9> A6 --> T129
 gram#7[10] <K10> A6 --> T47
 gram#7[11] <K11> A6 --> T37
+
+
 -------------------
+
 LIN
 gram#8[1] <K1> A7 --> T11
 gram#8[2] <K2> A7 --> T134
@@ -98,11 +120,17 @@ gram#8[8] <K8> A7 --> T169
 gram#8[9] <K9> A7 --> T62
 gram#8[10] <K10> A7 --> T147
 gram#8[11] <K11> A7 --> T106
+
+
 -------------------
+
 LIN
 gram#9[1] A8 --> T5
 gram#9[2] A'8 --> T'5
+
+
 ------------------
+
 LIN
 gram#10[1] <K1> B1 --> T70
 gram#10[2] <K2> B1 --> T117
@@ -115,7 +143,10 @@ gram#10[8] <K8> B1 --> T120
 gram#10[9] <K9> B1 --> T65
 gram#10[10] <K10> B1 --> T102
 gram#10[11] <K11> B1 --> T35
+
+
 ------------------
+
 LIN
 gram#11[1] <K1> B2 --> T121
 gram#11[2] <K2> B2 --> T39
@@ -128,7 +159,10 @@ gram#11[8] <K8> B2 --> T88
 gram#11[9] <K9> B2 --> T77
 gram#11[10] <K10> B2 --> T4
 gram#11[11] <K11> B2 --> T20
+
+
 ------------------
+
 LIN
 gram#12[1] <K1> B3 --> T26
 gram#12[2] <K2> B3 --> T126
@@ -141,7 +175,10 @@ gram#12[8] <K8> B3 --> T48
 gram#12[9] <K9> B3 --> T19
 gram#12[10] <K10> B3 --> T31
 gram#12[11] <K11> B3 --> T108
+
+
 ------------------
+
 LIN
 gram#13[1] <K1> B4 --> T9
 gram#13[2] <K2> B4 --> T56
@@ -154,7 +191,10 @@ gram#13[8] <K8> B4 --> T166
 gram#13[9] <K9> B4 --> T82
 gram#13[10] <K10> B4 --> T164
 gram#13[11] <K11> B4 --> T92
+
+
 ------------------
+
 LIN
 gram#14[1] <K1> B5 --> T112
 gram#14[2] <K2> B5 --> T174
@@ -167,7 +207,10 @@ gram#14[8] <K8> B5 --> T51
 gram#14[9] <K9> B5 --> T137
 gram#14[10] <K10> B5 --> T144
 gram#14[11] <K11> B5 --> T12
+
+
 ------------------
+
 LIN
 gram#15[1] <K1> B6 --> T49
 gram#15[2] <K2> B6 --> T18
@@ -180,7 +223,10 @@ gram#15[8] <K8> B6 --> T115
 gram#15[9] <K9> B6 --> T38
 gram#15[10] <K10> B6 --> T59
 gram#15[11] <K11> B6 --> T124
+
+
 ------------------
+
 LIN
 gram#16[1] <K1> B7 --> T109
 gram#16[2] <K2> B7 --> T116
@@ -193,7 +239,10 @@ gram#16[8] <K8> B7 --> T72
 gram#16[9] <K9> B7 --> T149
 gram#16[10] <K10> B7 --> T173
 gram#16[11] <K11> B7 --> T44
+
+
 ------------------
+
 LIN
 gram#17[1] <K1> B8 --> T8
 gram#17[2] <K2> B8 --> T78
@@ -206,8 +255,11 @@ gram#17[8] <K8> B8 --> T8
 gram#17[9] <K9> B8 --> T8
 gram#17[10] <K10> B8 --> T8
 gram#17[11] <K11> B8 --> T8
+
+
 ------------------
-SUB1 [Substitute only once.]
+
+SUB1 [Substitute only once.] 
 gram#18[1] T1 --> {fa3 re3 sol3,fa5 re5 sol5}
 gram#18[2] T2 --> {{2,si2,sol3}-,la4 {2,fa#4 sol4 si4 sol5}}
 gram#18[3] T3 --> {{2,do3,mi3}-,sol5 do5 mi5}
@@ -369,4 +421,4 @@ gram#18[158] T176 --> {{2,si2,re3}{si2,re3},la5 sol5 si5 sol5 re5 sol5}
 
 COMMENT:
 This is Mozart's musical dice game...
-[Source: B. Schott's Söhne, Mainz 39542]
+[Source: B. Schott's Söhne, Mainz 39542] 
