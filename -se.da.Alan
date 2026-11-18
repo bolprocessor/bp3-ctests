@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.da.Alan'. Date: 2026-11-17 15:05:54 15NovGMT",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.da.Alan'. Date: 2026-11-17 22:21:00 22NovGMT",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -440,7 +440,7 @@
     },
     "StopPauseContinue": {
         "name": "Respond to  Stop\/Continue",
-        "value": "1",
+        "value": "0",
         "unit": "(if a MIDI input is active)",
         "boolean": "1"
     },

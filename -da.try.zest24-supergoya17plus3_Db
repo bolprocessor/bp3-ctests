@@ -1,0 +1,11 @@
+// Bol Processor BP3
+// Data saved as "-da.try.zest24-supergoya17plus3_Db". Date: 2026-11-18 22:38:11
+
+-se.try.zest24-supergoya17plus3_Db
+-to.tryMPE
+
+_scale(zest24-supergoya17plus3_Db,0) _tempo(3) key#60 key#61 key#62 key#63 key#64 key#65 key#66 key#67 key#68 key#69 key#70 key#71 key#72
+
+_scale(zest24-supergoya17plus3_Db,0) _tempo(1) _pitchrange(200) key#60 key#61 key#62 _pitchcont _pitchbend(200) key#62 key#61 key#60 _pitchbend(-200)
+
+_scale(zest24-supergoya17plus3_Db,0) _tempo(3) key#60 key#61 key#62 _transpose(13) key#60 key#61 key#62

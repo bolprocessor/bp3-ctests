@@ -1,17 +1,19 @@
 // Bol Processor BP3
-// Data saved as "-da.tryBohlen-Pierce". Date: 2026-09-11 11:20:01
+// Data saved as "-da.tryBohlen-Pierce". Date: 2026-11-18 16:12:12
+
 -se.Bohlen-Pierce
 -to.tryScales
+
 
 // The Bohlen-Pierce "just intonation" scale
 // https://en.wikipedia.org/wiki/Bohlen-Pierce_scale
 // Open "Bohlen-Pierce" in "-to.tryScales" to visualise intervals
 
 [This will sound correct if your MIDI device accepts pitchbend. The default block key is key #60] 
-_scale(Bohlen-Pierce,0) _tempo(2) C4 Db4 D4 E4 F4 Gb4 G4 H4 Jb4 J4 A4 Bb4 B4 C5
+_ins(flute) _scale(Bohlen-Pierce,0) _tempo(2) C4 Db4 D4 E4 F4 Gb4 G4 H4 Jb4 J4 A4 Bb4 B4 C5
 
-[Using a different block key] 
-_scale(Bohlen-Pierce,H4) _tempo(2) C4 Db4 D4 E4 F4 Gb4 G4 H4 Jb4 J4 A4 Bb4 B4 C5
+[Using a different block key. You will see the difference reading frequencies on the Csound score] 
+_ins(flute) _scale(Bohlen-Pierce,H4) _tempo(2) C4 Db4 D4 E4 F4 Gb4 G4 H4 Jb4 J4 A4 Bb4 B4 C5
 
 [Add a MIDI input! After 1 second, will capture incoming key strokes and forward them to the output, applying the microtonal correction] 
 _volume(0) C0 _script(wait forever) _scale(Bohlen-Pierce,0)
