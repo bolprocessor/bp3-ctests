@@ -1,12 +1,16 @@
 // Bol Processor BP3
-// Data saved as "-gr.vina3". Date: 2026-11-08 10:36:40
+// Data saved as "-gr.vina3". Date: 2026-11-21 12:01:18
+
 -se.Vina3
 -cs.Vina
+-sc.Vina
 -to.Vina
+
 
 // "Pallavi" of song "Maayaatiita Svaruupini, Nannu brovave" in raga "mayamaalavagaula"
 // scale - C, C#, E, F, G, G#, B
 // Note phrase variations given.
+
 
 // Terms (used as variables):
 // Spuritam - Quick (discrete) two note succession.
@@ -37,11 +41,13 @@ gram#1[18] Ve1 --> {5, GamakaOscil E3 Pull1}
 gram#1[19] Ve2 --> StartSlide C#3 SlideBack1 _ StopSlide
 gram#1[20] Ve3 --> StartPull B2 Pull1 StopPull
 
+
 -----
 
 SUB1
 gram#2[1] Taalam4 --> Taalam Taalam Taalam Taalam
 gram#2[2] Taalam --> {3, C3, G3, C4}
+
 
 -----
 
@@ -50,13 +56,16 @@ gram#3[1] LongSpuritam ?1 ?2 --> {1, StartSlide ?1 _ Slide0 _ ?2 }
 gram#3[2] GamakaOscil ?1 ?2 --> {StartPull ?1 ?2 Pull0 _ ?2 _ Pull0 _ ?2 StopPull}
 gram#3[3] GamakaHold ?1 ?2 --> {1, StartPull ?1 ?2 _ _ _ StopPull}
 
+
 -----
 
 SUB1
 gram#4[1] StartSlidePull --> StartSlide StartPull
 gram#4[2] StopSlidePull --> StopSlide StopPull
 
+
 -----
+
 
 // Lowest level structures
 
