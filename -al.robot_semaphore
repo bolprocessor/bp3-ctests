@@ -1,0 +1,8 @@
+// Bol Processor BP3
+// Alphabet file saved as "-al.robot_semaphore". Date: 2026-11-23 21:00:00
+
+-so.robot_semaphore
+
+// Letters of the flag semaphore played by the robot puppet, defined as time-objects in "-so.robot_semaphore"
+
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z space

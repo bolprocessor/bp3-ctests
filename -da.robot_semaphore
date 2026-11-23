@@ -1,0 +1,34 @@
+// Bol Processor BP3
+// Data saved as "-da.robot_semaphore". Date: 2026-11-23 23:13:29
+
+-se.robot_semaphore
+-al.robot_semaphore
+-so.robot_semaphore
+-cs.Robot
+
+
+// Sentences in the flag semaphore alphabet, played by the robot puppet "BP_robot_puppet.py" of folder "osc_resources", with the output format "Real-time OSC".
+// See https://bolprocessor.org/robot-puppet/
+
+
+// Each letter is a time-object of "-so.robot_semaphore", named in "-al.robot_semaphore": A to Z, and "space" between words.
+// Its Csound score holds both arms at the angles of the letter, seen by the observer: "i3 0 1 261.626 45 45 0" keeps the left arm at 45 degrees (low) for the whole letter.
+// As the joints of the puppet have a maximum speed, the arms go from one letter to the next as fast as they can, then hold the position.
+// At the end of each letter, the head nods: this marks double letters, as in "HELLO".
+// "space" crosses the arms low in front of the body.
+// The metronome is 40 beats per minute (one letter in 1.5 s). Faster tempos are possible with _tempo(): see the last example.
+
+[Hello world] 
+H E L L O space W O R L D
+
+[The traditional distress signal] 
+S O S
+
+[Bol Processor] 
+B O L space P R O C E S S O R
+
+[The whole alphabet] 
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+
+[A pangram, twice as fast] 
+_tempo(2) T H E space Q U I C K space B R O W N space F O X space J U M P S space O V E R space T H E space L A Z Y space D O G
