@@ -1,0 +1,78 @@
+// Bol Processor BP3
+// Data saved as "-gr.robot_dance". Date: 2026-11-23 22:32:58
+
+-se.robot_dance
+-cs.Robot
+
+
+// A choreography for the robot puppet "BP_robot_puppet.py" of folder "osc_resources", with the output format "Real-time OSC".
+// See https://bolprocessor.org/robot-puppet/ and https://bolprocessor.org/usage-in-robotics/
+
+
+// Each joint of the puppet is an instrument of "-cs.Robot": torso, head, leftarm, leftforearm, rightarm, rightforearm.
+// Its angle (degrees) is a parameter named like the instrument, since the Bol Processor attaches each parameter name
+// to a single instrument: _value(leftarm,90) sets the angle of the left arm.
+// Each note moves a joint: its angle goes from its value at the beginning of the note to its value at the end.
+// With _cont(leftarm), the angle changes continuously from one _value(leftarm,...) to the next,
+// so the _value()s are the positions of the joint at given times, and the notes are the movements between them.
+// A _value() placed inside a prolonged note (C4 _ _value(rightforearm,60) _ ...) bends its movement: the puppet receives it as /bp/env.
+// The pitch of the notes is ignored by the puppet.
+
+
+// Angles: torso and head lean to the left of the screen if positive. Arms hang down at 0, are horizontal at 90 and raised at 180.
+// Forearms are straight at 0 and bend upwards if positive.
+
+
+// Every figure starts and ends in the rest position (all angles 0), so that they can follow each other in any order.
+
+ORD
+gram#1[1] S --> _tempo(3/2) Hello Figure Figure Figure Figure Bye
+
+
+-----
+
+RND
+gram#2[1] Figure --> Wave
+gram#2[2] Figure --> Swing
+gram#2[3] Figure --> Clap
+gram#2[4] Figure --> Stretch
+
+
+-----
+
+ORD
+
+
+// Raise both arms, nod and put them down
+
+gram#3[1] Hello --> {Still4, Head4, Arms4, Forearms4}
+gram#3[2] Still4 --> _ins(torso) _cont(torso) _value(torso,0) C4 _ _ _ _value(torso,0)
+gram#3[3] Head4 --> _ins(head) _cont(head) _value(head,0) C4 _value(head,10) C4 _value(head,-10) C4 _value(head,10) C4 _value(head,0)
+gram#3[4] Arms4 --> {_ins(leftarm) _cont(leftarm) _value(leftarm,0) C4 _value(leftarm,90) C4 _value(leftarm,170) C4 _value(leftarm,90) C4 _value(leftarm,0), _ins(rightarm) _cont(rightarm) _value(rightarm,0) C4 _value(rightarm,90) C4 _value(rightarm,170) C4 _value(rightarm,90) C4 _value(rightarm,0)}
+gram#3[5] Forearms4 --> {_ins(leftforearm) _cont(leftforearm) _value(leftforearm,0) C4 _ _ _ _value(leftforearm,0), _ins(rightforearm) _cont(rightforearm) _value(rightforearm,0) C4 _ _ _ _value(rightforearm,0)}
+
+
+// The right arm waves: a single movement of its forearm, bent by the _value()s between its prolongations. Repeating a value holds the position.
+
+gram#3[6] Wave --> {Still4, _ins(head) _cont(head) _value(head,0) C4 _value(head,-15) _ _ _value(head,-15) C4 _value(head,0), _ins(leftarm) _cont(leftarm) _value(leftarm,0) C4 _value(leftarm,30) _ _ _value(leftarm,30) C4 _value(leftarm,0), _ins(leftforearm) _cont(leftforearm) _value(leftforearm,0) C4 _value(leftforearm,110) _ _ _value(leftforearm,110) C4 _value(leftforearm,0), _ins(rightarm) _cont(rightarm) _value(rightarm,0) C4 _value(rightarm,150) _ _ _value(rightarm,150) C4 _value(rightarm,0), _ins(rightforearm) _cont(rightforearm) _value(rightforearm,0) C4 _ _value(rightforearm,60) _ _value(rightforearm,10) _ _value(rightforearm,60) _ _value(rightforearm,10) _ _value(rightforearm,60) C4 _ _value(rightforearm,0)}
+
+
+// The body swings from one side to the other, the arms follow with a delay
+
+gram#3[7] Swing --> {_ins(torso) _cont(torso) _value(torso,0) C4 _value(torso,15) C4 _value(torso,-15) C4 _value(torso,15) C4 _value(torso,0), _ins(head) _cont(head) _value(head,0) C4 _value(head,-10) C4 _value(head,10) C4 _value(head,-10) C4 _value(head,0), _ins(leftarm) _cont(leftarm) _value(leftarm,0) {1/2,C4} _value(leftarm,60) C4 _value(leftarm,20) C4 _value(leftarm,60) C4 _value(leftarm,20) {1/2,C4} _value(leftarm,0), _ins(rightarm) _cont(rightarm) _value(rightarm,0) {1/2,C4} _value(rightarm,20) C4 _value(rightarm,60) C4 _value(rightarm,20) C4 _value(rightarm,60) {1/2,C4} _value(rightarm,0), Forearms4}
+
+
+// Clapping above the head, three times faster
+
+gram#3[8] Clap --> {Still4, _ins(head) _cont(head) _value(head,0) C4 _ _ _ _value(head,0), _ins(leftarm) _cont(leftarm) _value(leftarm,0) C4 _value(leftarm,140) {2,C4 C4 C4 C4 C4 C4} C4 _value(leftarm,0), _ins(rightarm) _cont(rightarm) _value(rightarm,0) C4 _value(rightarm,140) {2,C4 C4 C4 C4 C4 C4} C4 _value(rightarm,0), Clap1 Clap1}
+gram#3[9] Clap1 --> {_ins(leftforearm) _cont(leftforearm) _value(leftforearm,0) C4 _value(leftforearm,40) C4 _value(leftforearm,90) C4 _value(leftforearm,40) C4 _value(leftforearm,90) C4 _value(leftforearm,40) C4 _value(leftforearm,90) C4 _value(leftforearm,0), _ins(rightforearm) _cont(rightforearm) _value(rightforearm,0) C4 _value(rightforearm,40) C4 _value(rightforearm,90) C4 _value(rightforearm,40) C4 _value(rightforearm,90) C4 _value(rightforearm,40) C4 _value(rightforearm,90) C4 _value(rightforearm,0)}
+
+
+// Stretching sideways in two different rhythms: 3 movements of the left arm against 4 of the right arm
+
+gram#3[10] Stretch --> {Still4, _ins(head) _cont(head) _value(head,0) C4 _value(head,20) C4 _value(head,-20) C4 _value(head,0), _ins(leftarm) _cont(leftarm) _value(leftarm,0) C4 _value(leftarm,100) C4 _value(leftarm,40) C4 _value(leftarm,0), _ins(rightarm) _cont(rightarm) _value(rightarm,0) C4 _value(rightarm,40) C4 _value(rightarm,100) C4 _value(rightarm,40) C4 _value(rightarm,0), Forearms4}
+
+
+// Wave goodbye with both hands
+
+gram#3[11] Bye --> {Still4, Head4, _ins(leftarm) _cont(leftarm) _value(leftarm,0) C4 _value(leftarm,120) _ _ _value(leftarm,120) C4 _value(leftarm,0), _ins(rightarm) _cont(rightarm) _value(rightarm,0) C4 _value(rightarm,120) _ _ _value(rightarm,120) C4 _value(rightarm,0), _ins(leftforearm) _cont(leftforearm) _value(leftforearm,0) C4 _ _value(leftforearm,50) _ _value(leftforearm,0) _ _value(leftforearm,50) _ _value(leftforearm,0) _ _value(leftforearm,50) C4 _ _value(leftforearm,0), _ins(rightforearm) _cont(rightforearm) _value(rightforearm,0) C4 _ _value(rightforearm,50) _ _value(rightforearm,0) _ _value(rightforearm,50) _ _value(rightforearm,0) _ _value(rightforearm,50) C4 _ _value(rightforearm,0)}

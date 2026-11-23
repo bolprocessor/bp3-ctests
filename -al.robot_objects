@@ -1,0 +1,8 @@
+// Bol Processor BP3
+// Alphabet file saved as "-al.robot_objects". Date: 2026-11-23 19:00:00
+
+-so.robot_objects
+
+// Gestures of the robot puppet, defined as time-objects in "-so.robot_objects"
+
+armsup armsdown clap wave waveoff nod

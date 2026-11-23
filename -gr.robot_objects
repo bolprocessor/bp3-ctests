@@ -1,0 +1,63 @@
+// Bol Processor BP3
+// Data saved as "-gr.robot_objects". Date: 2026-11-23 19:20:51
+
+-se.robot_objects
+-al.robot_objects
+-so.robot_objects
+-cs.Robot
+
+
+// A choreography for the robot puppet "BP_robot_puppet.py" of folder "osc_resources", with the output format "Real-time OSC".
+// See https://bolprocessor.org/robot-puppet/ and https://bolprocessor.org/usage-in-robotics/
+
+
+// Here the gestures are time-objects (sound-objects) of "-so.robot_objects", named in "-al.robot_objects": armsup, armsdown, clap, wave, waveoff, nod.
+// Each prototype contains a Csound score whose lines are movements of the joints (instruments of "-cs.Robot"):
+// "i5 0 0.5 261.626 0 150 0" moves the right arm (instrument 5) from 0 to 150 degrees in 0.5 s. Click a prototype to see its score and properties.
+// The grammar places gestures on beats, and the time-setting algorithm adapts each of them according to its properties:
+
+
+// - "clap" is never rescaled: it keeps its speed at any tempo. Its pivot, the point placed on the beat, is the impact of the hands (150 ms), not its beginning.
+// So the hands meet exactly on the beats, the preparation of each clap starting before its beat.
+// - "wave" is cyclic and never rescaled: after raising the arm (500 ms), its waving part (500 ms) is repeated as long as the object lasts, rather than slowed down.
+// - "nod" can be compressed or expanded, but only between 0.5 and 2 times, as a motor has speed limits.
+// - "armsup", "armsdown" and "waveoff" are rescaled freely: they follow the tempo.
+
+
+// The torso swings with notes and _cont(torso), as in "-gr.robot_dance", to show that notes and time-objects can be combined.
+// Every section ends in the rest position (all angles 0).
+
+ORD
+gram#1[1] S --> Hello Claps Waves FastClaps Bye
+
+
+-----
+
+ORD
+
+
+// The right arm waves for 3 beats while the head nods once on each beat
+
+gram#2[1] Hello --> {wave _ _ waveoff, nod nod nod nod}
+
+
+// Four claps on the beats, three nods against them, the torso swinging
+
+gram#2[2] Claps --> {armsup clap clap clap clap armsdown, - {4, nod nod nod} -, Sway6}
+gram#2[3] Sway6 --> _ins(torso) _cont(torso) _value(torso,0) C4 _value(torso,10) C4 _value(torso,-10) C4 _value(torso,10) C4 _value(torso,-10) C4 _value(torso,10) C4 _value(torso,0)
+
+
+// A short wave and a long wave: the long one repeats its waving part more times, at the same speed
+
+gram#2[4] Waves --> wave _ waveoff - wave _ _ _ _ _ waveoff -
+
+
+// Twice as fast: "armsup" and "armsdown" are twice as fast, the claps keep their speed and their impacts stay on the beats.
+// The nods are compressed to half their duration, which is their limit: a faster tempo would not make them faster.
+
+gram#2[5] FastClaps --> _tempo(2) {armsup clap clap clap clap clap clap clap clap armsdown, - nod nod nod nod nod nod nod nod -} _tempo(1)
+
+
+// Wave goodbye
+
+gram#2[6] Bye --> {wave _ _ _ _ waveoff, nod - nod - nod -}
