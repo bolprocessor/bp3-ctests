@@ -1,0 +1,6 @@
+-sc.tryMe
+-sc.trySubscript
+-sc.checkall
++sc.checkall
+-sc.Ruwet
++sc.Ruwet
