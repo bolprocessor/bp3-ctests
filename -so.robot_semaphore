@@ -18,7 +18,7 @@
     },
     "Comment on this file": {
         "key": "PrototypesComment",
-        "value": "Letters of the flag semaphore played by the robot puppet (osc_resources/BP_robot_puppet.py)"
+        "value": "Letters of the flag semaphore played by the robot puppet (osc_resources/dancer-with-flags.py)"
     },
     "Prototypes": [
         {

@@ -5,9 +5,11 @@
 -al.robot_semaphore
 -so.robot_semaphore
 -cs.Robot
+-py.dancer-with-flags
 
 
-// Sentences in the flag semaphore alphabet, played by the robot puppet "BP_robot_puppet.py" of folder "osc_resources", with the output format "Real-time OSC".
+// Sentences in the flag semaphore alphabet, played by the robot "dancer-with-flags.py" of folder "osc_resources" (line "-py.dancer-with-flags" above), with the output format "Real-time OSC".
+// Click START THE ROBOT to open its window, then PLAY next to a sentence.
 // See https://bolprocessor.org/robot-puppet/
 
 

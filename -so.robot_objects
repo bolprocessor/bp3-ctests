@@ -18,7 +18,7 @@
     },
     "Comment on this file": {
         "key": "PrototypesComment",
-        "value": "Gestures of the robot puppet (osc_resources/BP_robot_puppet.py)"
+        "value": "Gestures of the robot puppet (osc_resources/dancer.py)"
     },
     "Prototypes": [
         {

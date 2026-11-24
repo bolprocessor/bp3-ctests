@@ -1,11 +1,13 @@
 // Bol Processor BP3
-// Data saved as "-gr.robot_dance". Date: 2026-11-23 22:32:58
+// Data saved as "-gr.robot_dance". Date: 2026-11-24 13:14:06
 
 -se.robot_dance
 -cs.Robot
+-py.dancer
 
 
-// A choreography for the robot puppet "BP_robot_puppet.py" of folder "osc_resources", with the output format "Real-time OSC".
+// A choreography for the robot dancer "dancer.py" of folder "osc_resources" (line "-py.dancer" above), with the output format "Real-time OSC".
+// Click START THE ROBOT to open its window.
 // See https://bolprocessor.org/robot-puppet/ and https://bolprocessor.org/usage-in-robotics/
 
 
