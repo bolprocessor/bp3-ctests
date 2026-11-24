@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Beethoven-fugue-b-flat-major'. Date: 2026-11-11 08:45:22 8NovGMT",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Beethoven-fugue-b-flat-major'. Date: 2026-11-24 16:31:34 16NovGMT",
     "Quantization": {
         "name": "Quantization",
         "value": "20",
@@ -128,7 +128,7 @@
     },
     "ShowObjectGraph": {
         "name": "Show object graph",
-        "value": "1",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
@@ -172,6 +172,12 @@
         "name": "Split |variables|",
         "value": "0",
         "unit": "",
+        "boolean": "1"
+    },
+    "ExpandExpressions": {
+        "name": "Expand expressions",
+        "value": "0",
+        "unit": "in Bol Processor score output (may be very long)",
         "boolean": "1"
     },
     "SplitLines": {
@@ -484,6 +490,12 @@
         "name": "Trace item #",
         "value": "0",
         "unit": "(0 for none)",
+        "boolean": "0"
+    },
+    "MaxOutputFileSize": {
+        "name": "Max output file size",
+        "value": "500",
+        "unit": "MB (deft 500, at least 1). Work stops when a MIDI file, Csound score, event list, data or trace file reaches this size",
         "boolean": "0"
     },
     "UrlToPush": {
