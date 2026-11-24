@@ -344,7 +344,7 @@
     },
     "IgnoreFields": {
         "name": "Ignore field separators",
-        "value": "1",
+        "value": "0",
         "unit": "False by default, not advised",
         "boolean": "1"
     },
