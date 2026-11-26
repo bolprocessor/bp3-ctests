@@ -1,6 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-gr.Visser.Shapes". Date: 2026-11-24 17:57:28
-
+// Data saved as "-gr.Visser.Shapes". Date: 2026-11-26 18:11:15
 
 -se.Visser.Shapes
 -sc.0-default
@@ -17,7 +16,7 @@
 ORD
 _mm(60.0000) _striated
 
-gram#1[1] S --> _ins(flute) _staccato(50) Shapes
+gram#1[1] S --> _staccato(50) Shapes
 gram#1[2] Shapes --> Part1 {_transpose(2) Part1rotate20} Part2 Part3 {_tempo(0.7) Part3} Part4
 
 

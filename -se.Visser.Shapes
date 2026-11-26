@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Visser.Shapes'. Date: 2026-08-30 16:33:02 16AugGMT",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.Visser.Shapes'. Date: 2026-11-26 18:11:31 18NovGMT",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -128,7 +128,7 @@
     },
     "ShowObjectGraph": {
         "name": "Show object graph",
-        "value": "1",
+        "value": "0",
         "unit": "",
         "boolean": "1"
     },
@@ -140,7 +140,7 @@
     },
     "ShowPianoRoll": {
         "name": "Show pianoroll",
-        "value": "0",
+        "value": "1",
         "unit": "",
         "boolean": "1"
     },
@@ -155,6 +155,12 @@
         "value": "2",
         "unit": "",
         "boolean": "0"
+    },
+    "StartFromOne": {
+        "name": "Number beats from\u00a01",
+        "value": "0",
+        "unit": "in the graphics (otherwise from 0)",
+        "boolean": "1"
     },
     "DisplayProduce": {
         "name": "Display production",
@@ -172,6 +178,12 @@
         "name": "Split |variables|",
         "value": "0",
         "unit": "",
+        "boolean": "1"
+    },
+    "ExpandExpressions": {
+        "name": "Expand expressions",
+        "value": "0",
+        "unit": "in Bol Processor score output (may be very long)",
         "boolean": "1"
     },
     "SplitLines": {
@@ -342,12 +354,6 @@
         "unit": "(not implemented)",
         "boolean": "1"
     },
-    "IgnoreFields": {
-        "name": "Ignore field separators",
-        "value": "0",
-        "unit": "False by default, not advised",
-        "boolean": "1"
-    },
     "TraceZouleb": {
         "name": "Trace serial tools Zouleb()",
         "value": "0",
@@ -426,6 +432,12 @@
         "unit": "(0..127) usually 10",
         "boolean": "0"
     },
+    "DeftPitchbendRange": {
+        "name": "Default pitchbend range",
+        "value": "0",
+        "unit": "cents, for all MIDI channels (e.g. 200); _pitchrange() changes it for one channel. With 0, _pitchbend() values are raw (0..16383, centre 8192)",
+        "boolean": "0"
+    },
     "StopPauseContinue": {
         "name": "Respond to  Stop\/Continue",
         "value": "1",
@@ -478,6 +490,12 @@
         "name": "Trace item #",
         "value": "0",
         "unit": "(0 for none)",
+        "boolean": "0"
+    },
+    "MaxOutputFileSize": {
+        "name": "Max output file size",
+        "value": "500",
+        "unit": "MB (deft 500, at least 1). Work stops when a MIDI file, Csound score, event list, data or trace file reaches this size",
         "boolean": "0"
     },
     "UrlToPush": {
