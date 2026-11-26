@@ -1,5 +1,5 @@
 {
-    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.tryTimePatterns'. Date: 2026-11-13 23:19:52 23NovGMT",
+    "header": "\/\/ Bol Processor BP3\n\/\/ Settings file saved as '-se.tryTimePatterns'. Date: 2026-11-25 14:33:01 14NovGMT",
     "Quantization": {
         "name": "Quantization",
         "value": "10",
@@ -38,7 +38,7 @@
     },
     "Qclock": {
         "name": "Qclock",
-        "value": "3",
+        "value": "2",
         "unit": "",
         "boolean": "0"
     },
@@ -346,12 +346,6 @@
         "name": "Time setting step",
         "value": "0",
         "unit": "(not implemented)",
-        "boolean": "1"
-    },
-    "IgnoreFields": {
-        "name": "Ignore field separators",
-        "value": "0",
-        "unit": "Unchecked by default, not advised",
         "boolean": "1"
     },
     "TraceZouleb": {

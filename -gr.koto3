@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-gr.koto3". Date: 2026-11-22 11:44:24
+// Data saved as "-gr.koto3". Date: 2026-11-26 16:27:42
 
 // File “-gr.koto3”
 // A sort of unidimensional cellular automaton producing a
@@ -14,7 +14,7 @@
 
 
 -in.abc1
--tb.koto3
+// -tb.koto3
 -al.abc1
 -so.abc1
 -se.koto3

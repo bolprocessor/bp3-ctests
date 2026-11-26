@@ -1,152 +1,243 @@
-// Bol Processor BP3 compatible with version BP2.9.8
-// Time base file saved as "-tb.Waves". Date: 2020-09-21 14:07:45
-3
-40
-1
-7
-108
-2
-120
-5
-1
-1
-20
-1
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-1
-7
-96
-2
-64
-5
-1
-1
-20
-0
-1
-0
-1
-1
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-1
-7
-104
-2
-64
-5
-1
-1
-20
-0
-0
-1
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-DATA: This timebase is for &quot;-gr.Visser.Waves&quot;. Import &quot;Visser.Waves1.mid&quot; and set 8 beats / 10 sec.
+{
+    "header": "// Bol Processor BP3 compatible with version BP2.9.8\n// Time base file saved as \"-tb.Waves\". Date: 2020-09-21 14:07:45\n// Converted to JSON format. Date: 2026-11-25 14:18:38 GMT",
+    "Tracks": {
+        "key": "Tracks",
+        "value": [
+            {
+                "Key": {
+                    "key": "TickKey",
+                    "value": 108
+                },
+                "MIDI channel": {
+                    "key": "TickChannel",
+                    "value": 2
+                },
+                "Velocity": {
+                    "key": "TickVelocity",
+                    "value": 120
+                },
+                "Cycle": {
+                    "key": "TickCycle",
+                    "value": 5,
+                    "unit": "beats"
+                },
+                "Speed ratio: numerator": {
+                    "key": "Ptick",
+                    "value": 1
+                },
+                "Speed ratio: denominator": {
+                    "key": "Qtick",
+                    "value": 1
+                },
+                "Duration of a tick": {
+                    "key": "TickDuration",
+                    "value": 20,
+                    "unit": "ms"
+                },
+                "Beats with a tick (1) or without (0)": {
+                    "key": "Ticks",
+                    "value": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            },
+            {
+                "Key": {
+                    "key": "TickKey",
+                    "value": 96
+                },
+                "MIDI channel": {
+                    "key": "TickChannel",
+                    "value": 2
+                },
+                "Velocity": {
+                    "key": "TickVelocity",
+                    "value": 64
+                },
+                "Cycle": {
+                    "key": "TickCycle",
+                    "value": 5,
+                    "unit": "beats"
+                },
+                "Speed ratio: numerator": {
+                    "key": "Ptick",
+                    "value": 1
+                },
+                "Speed ratio: denominator": {
+                    "key": "Qtick",
+                    "value": 1
+                },
+                "Duration of a tick": {
+                    "key": "TickDuration",
+                    "value": 20,
+                    "unit": "ms"
+                },
+                "Beats with a tick (1) or without (0)": {
+                    "key": "Ticks",
+                    "value": [
+                        0,
+                        1,
+                        0,
+                        1,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            },
+            {
+                "Key": {
+                    "key": "TickKey",
+                    "value": 104
+                },
+                "MIDI channel": {
+                    "key": "TickChannel",
+                    "value": 2
+                },
+                "Velocity": {
+                    "key": "TickVelocity",
+                    "value": 64
+                },
+                "Cycle": {
+                    "key": "TickCycle",
+                    "value": 5,
+                    "unit": "beats"
+                },
+                "Speed ratio: numerator": {
+                    "key": "Ptick",
+                    "value": 1
+                },
+                "Speed ratio: denominator": {
+                    "key": "Qtick",
+                    "value": 1
+                },
+                "Duration of a tick": {
+                    "key": "TickDuration",
+                    "value": 20,
+                    "unit": "ms"
+                },
+                "Beats with a tick (1) or without (0)": {
+                    "key": "Ticks",
+                    "value": [
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            }
+        ]
+    },
+    "Comment on this time base": {
+        "key": "Comment",
+        "value": "This timebase is for \"-gr.Visser.Waves\". Import \"Visser.Waves1.mid\" and set 8 beats / 10 sec."
+    }
+}

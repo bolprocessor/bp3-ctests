@@ -1,0 +1,253 @@
+{
+    "header": "// Bol Processor BP3\n// Time base file saved as \"-tb.tansen trans 2\". Date: 2026-11-26 13:40:50 GMT",
+    "Metronome: ticks": {
+        "key": "Pclock",
+        "value": 10,
+        "unit": "ticks"
+    },
+    "Metronome: beats": {
+        "key": "Qclock",
+        "value": 1,
+        "unit": "beats of the project"
+    },
+    "Tracks": {
+        "key": "Tracks",
+        "value": [
+            {
+                "Key": {
+                    "key": "TickKey",
+                    "value": 48
+                },
+                "MIDI channel": {
+                    "key": "TickChannel",
+                    "value": 1
+                },
+                "Velocity": {
+                    "key": "TickVelocity",
+                    "value": 67
+                },
+                "Cycle": {
+                    "key": "TickCycle",
+                    "value": 20,
+                    "unit": "beats"
+                },
+                "Speed ratio: numerator": {
+                    "key": "Ptick",
+                    "value": 1
+                },
+                "Speed ratio: denominator": {
+                    "key": "Qtick",
+                    "value": 1
+                },
+                "Duration of a tick": {
+                    "key": "TickDuration",
+                    "value": 20,
+                    "unit": "ms"
+                },
+                "Beats with a tick (1) or without (0)": {
+                    "key": "Ticks",
+                    "value": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        1,
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            },
+            {
+                "Key": {
+                    "key": "TickKey",
+                    "value": 55
+                },
+                "MIDI channel": {
+                    "key": "TickChannel",
+                    "value": 1
+                },
+                "Velocity": {
+                    "key": "TickVelocity",
+                    "value": 64
+                },
+                "Cycle": {
+                    "key": "TickCycle",
+                    "value": 20,
+                    "unit": "beats"
+                },
+                "Speed ratio: numerator": {
+                    "key": "Ptick",
+                    "value": 1
+                },
+                "Speed ratio: denominator": {
+                    "key": "Qtick",
+                    "value": 1
+                },
+                "Duration of a tick": {
+                    "key": "TickDuration",
+                    "value": 20,
+                    "unit": "ms"
+                },
+                "Beats with a tick (1) or without (0)": {
+                    "key": "Ticks",
+                    "value": [
+                        0,
+                        1,
+                        1,
+                        0,
+                        1,
+                        1,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            },
+            {
+                "Key": {
+                    "key": "TickKey",
+                    "value": 60
+                },
+                "MIDI channel": {
+                    "key": "TickChannel",
+                    "value": 1
+                },
+                "Velocity": {
+                    "key": "TickVelocity",
+                    "value": 127
+                },
+                "Cycle": {
+                    "key": "TickCycle",
+                    "value": 20,
+                    "unit": "beats"
+                },
+                "Speed ratio: numerator": {
+                    "key": "Ptick",
+                    "value": 1
+                },
+                "Speed ratio: denominator": {
+                    "key": "Qtick",
+                    "value": 1
+                },
+                "Duration of a tick": {
+                    "key": "TickDuration",
+                    "value": 20,
+                    "unit": "ms"
+                },
+                "Beats with a tick (1) or without (0)": {
+                    "key": "Ticks",
+                    "value": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            }
+        ]
+    },
+    "Comment on this time base": {
+        "key": "Comment",
+        "value": ""
+    }
+}

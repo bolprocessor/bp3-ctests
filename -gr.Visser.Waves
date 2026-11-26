@@ -1,12 +1,16 @@
 // Bol Processor BP3
-// Data saved as "-gr.Visser.Waves". Date: 2026-08-30 16:32:11
+// Data saved as "-gr.Visser.Waves". Date: 2026-11-25 18:10:40
+
 -se.Visser.Waves
+-tb.onebeat
+
 
 // This grammar was rewritten in November 2026 for the current convention of serial tools, producing exactly the same work.
 // The composer's _retro and _rotate were processed by the old algorithm, in which parameters such as _transpose() or _vel() kept their positions while notes and {} expressions moved, and in which the tool also applied to every nested expression.
 // Their results are spelled out by variables Frase1retro, Frase2rotate2 and Frase4rotate3, with the original instructions in comments.
 
 ORD
+
 _mm(60.0000) _striated
 
 gram#1[1] S --> _tempo(0.8) Waves
@@ -20,11 +24,19 @@ gram#1[6] Frase4 --> _legato(100) {_velcont _vel(50) _transpose(2) M19 M20 M21 M
 gram#1[7] Frase5 --> _legato(100) {_velcont _vel(50) _transpose(2) M25 _vel(60) M26 M27 M28 M29 M30 _vel(50)}
 gram#1[8] Frase6 --> _legato(100) {_velcont _vel(50) _transpose(2) M31 _vel(60) M32 M33 M34 M35 M36 M37 M38 _vel(50)}
 
+
 // Frase1retro was {_retro Frase1}
+
 gram#1[9] Frase1retro --> _legato(100) {_velcont _vel(50) {5, B3 F1 {3, _transpose(13) B3 F2 {3, _transpose(1) B3 F2 F#3 C3} _vel(60) F#3 C3} F#3 C3} _vel(50)}
+
+
 // Frase2rotate2 was {_rotate(2) Frase2}
+
 gram#1[10] Frase2rotate2 --> _legato(100) {_velcont _vel(50) _transpose(2) {5, _vel(60) {3, _transpose(13) {3, _transpose(1) F#3 F2 B3 C3 {{3, _transpose(13) F2 B3 C3 F#3}}} F2 _vel(60) B3 C3 F#3} F1 B3 C3 F#3} _vel(50)}
+
+
 // Frase4rotate3 was {_rotate(3) Frase4}
+
 gram#1[11] Frase4rotate3 --> _legato(100) {_velcont _vel(50) _transpose(2) {9, F1 B3 C3 F#3 {9, _transpose(13) {9, _transpose(1) F2 {18, _transpose(-11) {5, F1 B3 C3 F#3 {3, _transpose(13) F2 B3 C3 F#3 {3, _transpose(1) B3 C3 F#3 F2}}}} B3 C3 {{5, _transpose(13) F2 B3 C3 {_transpose(1) {5, _vel(60) B3 C3 F#3 F2}} F#3}} F#3} F2 B3 C3 _vel(60) {_transpose(1) {5, _vel(60) B3 C3 F#3 F2}} F#3}} _vel(50)}
 
 gram#1[12] M1 --> {5, C3 F#3

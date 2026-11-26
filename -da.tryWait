@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-da.tryWait". Date: 2026-11-17 18:41:19
+// Data saved as "-da.tryWait". Date: 2026-11-26 15:32:18
 
 -se.tryWait
 -to.tryWait
@@ -19,7 +19,15 @@ G2 B2 _script(Hold for 1500 milliseconds) D2 E2
 
 C4 _script(Wait forever) D4
 
+
+// Sending Start and Continue
+
 _script(wait for C3 channel 1) G2 B2 _script(MIDI send Start) _script(MIDI send Continue) D3 E3
+
+
+// Wait for space
+
+C4 _script(Wait for space) D4
 
 
 // This item starts playing if either the C3 or the D3 note is sent
@@ -35,5 +43,3 @@ _scale(Cmaj,69) _script(wait for C3 channel 1) key#60 key#62 key#69
 // Note that key#69 will be released after 1 second of waiting for C3
 
 _scale(zest24-supergoya17plus3_Db,0) key#60 key#62 key#69 _script(wait for C3 channel 1) _scale(Cmaj,69) key#60 key#62 key#69
-
-_scale(zest24-supergoya17plus3_Db,0) key#60 key#62 G4 key#69

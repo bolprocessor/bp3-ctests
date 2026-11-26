@@ -1,5 +1,15 @@
 {
-    "header": "// Bol Processor BP3\n// Time base file saved as \"-tb.niceticks\". Date: 2026-11-11 22:49:02 GMT",
+    "header": "// Bol Processor BP3\n// Time base file saved as \"-tb.niceticks\". Date: 2026-11-26 10:45:59 GMT",
+    "Metronome: ticks": {
+        "key": "Pclock",
+        "value": 1,
+        "unit": "ticks"
+    },
+    "Metronome: beats": {
+        "key": "Qclock",
+        "value": 1,
+        "unit": "beats of the project"
+    },
     "Tracks": {
         "key": "Tracks",
         "value": [

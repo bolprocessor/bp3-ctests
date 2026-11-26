@@ -4,3 +4,4 @@
 +sc.checkall
 -sc.Ruwet
 +sc.Ruwet
+-tb.tryTimePatterns
