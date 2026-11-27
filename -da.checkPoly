@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-da.checkPoly". Date: 2026-11-11 10:49:07
+// Data saved as "-da.checkPoly". Date: 2026-11-27 14:24:06
 
 -al.abc1
 -so.abc1
@@ -36,6 +36,7 @@ C4 D4 . E4 F4 G4
 /3 {{C4_ _ D4_ _, E4_ F4 - G4_}, E5_ _ _ _ _}
 
 {C4 D4 B3, A#3 G3}
+
 /1 {*1/1 C4 D4 B3,*3/2 A#3 G3}
 
 
@@ -123,11 +124,15 @@ C4 D4 B3 . A#3 G3
 // are empty sound-objects and won't appear on the graphs.
 
 {a b . c d e}
+
 a.b.c.ab.cd.ef.abc.def.ghi
+
 a.b.c.ab.cd.ef.a.b.c
+
 a.b.c.ab.cd.ef.abc.a.b.c
 
 {ab.cd}efg{hi.jk}
+
 {a.b.c.ab.cd}{ef.abc.def.ghi}
 
 
@@ -165,7 +170,9 @@ a.b.c.ab.cd.ef.abc.a.b.c
 // will therefore be interpreted with the “period notation”.
 
 {2,c d e}
+
 {- -, c d e}
+
 {_ _, c d e f g h}
 
 
@@ -240,6 +247,7 @@ C4 C5 3/2 D5 E5
 /1 abcde . ba
 
 {{1/2,E5} . F5 . A5} . {B5 . C6}
+
 a b 5/3 {a b,c d e}
 
 
@@ -259,9 +267,13 @@ a b 5/3 {a b,c d e}
 // _rest or '…'
 
 {3/2 c d e, _rest f g, a b _rest c d}
+
 /1 {/2 - _ _ /1 c d e,/2 - _ _ _ _ /1 f g,a b /2 - /1 c d}
+
 /1 {/2 - _ _ /1 c_ d_ e_,/2 - _ _ _ _ /1 f_ g_,a_ b_ /2 - /1 c_ d_}
+
 {C3 D3 B2, _rest C4 D4 B3}
+
 {{1/2,E5} . F5 . A5} . {B5 _rest . C6}
 
 
@@ -385,6 +397,7 @@ abc . e _rest _tempo(2) b . c
 // Try the two ones:
 
 abc .e _rest /2 {abc,de} .a
+
 abc .e _rest _tempo(2) {abc,de} .a
 
 
@@ -401,9 +414,13 @@ a b....c d e
 // Beats containing only silences are “resized”, except the first beat which serves as a duration reference. (This is dual to the “,” operation)
 
 a b.-.c d
+
 a b.3.c d
+
 a b.5/3.c d
+
 a b.5/3 ….c d
+
 2.abc.defg
 
 {5/3 . C4 D4 . E4 B3} [Don't remove {} otherwise “5” will be taken as part of header] 
@@ -435,7 +452,9 @@ a b. _rest .c d e [Undetermined rest is also resized]
 // Other structures with variables: these are simply ignored.
 
 {a b,X c d e}
+
 {a b,X Y, c d e}
+
 Z.a b.X Y.c d
 
 
@@ -449,22 +468,29 @@ Z.a b.X Y.c d
 // {a <<c>> b,/3 c_ d_ e_}
 
 a <<c>> b . c d e
+
 a b .<<c>> . c d e
+
 {a b,<<c>>, c d e}
+
 {<<c>><<a>>, a b, c d e}
+
 <<c>><<a>> . a b . c d e
 
 
 // _rest but they can be followed by empty objects or silences.
 
 {a b,<<c>>_ _ _ _, c d e}
+
 {a b,<<c>> - - - -, c d e}
+
 a b . <<c>> - - - - . c d e
 
 
 // Here we'll get a three-time unit structure because the first field is three units…
 
 {<<a>> - - -,a b, c d e}
+
 {<<a>> 3,a b, c d e}
 
 
@@ -472,17 +498,24 @@ a b . <<c>> - - - - . c d e
 // This situation may occur there are erasing rules in a grammar...
 
 {a b,,,c d e,}
+
 a b....c d e.
+
 {,a b,c d e} .a b.c d
+
 {,,a b,c d e} ..a b.c d e
 
 
 // Here we have either silences ‘-’ or empty objects ‘_’ that count for one beat
 
 {--,c d e}
+
 {__,c d e}
+
 {-_,c d e}
+
 {_-,c d e}
+
 _ _ .c d e
 
 
@@ -501,7 +534,9 @@ a b {,} . c { . , .} d e
 [Brackets are balanced] {{{},},a b {},c {{{ .{}}}} d e}
 
 {{{<<a>>},},a b {},c {{{{}}}} d e}
+
 {a b {},{{<<a>>},},c {{{{}}}} d e}
+
 {a b {},{{- <<a>>},},c {{{{}}}} d e}
 
 

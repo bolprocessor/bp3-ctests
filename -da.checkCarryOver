@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-da.checkCarryOver". Date: 2026-11-22 22:01:41
+// Data saved as "-da.checkCarryOver". Date: 2026-11-27 14:33:38
 
 // -da.checkCarryOver
 // Explanations: https://bolprocessor.org/carrying-over-controls/
@@ -58,7 +58,7 @@ _volume(20) C4 _chan(2) D4 _chan(3) E4
 [Fields of the same expression starting at the same time do not share their values. Expected volumes: C4 20, D4 90 (default), E4 20] 
 {_volume(20) C4, D4} {E4}
 
-[Values are carried over from one line (chunk) of the item to the next, as when playing "PLAY safe". Expected panoramic: part 1 = 23 (C4, D4, G4), part 2 = 48 (E4, F4) then 100 (A4)] 
+[Values are carried over from one expression of the item to the next (the lines of an item are joined). Expected panoramic: part 1 = 23 (C4, D4, G4), part 2 = 48 (E4, F4) then 100 (A4)] 
 {_part(1) _pan(23) C4, _part(2) _pan(48) E4}
 {_part(1) D4, _part(2) F4}
 {_part(1) G4, _part(2) _pan(100) A4}

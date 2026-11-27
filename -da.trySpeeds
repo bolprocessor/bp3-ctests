@@ -1,5 +1,5 @@
 // Bol Processor BP3
-// Data saved as "-da.trySpeeds". Date: 2026-11-26 14:09:38
+// Data saved as "-da.trySpeeds". Date: 2026-11-26 20:00:54
 
 -se.trySpeeds
 -tb.trySpeeds
@@ -16,4 +16,4 @@ _vel(2) _tempo(1.3) C4 D4 E4 F4 _tempo(1) G4 F4 E4 D4 C4
 
 _vel(2) _tempo(1.3) C4 D4 {E4 F4 _tempo(2.7) G4 F4} E4 D4 C4
 
-_vel(2) _tempo(1.3) C4 D4 {E4 F4 _tempo(2.7) G4 F4} {E4 D4, G4 B4 F4} C4
+_vel(2) _tempo(1.3) C4 D4 {E4 F4 _tempo(2) G4 F4} {E4 D4, G4 B4 F4} C4
